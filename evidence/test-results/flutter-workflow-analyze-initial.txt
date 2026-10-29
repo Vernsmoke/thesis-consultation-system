@@ -1,0 +1,12 @@
+Analyzing frontend...                                           
+
+   info - Statements in an if should be enclosed in a block. Try wrapping the statement in a block - lib\api.dart:58:11 - curly_braces_in_flow_control_structures
+   info - Statements in an if should be enclosed in a block. Try wrapping the statement in a block - lib\ui.dart:29:5 - curly_braces_in_flow_control_structures
+   info - Statements in an if should be enclosed in a block. Try wrapping the statement in a block - lib\ui.dart:44:5 - curly_braces_in_flow_control_structures
+   info - Statements in an if should be enclosed in a block. Try wrapping the statement in a block - lib\workspace.dart:174:13 - curly_braces_in_flow_control_structures
+   info - Statements in an if should be enclosed in a block. Try wrapping the statement in a block - lib\workspace.dart:183:9 - curly_braces_in_flow_control_structures
+   info - Statements in an if should be enclosed in a block. Try wrapping the statement in a block - lib\workspace.dart:245:9 - curly_braces_in_flow_control_structures
+  error - The named parameter 'client' isn't defined. Try correcting the name to an existing named parameter's name, or defining a named parameter with the name 'client' - test\widget_test.dart:18:45 - undefined_named_parameter
+  error - The named parameter 'client' isn't defined. Try correcting the name to an existing named parameter's name, or defining a named parameter with the name 'client' - test\widget_test.dart:27:45 - undefined_named_parameter
+
+8 issues found. (ran in 2.2s)

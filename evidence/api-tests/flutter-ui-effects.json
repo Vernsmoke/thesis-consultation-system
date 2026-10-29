@@ -1,0 +1,153 @@
+{
+    "timestamp_utc": "2026-10-29T16:11:01+00:00",
+    "base_commit": "297f26607e9e42b629b6d4911d4224bd12fbd5e5",
+    "build": "uncommitted checkpoint07",
+    "environment": "Read-only MariaDB and receiver ledger verification after actual Flutter browser actions",
+    "consultations": [
+        {
+            "id": 7,
+            "reference": "SCAN-REMINDER-b1239e74abbf",
+            "status": "completed",
+            "starts_at": "2026-10-29T13:28:37.000000Z",
+            "ends_at": "2026-10-29T13:58:37.000000Z",
+            "schedule_version": 1
+        },
+        {
+            "id": 16,
+            "reference": "a7d6526b-a38e-4323-8e13-42cecc8dec4b",
+            "status": "confirmed",
+            "starts_at": "2026-10-30T01:00:00.000000Z",
+            "ends_at": "2026-10-30T01:30:00.000000Z",
+            "schedule_version": 1
+        }
+    ],
+    "actions": [
+        {
+            "id": 4,
+            "due_at": "2026-10-31T09:00:00.000000Z",
+            "completed_at": "2026-10-29T15:59:11.000000Z",
+            "assigned_to_id": 1
+        }
+    ],
+    "audit": [
+        {
+            "consultation_id": 16,
+            "actor_id": 1,
+            "actor_type": "user",
+            "event": "consultation_requested",
+            "from_status": null,
+            "to_status": "requested",
+            "action_item_id": null,
+            "correlation_id": "e31b7484-440d-49a5-9f38-5e87ae946e13",
+            "created_at": "2026-10-29 15:53:24"
+        },
+        {
+            "consultation_id": 16,
+            "actor_id": 3,
+            "actor_type": "user",
+            "event": "schedule_confirmed",
+            "from_status": "requested",
+            "to_status": "confirmed",
+            "action_item_id": null,
+            "correlation_id": "432361f2-eede-47b4-a53f-ee3fc0ca68eb",
+            "created_at": "2026-10-29 15:55:44"
+        },
+        {
+            "consultation_id": 7,
+            "actor_id": 3,
+            "actor_type": "user",
+            "event": "meeting_completed",
+            "from_status": "confirmed",
+            "to_status": "completed",
+            "action_item_id": null,
+            "correlation_id": "3102d31a-de16-4c52-89f7-2da0979da303",
+            "created_at": "2026-10-29 15:56:16"
+        },
+        {
+            "consultation_id": 7,
+            "actor_id": 3,
+            "actor_type": "user",
+            "event": "action_item_assigned",
+            "from_status": "completed",
+            "to_status": "completed",
+            "action_item_id": 4,
+            "correlation_id": "5945936e-0211-4625-b803-074f794b379e",
+            "created_at": "2026-10-29 15:56:58"
+        },
+        {
+            "consultation_id": 7,
+            "actor_id": 3,
+            "actor_type": "user",
+            "event": "follow_up_added",
+            "from_status": "completed",
+            "to_status": "completed",
+            "action_item_id": null,
+            "correlation_id": "b994fb91-e8f7-45ab-a0a3-f685cd57ff40",
+            "created_at": "2026-10-29 15:57:15"
+        },
+        {
+            "consultation_id": 7,
+            "actor_id": 1,
+            "actor_type": "user",
+            "event": "action_item_completed",
+            "from_status": "completed",
+            "to_status": "completed",
+            "action_item_id": 4,
+            "correlation_id": "d3826bc9-cb57-48aa-88da-4060192fb27e",
+            "created_at": "2026-10-29 15:59:11"
+        }
+    ],
+    "work": {
+        "id": 19,
+        "consultation_id": 16,
+        "correlation_id": "97080714-2e5f-49a3-91cb-f29b5adc1087",
+        "status": "delivered",
+        "cycle": 2,
+        "attempts": 1,
+        "total_attempts": 2,
+        "receipt": "rcpt_b17fa042e849623b8f2334e816b116a2"
+    },
+    "attempts": [
+        {
+            "cycle": 1,
+            "number": 1,
+            "outcome": "needs_review",
+            "code": "http_422",
+            "http_status": 422,
+            "receipt": null,
+            "started_at": "2026-10-29 16:00:18",
+            "finished_at": "2026-10-29 16:00:18"
+        },
+        {
+            "cycle": 2,
+            "number": 1,
+            "outcome": "delivered",
+            "code": "accepted",
+            "http_status": 201,
+            "receipt": "rcpt_b17fa042e849623b8f2334e816b116a2",
+            "started_at": "2026-10-29 16:01:34",
+            "finished_at": "2026-10-29 16:01:34"
+        }
+    ],
+    "recoveries": [
+        {
+            "actor_id": 6,
+            "cycle": 2,
+            "created_at": "2026-10-29 16:01:16"
+        }
+    ],
+    "receiver": {
+        "receipt_count": 1,
+        "receipt": "rcpt_b17fa042e849623b8f2334e816b116a2"
+    },
+    "checks": {
+        "browser_request_confirmed": true,
+        "elapsed_fixture_completed": true,
+        "browser_action_completed": true,
+        "browser_follow_up_retained": true,
+        "recovery_kept_original_failure": true,
+        "bounded_recovery_and_one_receipt": true,
+        "older_exhausted_item_unchanged": true
+    },
+    "outcome": "pass"
+}

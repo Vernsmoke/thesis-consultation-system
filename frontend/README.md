@@ -1,17 +1,16 @@
-# thesis_consultation
+# Flutter Web client
 
-A new Flutter project.
+Project29 Thesis Consultation Reminder System, Week13. Actual session login, role workflows, notifications and coordinator review/recovery.
 
-## Getting Started
+See [setup, screen flow and source explanation](../docs/FLUTTER.md) and [recorded browser/test results](../evidence/test-results/FLUTTER-RESULTS.md). Use the workspace root README for Laravel/MariaDB/receiver setup. Never compile a private password or service key into this client.
 
-This project is a starting point for a Flutter application.
+```powershell
+flutter pub get --offline
+flutter analyze
+flutter build web --dart-define=API_BASE_URL=http://127.0.0.1:8000/api
+php -S 127.0.0.1:8080 -t build/web
+```
 
-A few resources to get you started if this is your first Flutter project:
+Use the existing fictional accounts/private demo password. The exact configured browser origin is http://127.0.0.1:8080. Browser cookie credentials and CSRF header are required; no client bearer key is used. Backend permissions remain authoritative. All dates are explicitly Manila (UTC+8).
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Analysis and release build passed. Five new timezone/API/widget tests are authored, but automated Flutter execution is unfinished: browser runner stalled with zero tests executed and prior VM policy blocker remains. Actual browser scenarios and backend regression are separate recorded evidence. Do not claim `flutter test` passed or automatically change Windows security settings.

@@ -1,0 +1,8 @@
+{
+    "timestamp_utc": "2026-10-29T16:00:19+00:00",
+    "phase": "fix",
+    "consultation_id": 16,
+    "environment": "Actual local scanner, MariaDB and authenticated controlled receiver; no reset",
+    "work_id": 19,
+    "next": "Receiver corrected; coordinator may now authorize recovery through Flutter."
+}

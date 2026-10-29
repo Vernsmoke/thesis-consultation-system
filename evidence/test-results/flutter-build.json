@@ -1,0 +1,68 @@
+{
+  "base_commit": "297f26607e9e42b629b6d4911d4224bd12fbd5e5",
+  "build": "Uncommitted checkpoint07",
+  "checks": "Flutter analyze clean; web build37.4s; automated Flutter tests unfinished; 63 backend tests/314 assertions; 19 actual browser cases; 7 DB effect checks",
+  "release": {
+    "path": "frontend/build/web/main.dart.js",
+    "sha256": "f796e118f606b06d6606c61afcd2fe9f0cb4303e3727689d2753d5acc88142be"
+  },
+  "files": [
+    {
+      "path": "backend/tools/inspect-ui-evidence.php",
+      "sha256": "313ff6bd1aede29d4f626a913666d1a30d407c3d74251327cbc22bd2f186425f"
+    },
+    {
+      "path": "backend/tools/prepare-ui-recovery.php",
+      "sha256": "6e7dcfc4c6ebe2279dc605fc626bdf622fde95d541256a502837ca9c0f51a303"
+    },
+    {
+      "path": "backend/tools/ui-failure-router.php",
+      "sha256": "1ecac4f86e3232045f2122c35b2275caec5d81ccf8add6f5fdcfadefa315f0d5"
+    },
+    {
+      "path": "frontend/lib/api.dart",
+      "sha256": "db68a7ec2bfe1d0935073b3a2ab5586f64ad9e3e041cdee18053b542fb7ea3f6"
+    },
+    {
+      "path": "frontend/lib/browser_transport_stub.dart",
+      "sha256": "6de240837753943483d8f5c943e12eb55ba1d18f8030817eb1d4dd4a4fa9118d"
+    },
+    {
+      "path": "frontend/lib/browser_transport_web.dart",
+      "sha256": "513ef7f1f1dcfbf5a2d574e6c5f0f20fa5f55c78cd59a5623f83d9355412a297"
+    },
+    {
+      "path": "frontend/lib/browser_transport.dart",
+      "sha256": "21d61225b9f83d28485656e89d4e05f6f2e04e48b3b59d17aae8e3e4c5cab653"
+    },
+    {
+      "path": "frontend/lib/details.dart",
+      "sha256": "21a5a82458eda259ce6d122c79c35a5c17cae18478ad81b85e20683095f6dc8f"
+    },
+    {
+      "path": "frontend/lib/main.dart",
+      "sha256": "06b1f592a28a811d5b6e7a30c1aa52d1ee6fd8f2f6d6dc6460714aed073dd2c4"
+    },
+    {
+      "path": "frontend/lib/ui.dart",
+      "sha256": "199680a4917d0d79785ea250c9a71756863a69d8ef66d37312e130e1ba6f9636"
+    },
+    {
+      "path": "frontend/lib/workspace.dart",
+      "sha256": "3b676fa82a063ae5277e29d455b89ae8ed1c3872362c324d0c46831a89e92424"
+    },
+    {
+      "path": "frontend/pubspec.lock",
+      "sha256": "ad9c97d291087ba037d7f0e3ca00e46ec31a4135620c5b2c6d5a02cb0d198859"
+    },
+    {
+      "path": "frontend/pubspec.yaml",
+      "sha256": "58a5fcfcf5889162ed39a888d990b79ec87fc3553c8e45e1817dfbb94ffc420f"
+    },
+    {
+      "path": "frontend/test/widget_test.dart",
+      "sha256": "9b5438a9cf3acb3028484282c3b2106a90803c8c23cde58376e045326d58082d"
+    }
+  ],
+  "timestamp_utc": "2026-10-29T16:19:14.8958299Z"
+}

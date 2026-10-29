@@ -1,0 +1,4 @@
+Browser test attempt stopped after more than 12 minutes at loading; zero tests executed.
+No pass/fail assertion result available. No security setting changed.
+Only verified Flutter test processes and descendants using their temporary test profile were stopped.
+Static analysis, release build and actual browser checks are separate evidence; they do not replace this missing automated result.

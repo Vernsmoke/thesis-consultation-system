@@ -1,5 +1,7 @@
 # Week 13 API — request and schedule milestone
 
+Checkpoint 07 update: [Flutter integration](FLUTTER.md) now implements the cookie/CSRF client, role workflows and coordinator recovery with [actual browser evidence](../evidence/test-results/FLUTTER-RESULTS.md). Four-kind scans and delivery are implemented, and ten migrations applied. Earlier references below to future Flutter, unimplemented automatic missed detection, eight migrations and old counts describe their checkpoint-time implementation; use the current Flutter/delivery result maps for present status. Domain/automation endpoints themselves are unchanged by this frontend increment.
+
 Session/request/schedule APIs were implemented at checkpoint 03. Checkpoint 04 adds manual meeting outcomes, action assignment/completion and follow-up. Checkpoint 06 adds the automation routes below. Full Flutter workflow remains pending. This document describes implemented routes.
 
 ## Automation routes added at checkpoint 06

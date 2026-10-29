@@ -1,0 +1,164 @@
+[
+  {
+    "format": "JPEG",
+    "file": "w13-action-deadline-notice.jpg",
+    "width": 1280,
+    "height": 900
+  },
+  {
+    "format": "JPEG",
+    "file": "w13-adviser-outcome-action-followup.jpg",
+    "width": 1280,
+    "height": 900
+  },
+  {
+    "format": "JPEG",
+    "file": "w13-api-controlled-503.jpg",
+    "width": 1280,
+    "height": 900
+  },
+  {
+    "format": "JPEG",
+    "file": "w13-api-loading-controlled.jpg",
+    "width": 1280,
+    "height": 900
+  },
+  {
+    "format": "JPEG",
+    "file": "w13-api-network-failure.jpg",
+    "width": 1280,
+    "height": 900
+  },
+  {
+    "format": "JPEG",
+    "file": "w13-api-restored.jpg",
+    "width": 1280,
+    "height": 900
+  },
+  {
+    "format": "JPEG",
+    "file": "w13-api-timeout.jpg",
+    "width": 1280,
+    "height": 900
+  },
+  {
+    "format": "JPEG",
+    "file": "w13-empty-adviser.jpg",
+    "width": 1280,
+    "height": 900
+  },
+  {
+    "format": "JPEG",
+    "file": "w13-forbidden-record.jpg",
+    "width": 1280,
+    "height": 900
+  },
+  {
+    "format": "JPEG",
+    "file": "w13-foundation-api-connected.jpg",
+    "width": 897,
+    "height": 884
+  },
+  {
+    "format": "JPEG",
+    "file": "w13-foundation-narrow-390.jpg",
+    "width": 390,
+    "height": 844
+  },
+  {
+    "format": "JPEG",
+    "file": "w13-login-rejected.jpg",
+    "width": 897,
+    "height": 884
+  },
+  {
+    "format": "JPEG",
+    "file": "w13-login-validation.jpg",
+    "width": 1280,
+    "height": 720
+  },
+  {
+    "format": "JPEG",
+    "file": "w13-missed-session-notice.jpg",
+    "width": 1280,
+    "height": 900
+  },
+  {
+    "format": "JPEG",
+    "file": "w13-notification-history-narrow-390.jpg",
+    "width": 390,
+    "height": 844
+  },
+  {
+    "format": "JPEG",
+    "file": "w13-notification-history-tablet-768.jpg",
+    "width": 473,
+    "height": 1024
+  },
+  {
+    "format": "JPEG",
+    "file": "w13-panel-readonly.jpg",
+    "width": 1280,
+    "height": 900
+  },
+  {
+    "format": "JPEG",
+    "file": "w13-permanent-failure-review.jpg",
+    "width": 1280,
+    "height": 900
+  },
+  {
+    "format": "JPEG",
+    "file": "w13-progress-summary-tablet-768.jpg",
+    "width": 768,
+    "height": 1024
+  },
+  {
+    "format": "JPEG",
+    "file": "w13-recovery-delivered.jpg",
+    "width": 1280,
+    "height": 900
+  },
+  {
+    "format": "JPEG",
+    "file": "w13-recovery-queued.jpg",
+    "width": 1280,
+    "height": 900
+  },
+  {
+    "format": "JPEG",
+    "file": "w13-request-created.jpg",
+    "width": 1280,
+    "height": 900
+  },
+  {
+    "format": "JPEG",
+    "file": "w13-request-validation.jpg",
+    "width": 1280,
+    "height": 900
+  },
+  {
+    "format": "JPEG",
+    "file": "w13-schedule-confirmed.jpg",
+    "width": 1280,
+    "height": 900
+  },
+  {
+    "format": "JPEG",
+    "file": "w13-schedule-order-validation.jpg",
+    "width": 1280,
+    "height": 900
+  },
+  {
+    "format": "JPEG",
+    "file": "w13-student-action-completed.jpg",
+    "width": 1280,
+    "height": 900
+  },
+  {
+    "format": "JPEG",
+    "file": "w13-student-consultations-desktop.jpg",
+    "width": 1280,
+    "height": 900
+  }
+]

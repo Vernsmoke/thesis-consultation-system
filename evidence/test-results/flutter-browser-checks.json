@@ -1,0 +1,146 @@
+{
+  "base_commit": "297f26607e9e42b629b6d4911d4224bd12fbd5e5",
+  "build": "Uncommitted checkpoint07 Flutter workflow",
+  "environment": "Actual compiled Flutter in in-app browser, Laravel, MariaDB and controlled receiver; read-only stand-in explicitly used for loading/503/timeout cases",
+  "checks": [
+    {
+      "id": "WEB-01",
+      "expected": "Blank email/password rejected without login",
+      "actual": "Both field errors visible",
+      "outcome": "pass",
+      "time_utc": "2026-10-29T15:52:38.099Z"
+    },
+    {
+      "id": "WEB-02",
+      "expected": "Incorrect credentials rejected",
+      "actual": "Generic authentication error, password cleared",
+      "outcome": "pass",
+      "time_utc": "2026-10-29T15:52:38.100Z"
+    },
+    {
+      "id": "WEB-03",
+      "expected": "Cookie/CSRF login and own records",
+      "actual": "Student One signed in, 14 own records, no coordinator navigation",
+      "outcome": "pass",
+      "time_utc": "2026-10-29T15:52:56.043Z"
+    },
+    {
+      "id": "WEB-04",
+      "expected": "Required fields reject blank, then one request saved",
+      "actual": "Adviser/agenda validation visible; consultation #16 requested",
+      "outcome": "pass",
+      "time_utc": "2026-10-29T15:53:51.361Z"
+    },
+    {
+      "id": "WEB-05",
+      "expected": "Student cannot read another student consultation",
+      "actual": "Consultation #1 denied with permission message; no detail exposed",
+      "outcome": "pass",
+      "time_utc": "2026-10-29T15:54:18.619Z"
+    },
+    {
+      "id": "WEB-06",
+      "expected": "Own notification shows matching receipt and attempt history at 390px",
+      "actual": "Work #17 delivered; timeout 5019ms then accepted HTTP200; narrow layout inspected",
+      "outcome": "pass",
+      "time_utc": "2026-10-29T15:54:41.992Z"
+    },
+    {
+      "id": "WEB-07",
+      "expected": "Keyboard Tab/Enter opens ID; adviser rejects reversed date and confirms future schedule",
+      "actual": "Focus reached Open ID; #16 confirmed for 2026-10-30 09:00–09:30 Manila; premature outcome unavailable",
+      "outcome": "pass",
+      "time_utc": "2026-10-29T15:56:04.242Z"
+    },
+    {
+      "id": "WEB-08",
+      "expected": "Assigned adviser records elapsed outcome and assigns action/follow-up",
+      "actual": "Existing fictional elapsed consultation #7 completed; action #4 due Oct31 17:00; adviser follow-up persisted",
+      "outcome": "pass",
+      "time_utc": "2026-10-29T15:57:26.260Z"
+    },
+    {
+      "id": "WEB-09",
+      "expected": "Owning student can complete assigned action",
+      "actual": "Action #4 completed; completion button removed; no duplicate automatic submission",
+      "outcome": "pass",
+      "time_utc": "2026-10-29T15:59:17.867Z"
+    },
+    {
+      "id": "WEB-10",
+      "expected": "Coordinator paginates 22 work records",
+      "actual": "Page 2 of 2 shows remaining work #1/#2; Next disabled",
+      "outcome": "pass",
+      "time_utc": "2026-10-29T16:01:01.954Z"
+    },
+    {
+      "id": "WEB-11",
+      "expected": "Coordinator sees permanent failure, records recovery, then matching delivered result",
+      "actual": "Work19: HTTP422 cycle1 retained; actor6 recovery; pending cycle2 then worker receipt accepted; old work15 unchanged",
+      "outcome": "pass",
+      "time_utc": "2026-10-29T16:02:04.322Z"
+    },
+    {
+      "id": "WEB-12",
+      "expected": "Progress summary displays dated counts and pending status at tablet size",
+      "actual": "Work22 Manila Oct30 snapshot, five counts, no service attempt; 768px layout inspected",
+      "outcome": "pass",
+      "time_utc": "2026-10-29T16:02:31.217Z"
+    },
+    {
+      "id": "WEB-13",
+      "expected": "Missed and deadline details show correct source and limitations",
+      "actual": "Work7 human-review inference for consultation8; work8 links action3/consultation3 with accepted receipt",
+      "outcome": "pass",
+      "time_utc": "2026-10-29T16:04:24.441Z"
+    },
+    {
+      "id": "WEB-14",
+      "expected": "Panel sees only linked consultation and read-only controls",
+      "actual": "PanelOne reads #2; read-only label; no notifications/recovery or mutation buttons",
+      "outcome": "pass",
+      "time_utc": "2026-10-29T16:05:08.139Z"
+    },
+    {
+      "id": "WEB-15",
+      "expected": "Unassigned adviser has a clear empty state",
+      "actual": "AdviserTwo sees zero consultations, empty message, disabled paging",
+      "outcome": "pass",
+      "time_utc": "2026-10-29T16:05:40.919Z"
+    },
+    {
+      "id": "WEB-16",
+      "expected": "Stopped API shows safe network error and retry",
+      "actual": "Connection error visible, Refresh enabled, no empty-success message",
+      "outcome": "pass",
+      "time_utc": "2026-10-29T16:06:17.840Z"
+    },
+    {
+      "id": "WEB-17",
+      "expected": "Delayed controlled 503 shows loading/disabled controls then safe error",
+      "actual": "Three-second read-only stand-in; progress label, disabled buttons, then service-unavailable message",
+      "outcome": "pass",
+      "time_utc": "2026-10-29T16:06:57.859Z"
+    },
+    {
+      "id": "WEB-18",
+      "expected": "Twelve-second read stand-in exceeds ten-second client limit",
+      "actual": "Timeout message explains uncertainty and requires refresh before repeated writes",
+      "outcome": "pass",
+      "time_utc": "2026-10-29T16:07:40.837Z"
+    },
+    {
+      "id": "WEB-19",
+      "expected": "Restored actual API returns the authorized empty list",
+      "actual": "Normal empty list returned, error cleared, existing session retained",
+      "outcome": "pass",
+      "time_utc": "2026-10-29T16:10:30.942Z"
+    }
+  ],
+  "limitations": [
+    "Automated Flutter test runner stalled at loading; zero tests executed",
+    "Keyboard check covered Tab to Open ID and Enter, not a full screen-reader audit",
+    "No real users/consultations/email claimed",
+    "Initial quick role-switch fills were retried after observing the active role; no unauthorised writes occurred"
+  ]
+}

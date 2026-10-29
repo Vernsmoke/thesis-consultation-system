@@ -1,0 +1,27 @@
+{
+  "timestamp_utc": "2026-10-29T16:19:21.5987838Z",
+  "fault_router": "stopped; actual Laravel restored",
+  "services": [
+    {
+      "process_id": 24244,
+      "command": "\"C:\\xampp\\php\\php.exe\" -S 127.0.0.1:8090 -t public public/index.php",
+      "port": 8090
+    },
+    {
+      "process_id": 14164,
+      "command": "\"C:\\xampp\\php\\php.exe\" -S 127.0.0.1:8080 -t build/web",
+      "port": 8080
+    },
+    {
+      "process_id": 23220,
+      "command": "\"C:\\xampp\\php\\php.exe\" -S 127.0.0.1:8000 ../vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php",
+      "port": 8000
+    },
+    {
+      "process_id": 28128,
+      "command": "\"C:\\xampp\\mysql\\bin\\mysqld.exe\" --defaults-file=C:/xampp/mysql/bin/my.ini --bind-address=127.0.0.1",
+      "port": 3306
+    }
+  ],
+  "persistent_scheduler": "not started"
+}

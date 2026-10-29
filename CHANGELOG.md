@@ -1,5 +1,15 @@
 # Changelog
 
+## Uncommitted Flutter workflow/browser evidence — 2026-10-29–30
+
+- Verified pushed student checkpoint06 commit297f266 and clean starting tree. Inspected tools/services and restarted existing configuration after recorded servers were no longer running.
+- Replaced connection-only UI with cookie/CSRF login, role workflows, paginated lists, consultation forms/actions, notifications, coordinator review/recovery and Manila date conversion. Added shared validated dialogs, safe feedback and uncertain-write guard.
+- Flutter analysis clean and release build successful;63 backend tests/314 assertions,19 selected actual browser scenarios and7 persisted-effect checks pass. Five new Flutter tests authored but browser runner stalled at loading; zero executed, no pass claimed. Prior VM policy blocker not repaired.
+- Actual source in VS Code and desktop/tablet/narrow/failure/recovery interface captured. Real API restored after stopped-service and read-only503/timeout stand-ins. No continuous scheduler launched.
+- Retained browser consultation16, outcome/action/follow-up on elapsed fictional7, action4 completion and work19 recovered receipt. Current18 accepted/3 pending/1 needs_review; original exhausted15 unchanged. Activities/SA7/final review/student reflection remain pending.
+
+Delivery/recovery below was committed and pushed by the student as297f266. Earlier entries preserve checkpoint-time outcomes.
+
 ## Uncommitted bounded delivery/recovery — 2026-10-29
 
 - Verified clean student scan commit 0c8a274 locally/live remote before implementation.

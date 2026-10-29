@@ -1,5 +1,15 @@
 # Week 13 laboratory log
 
+## 2026-10-29–30 Asia/Manila — checkpoint07
+
+Verified clean pushed297f266. Flutter source/API contract and real services inspected; prior PHP/MariaDB services were stopped. Restarted existing MariaDB/private config without provisioning/reset. PHP services initially unreachable when launched in restricted process sandbox; only inspected project listeners replaced outside it. No database or security repair. Flutter uses existing http/web packages, conditional credentialed browser transport, CSRF header and safe bounded requests.
+
+Analysis initially found six style issues and obsolete foundation tests' client constructor; meaningful timezone/API/login tests replaced them. Final analysis clean, release web build37.4s. Browser Flutter test run stalled at loading >12min with zero executed and was stopped with only its temporary-profile descendants; no automated frontend pass. Backend regression63/314,6.57s. Actual browser checked19 scenarios across student/adviser/coordinator/panel, including required adverse states,1280 desktop/390 narrow/768 tablet and keyboard ID activation. Focus/state checks corrected Flutter automation fill timing; no unauthorized write. Initial premature tablet resize capture retained; settled tablet summary is final layout proof.
+
+Browser23:52 Oct29–00:10 Oct30: request16 and future confirmation; retained elapsed fixture7 completed, action4 dueOct31, follow-up4, student completion. Controlled real receiver422 for valid work19, source mode corrected before coordinator recorded recovery through Flutter, bounded worker accepted one receipt. Read-only DB/ledger verifier7 checks pass. New Manila-day scan created4 work rows; three remain pending. App now16 consultations/4 actions/4 follow-ups/16 audit events/22 work:18 accepted,3 pending,1 needs_review. Old work15 unchanged. No real consultations/email/stakeholder acceptance claimed.
+
+Stopped actual API only for network case; separate read-only router delayed3s then503 or12s to exercise ten-second UI timeout. Actual Laravel restored and normal read verified; no fault router left running. No persistent scheduler. Actual saved-source VS Code screenshot captured with zero editor problems. Evidence map FLUTTER-RESULTS.md. Activities/SA7/lab final report, maintainability/demo, student reflection/AI acknowledgment/defense and submission still pending. Pause for student checkpoint07 commit; assistant stages/commits/pushes nothing.
+
 ## 2026-10-29 Asia/Manila — checkpoint 06
 
 Verified student commit 0c8a274, fresh Git status and actual services before editing. Added local receiver 8090 using installed PHP/PDO SQLite; fresh private shared key generated once, no old configuration used. App migration adds durable delivery history. Worker uses MariaDB transactions around claims/results, one bounded HTTP call outside the transaction, same receiver identity on retry and finite review/recovery cycles. All four work kinds revalidate.

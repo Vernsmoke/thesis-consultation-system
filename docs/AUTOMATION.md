@@ -1,5 +1,7 @@
 # Week 13 automation — scan checkpoint
 
+Current checkpoint07: [Flutter flow](FLUTTER.md) and [browser results](../evidence/test-results/FLUTTER-RESULTS.md) now expose notifications/review/recovery. Current captured18 accepted/3 pending/1 needs_review includes a new Manila-day scan; older counts/statements below describe scan/delivery checkpoints at their recorded times. No persistent scheduler is running.
+
 The scan was implemented at checkpoint 05 (now student commit **0c8a274**). This document preserves that milestone's scan-specific results. Checkpoint 06 implements the [bounded delivery/recovery contract](DELIVERY.md), with [actual delivery evidence](../evidence/test-results/DELIVERY-RESULTS.md). Statements below about a future worker and 11 pending rows describe the historical scan checkpoint; the current snapshot is 17 receiver-accepted / 1 needs_review. Pending rows still never prove delivery.
 
 ## Trigger and ownership

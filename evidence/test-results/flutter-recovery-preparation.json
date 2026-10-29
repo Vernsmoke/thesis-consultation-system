@@ -1,0 +1,26 @@
+{
+    "timestamp_utc": "2026-10-29T16:00:18+00:00",
+    "phase": "prepare",
+    "consultation_id": 16,
+    "environment": "Actual local scanner, MariaDB and authenticated controlled receiver; no reset",
+    "scan": {
+        "run_id": "575af5a0-a31d-4c4f-941e-0cd6ba3750bb",
+        "created": 4,
+        "missed_detected": 0,
+        "delivery": "separate_worker",
+        "log_status": "recorded"
+    },
+    "work_id": 19,
+    "delivery": {
+        "work_id": 19,
+        "correlation_id": "97080714-2e5f-49a3-91cb-f29b5adc1087",
+        "status": "needs_review",
+        "cycle": 1,
+        "attempts": 1,
+        "total_attempts": 1,
+        "code": "http_422",
+        "receipt": null,
+        "log_status": "recorded"
+    },
+    "next": "Coordinator reviews in Flutter; fix the controlled receiver before authorizing recovery."
+}

@@ -1,5 +1,7 @@
 # Bounded delivery and coordinator recovery
 
+Checkpoint 07 update: the [Flutter workflow/review UI](FLUTTER.md) now exposes these endpoints. [Actual browser recovery](../evidence/test-results/FLUTTER-RESULTS.md) verified new work19 from422 to recorded cycle2 recovery and one accepted receipt. Current captured state is18 accepted/3 pending/1 needs_review; earlier result counts below describe checkpoint06. Full activities/SA7/student review and automated Flutter test execution remain unfinished.
+
 Checkpoint 06, 2026-10-29. This extends [the scan contract](AUTOMATION.md). Policy choices below are implementation decisions for a controlled classroom prototype. A delivered row means the separate loopback receiver accepted the minimal notification and returned a matching receipt. It does not prove email/SMS delivery, user reading, real attendance or stakeholder acceptance.
 
 ## Execution and boundaries

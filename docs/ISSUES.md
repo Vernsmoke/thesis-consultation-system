@@ -1,5 +1,7 @@
 # Open issues and limitations
 
+Checkpoint07 supersedes earlier Flutter-pending entries: bounded interface and selected real-browser states/layout/recovery implemented and verified; [results](../evidence/test-results/FLUTTER-RESULTS.md). Remaining: automated Flutter suite stalled at loading, prior VM policy blocker unresolved; browser419/session-expiry, full server422/viewport/accessibility coverage not claimed. Activities/SA7, maintainability/demo, final student reflection/AI acknowledgment/defense/submission pending. Continuous scheduler, true process-kill/concurrency and ledger backup/restore remain unverified. Source/receiver/domain limitations documented earlier still apply. Actual API restored after read-only fault drills; no security changes or app resets.
+
 Checkpoint 06 status supersedes earlier delivery-pending entries: worker/receiver/bounded retry/API recovery implemented; [results and retained failures](../evidence/test-results/DELIVERY-RESULTS.md). Current open limits: Flutter workflow/review/browser evidence; continuous scheduling and true competing-process/kill tests; real messaging/read acknowledgment; transport encryption; receiver ledger backup/restore; recovery-log failure not signaled in API response (durable DB recovery retained); terminal automatic missed correction policy; production privilege split; activities/SA7/student review. Prototype not production ready. SQLite cursor lock discovered in verifier was fixed by closing cursor before HTTP, without deleting data.
 
 | ID | Issue | Status / next action |
