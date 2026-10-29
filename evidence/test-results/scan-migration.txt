@@ -1,0 +1,5 @@
+
+   INFO  Running migrations.  
+
+  2026_10_29_000005_create_automation_items ............................................................ 115.58ms DONE
+

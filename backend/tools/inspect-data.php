@@ -39,11 +39,14 @@ $result = [
         'users' => User::count(), 'consultations' => Consultation::count(),
         'panel_links' => DB::table('consultation_panel')->count(), 'action_items' => ActionItem::count(),
         'follow_ups' => DB::table('follow_ups')->count(), 'audit_events' => DB::table('consultation_events')->count(),
+        'automation_items' => DB::table('automation_items')->count(),
+        'pending_automation' => DB::table('automation_items')->where('status', 'pending')->count(),
+        'delivered_automation' => DB::table('automation_items')->where('status', 'delivered')->count(),
     ],
     'roles' => User::select('role')->selectRaw('COUNT(*) AS count')->groupBy('role')->orderBy('role')->get(),
     'consultations' => Consultation::orderBy('reference')->get(['reference', 'status', 'starts_at', 'ends_at', 'schedule_version']),
     'cross_database_isolation' => $isolation,
-    'limitation' => 'Seeded fixtures and database constraints only; no user workflow, role authorization or automation execution demonstrated.',
+    'limitation' => 'Read-only counts and controlled record metadata. This snapshot alone does not prove API actions, notification delivery or recovery; consult the dated execution records.',
 ];
 echo json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES).PHP_EOL;
 exit($isolation['outcome'] === 'pass' ? 0 : 1);

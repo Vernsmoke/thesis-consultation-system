@@ -1,0 +1,3 @@
+
+  * * * * *  php artisan consultations:scan ............................................. Next Due: 5 seconds from now
+

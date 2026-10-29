@@ -39,3 +39,11 @@ Full Flutter login/workflow/browser states and automation evidence remain pendin
 - [Actual completion/follow-up code in VS Code](screenshots/source-code/w13-workflow-completion-vscode.jpg). Repeat-completion behavior is supported by test/live execution, not the screenshot alone.
 
 Two live starting meetings were explicitly initialized fictional past-confirmed fixtures. No real meeting, Flutter workflow, notification or automatic missed-session behavior is claimed. No execution failure occurred in this increment; prior checkpoint failures remain preserved.
+
+## Checkpoint 05 durable scan evidence
+
+- [Scan result map](test-results/SCAN-RESULTS.md), [first suite](test-results/scan-tests-initial.txt), [final source suite](test-results/scan-tests-final-source.txt) and intermediate regression records preserved.
+- [Actual scan/repeat/schedule execution](test-results/scan-live-initial.json), [schedule configuration](test-results/scan-schedule-list.txt), [migration](test-results/scan-migration.txt), [current app/pending counts](test-results/scan-app-snapshot.json), [build metadata](test-results/scan-build.json).
+- [Actual JSON log copy](logs/automation-scan.jsonl), with test/local environment labels; [saved scanner in VS Code](screenshots/source-code/w13-automation-scan-vscode.jpg).
+
+First scan: 11 pending records (4 reminder, 3 missed_session, 2 action_deadline, 2 progress_summary), one explicitly automated missed inference. Repeat/scheduled repeat: no duplicates. **Zero deliveries**; worker/retry/recovery and full browser automation views remain pending. Do not substitute this evidence for required service success/transient recovery/permanent failure cases.

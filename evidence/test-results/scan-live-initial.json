@@ -1,0 +1,294 @@
+{
+    "run": "b1239e74abbf",
+    "base_commit": "4a51934b36f9010f22989ac1cbdd797e895db725",
+    "build": "uncommitted scan foundation",
+    "environment": "Actual local Artisan commands and schedule:run; MariaDB app database; no HTTP service calls",
+    "preconditions": "Two initialized fictional confirmed meetings and one initialized overdue action; no computer-clock change. Existing records preserved.",
+    "fixtures": {
+        "reminder_consultation_id": 7,
+        "elapsed_consultation_id": 8,
+        "action_item_id": 3
+    },
+    "outcome": "pass",
+    "failure": null,
+    "initial_work_count": 0,
+    "scans": [
+        {
+            "phase": "first",
+            "timestamp_utc": "2026-10-29T12:28:37+00:00",
+            "exit_code": 0,
+            "actual": {
+                "run_id": "552b69f7-0bbb-4a65-8452-42938a005e0b",
+                "created": 11,
+                "missed_detected": 1,
+                "delivery": "not_implemented",
+                "log_status": "recorded"
+            }
+        },
+        {
+            "phase": "repeat",
+            "timestamp_utc": "2026-10-29T12:28:37+00:00",
+            "exit_code": 0,
+            "actual": {
+                "run_id": "a5f303e5-7e5a-4e61-815e-05091dc930d0",
+                "created": 0,
+                "missed_detected": 0,
+                "delivery": "not_implemented",
+                "log_status": "recorded"
+            }
+        }
+    ],
+    "scheduler": {
+        "exit": 0,
+        "output": "2026-10-29 12:28:37 Running [\"artisan\" consultations:scan] ........................................... 632.40ms DONE\r\n  \u21c2 \"C:\\xampp\\php\\php.exe\" \"artisan\" consultations:scan > \"NUL\" 2>&1",
+        "before_count": 11,
+        "after_count": 11
+    },
+    "work_by_kind": [
+        {
+            "kind": "reminder",
+            "count": 4
+        },
+        {
+            "kind": "missed_session",
+            "count": 3
+        },
+        {
+            "kind": "action_deadline",
+            "count": 2
+        },
+        {
+            "kind": "progress_summary",
+            "count": 2
+        }
+    ],
+    "missed_audit": [
+        {
+            "event": "elapsed_meeting_detected",
+            "actor_id": null,
+            "actor_type": "automation",
+            "correlation_id": "947f93aa-53f7-4692-9876-34a33b464642"
+        }
+    ],
+    "items": [
+        {
+            "id": 1,
+            "kind": "reminder",
+            "consultation_id": 2,
+            "action_item_id": null,
+            "recipient_id": 1,
+            "review_owner_id": 6,
+            "correlation_id": "75671476-7abb-4bfb-ad12-9f878bb25b2b",
+            "source_version": 1,
+            "status": "pending",
+            "attempts": 0,
+            "receipt": null,
+            "scheduled_for": "2026-10-30T11:00:00.000000Z",
+            "payload": {
+                "consultation_id": 2,
+                "schedule_version": 1
+            }
+        },
+        {
+            "id": 2,
+            "kind": "reminder",
+            "consultation_id": 2,
+            "action_item_id": null,
+            "recipient_id": 3,
+            "review_owner_id": 6,
+            "correlation_id": "a9499e1d-b0eb-4c98-beca-90f26a50e6c4",
+            "source_version": 1,
+            "status": "pending",
+            "attempts": 0,
+            "receipt": null,
+            "scheduled_for": "2026-10-30T11:00:00.000000Z",
+            "payload": {
+                "consultation_id": 2,
+                "schedule_version": 1
+            }
+        },
+        {
+            "id": 3,
+            "kind": "reminder",
+            "consultation_id": 7,
+            "action_item_id": null,
+            "recipient_id": 1,
+            "review_owner_id": 6,
+            "correlation_id": "a140f703-1b5e-4f21-8213-4b07c448b7e5",
+            "source_version": 1,
+            "status": "pending",
+            "attempts": 0,
+            "receipt": null,
+            "scheduled_for": "2026-10-29T13:28:37.000000Z",
+            "payload": {
+                "consultation_id": 7,
+                "schedule_version": 1
+            }
+        },
+        {
+            "id": 4,
+            "kind": "reminder",
+            "consultation_id": 7,
+            "action_item_id": null,
+            "recipient_id": 3,
+            "review_owner_id": 6,
+            "correlation_id": "5590bd74-5caa-4650-a803-0d678faccb12",
+            "source_version": 1,
+            "status": "pending",
+            "attempts": 0,
+            "receipt": null,
+            "scheduled_for": "2026-10-29T13:28:37.000000Z",
+            "payload": {
+                "consultation_id": 7,
+                "schedule_version": 1
+            }
+        },
+        {
+            "id": 5,
+            "kind": "missed_session",
+            "consultation_id": 8,
+            "action_item_id": null,
+            "recipient_id": 1,
+            "review_owner_id": 6,
+            "correlation_id": "229d76c5-05ee-4f8f-98eb-cfda9e8bfaa7",
+            "source_version": 1,
+            "status": "pending",
+            "attempts": 0,
+            "receipt": null,
+            "scheduled_for": "2026-10-29T11:58:37.000000Z",
+            "payload": {
+                "consultation_id": 8,
+                "requires_human_review": true,
+                "basis": "elapsed_without_recorded_outcome",
+                "transition_correlation_id": "947f93aa-53f7-4692-9876-34a33b464642"
+            }
+        },
+        {
+            "id": 6,
+            "kind": "missed_session",
+            "consultation_id": 8,
+            "action_item_id": null,
+            "recipient_id": 3,
+            "review_owner_id": 6,
+            "correlation_id": "d817d607-b3db-42d4-8b43-86c8b0410e5b",
+            "source_version": 1,
+            "status": "pending",
+            "attempts": 0,
+            "receipt": null,
+            "scheduled_for": "2026-10-29T11:58:37.000000Z",
+            "payload": {
+                "consultation_id": 8,
+                "requires_human_review": true,
+                "basis": "elapsed_without_recorded_outcome",
+                "transition_correlation_id": "947f93aa-53f7-4692-9876-34a33b464642"
+            }
+        },
+        {
+            "id": 7,
+            "kind": "missed_session",
+            "consultation_id": 8,
+            "action_item_id": null,
+            "recipient_id": 6,
+            "review_owner_id": 6,
+            "correlation_id": "2142436a-cf85-476f-9df7-f87748e0e6d9",
+            "source_version": 1,
+            "status": "pending",
+            "attempts": 0,
+            "receipt": null,
+            "scheduled_for": "2026-10-29T11:58:37.000000Z",
+            "payload": {
+                "consultation_id": 8,
+                "requires_human_review": true,
+                "basis": "elapsed_without_recorded_outcome",
+                "transition_correlation_id": "947f93aa-53f7-4692-9876-34a33b464642"
+            }
+        },
+        {
+            "id": 8,
+            "kind": "action_deadline",
+            "consultation_id": 3,
+            "action_item_id": 3,
+            "recipient_id": 1,
+            "review_owner_id": 6,
+            "correlation_id": "c5db8549-e15c-469b-9215-de86555b57de",
+            "source_version": 1,
+            "status": "pending",
+            "attempts": 0,
+            "receipt": null,
+            "scheduled_for": "2026-10-29T11:28:37.000000Z",
+            "payload": {
+                "action_item_id": 3,
+                "deadline_version": 1
+            }
+        },
+        {
+            "id": 9,
+            "kind": "action_deadline",
+            "consultation_id": 3,
+            "action_item_id": 3,
+            "recipient_id": 3,
+            "review_owner_id": 6,
+            "correlation_id": "618ce883-775c-4fe4-8838-7db88df148a0",
+            "source_version": 1,
+            "status": "pending",
+            "attempts": 0,
+            "receipt": null,
+            "scheduled_for": "2026-10-29T11:28:37.000000Z",
+            "payload": {
+                "action_item_id": 3,
+                "deadline_version": 1
+            }
+        },
+        {
+            "id": 10,
+            "kind": "progress_summary",
+            "consultation_id": null,
+            "action_item_id": null,
+            "recipient_id": 3,
+            "review_owner_id": 6,
+            "correlation_id": "0afc5b8b-2fd8-4107-974e-0a41286ad136",
+            "source_version": 0,
+            "status": "pending",
+            "attempts": 0,
+            "receipt": null,
+            "scheduled_for": "2026-10-28T16:00:00.000000Z",
+            "payload": {
+                "adviser_id": 3,
+                "local_date": "2026-10-29",
+                "counts": {
+                    "requested": 1,
+                    "confirmed": 3,
+                    "completed": 2,
+                    "missed": 2,
+                    "open_overdue_actions": 1
+                }
+            }
+        },
+        {
+            "id": 11,
+            "kind": "progress_summary",
+            "consultation_id": null,
+            "action_item_id": null,
+            "recipient_id": 6,
+            "review_owner_id": 6,
+            "correlation_id": "0b300b53-1328-4b89-9e1f-bcce68f0be5b",
+            "source_version": 0,
+            "status": "pending",
+            "attempts": 0,
+            "receipt": null,
+            "scheduled_for": "2026-10-28T16:00:00.000000Z",
+            "payload": {
+                "adviser_id": 3,
+                "local_date": "2026-10-29",
+                "counts": {
+                    "requested": 1,
+                    "confirmed": 3,
+                    "completed": 2,
+                    "missed": 2,
+                    "open_overdue_actions": 1
+                }
+            }
+        }
+    ],
+    "limitation": "Pending work is not notification delivery. No worker, retry/service failure or recovery demonstrated. Repeating this script retains additional fixtures."
+}

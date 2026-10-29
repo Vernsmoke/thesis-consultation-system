@@ -2,7 +2,7 @@
 
 Project 29, PFEBSIT 002. Individual classroom prototype using Flutter Web, Laravel and XAMPP MariaDB through Laravel's MySQL driver.
 
-Status: **meeting/action/follow-up API ready for checkpoint 04**. Student commit `d2fe529` is verified on GitHub. The bounded server workflow now includes requests/agendas, confirmed schedules, manual meeting outcomes, action assignment/completion and follow-up, with session/record permissions and transactional audit. **40 backend tests pass (197 assertions)**, and the new real HTTP exercise matched **36 expected responses** with seven new audit events on explicitly initialized fictional fixtures. Full Flutter workflow, all four automations, activities and SA7 remain unfinished. Widget tests remain blocked by the recorded Windows policy. See [checklist](SUBMISSION-CHECKLIST.md), [API contract](docs/API-CONTRACT.md), [workflow results](evidence/test-results/WORKFLOW-RESULTS.md), [lab log](docs/LAB-LOG.md) and [evidence index](evidence/README.md).
+Status: **durable four-kind scan ready for checkpoint 05**. Student workflow commit `4a51934` is verified on GitHub. The bounded server workflow and scan eligibility/deduplication are implemented. **50 backend tests pass (242 assertions)**; actual first/repeat/scheduled scans created 11 pending rows without duplicates and one explicitly automated missed inference. **No notifications delivered; delivery/retry/recovery and full Flutter workflow are pending.** Activities/SA7 and widget-test machine-policy blocker remain unfinished. See [checklist](SUBMISSION-CHECKLIST.md), [automation boundary](docs/AUTOMATION.md), [actual scan results](evidence/test-results/SCAN-RESULTS.md), [API contract](docs/API-CONTRACT.md) and [evidence index](evidence/README.md).
 
 The student reports teacher assignment/approval. The official registry was not independently inspected. Use only fictional data. The student personally reviews, verifies, commits, pushes and defends the work. AI-assisted code and documentation must be reviewed and acknowledged under institutional policy; preparation is not evidence of student understanding.
 
@@ -53,7 +53,7 @@ The **current workspace** has a fresh `thesis_consultation_week13` database, a s
 
 ## Student checkpoint and next milestone
 
-The student completed checkpoints 01–03. Use [checkpoint 04 commands and explanation](docs/CHECKPOINT-04.md) for this increment. No commit or push has been performed by the assistant. After the student commits, verify history/status before adding automation. The current Flutter screen still shows the foundation connection check; it does not yet expose authenticated workflow actions. The shared parent `PROJECT-PROGRESS.md` holds the handover for another chat.
+The student completed checkpoints 01–04. Use [checkpoint 05 commands and explanation](docs/CHECKPOINT-05.md) for this scan increment. No commit or push has been performed by the assistant. After the student commits, verify history/status before adding bounded notification delivery/retry/recovery. The current Flutter screen still shows the foundation connection check; it does not yet expose authenticated workflow or automation actions. The shared parent `PROJECT-PROGRESS.md` holds the handover for another chat.
 
 ## Reference documentation
 

@@ -1,5 +1,14 @@
 # Changelog
 
+## Uncommitted automation scan foundation — 2026-10-29
+
+- Verified student workflow commit 4a51934 locally/on remote before edits.
+- Added durable unique work records, minute-scheduled scans for reminders/elapsed meetings/overdue actions/Manila daily summaries, coordinator review ownership and bounded-capacity failures.
+- Added explicitly automated missed audit with null human actor and human-review basis; state/work/audit share transaction. Invalid sources route to needs_review without wrong-recipient work.
+- Added safe JSON logs/correlation and honest distinction between pre-commit storage failure and post-commit logging failure. Reserved delivery fields are not an implemented worker.
+- Final suite 50 tests/242 assertions passes; live scan created 11 pending rows, repeat/scheduled invocation created zero duplicates. All attempts zero/no receipts, zero delivered notifications.
+- Saved actual scanner source in VS Code and updated evidence/handover. Delivery/retry/recovery, full Flutter UI and assessments pending.
+
 ## Uncommitted remaining workflow API — 2026-10-29
 
 - Verified student API commit d2fe529 locally/on remote and clean starting tree.

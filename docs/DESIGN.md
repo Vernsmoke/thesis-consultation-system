@@ -8,6 +8,8 @@ Checkpoint 03 update supersedes the permission/request/schedule proposal: [API c
 
 Checkpoint 04 update: manual meeting outcomes, action assignment/completion and participant follow-up now implement the bounded server workflow; see [workflow evidence](../evidence/test-results/WORKFLOW-RESULTS.md). Follow-up author/assignee come from the server, notes are appended, and repeat action completion creates no extra audit. No Flutter workflow or automation behavior is implied by these API results; all four required automations remain pending.
 
+Checkpoint 05 update: [four-kind durable scans](AUTOMATION.md) now implement eligibility, unique work identities, bounded candidate checks and explicit automated missed inference/audit. [Actual scan evidence](../evidence/test-results/SCAN-RESULTS.md) proves pending records and duplicates avoided, not notification delivery. The first coordinator by ID owns reviews; daily summaries are first-scan snapshots. Delivery/retry/receipt/stale-claim recovery and Flutter views remain pending. The actual scan cap stops visibly above 100 eligible candidates/category instead of implementing automatic pagination; this bounds the classroom exercise and remains a scale limitation.
+
 ## Scope and authority
 
 The student reports on 2026-10-29 that the teacher assigned and approved Project 29, Thesis Consultation Reminder System, in response to the approval/registration status question. This is the student's confirmation, not an independent inspection of the official class registry. The student retains responsibility for checking the instructor's written approval/registry; this repository must never modify it. Deadline: October 30, 2026, Asia/Manila; submission time unspecified.
