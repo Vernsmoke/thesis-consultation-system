@@ -1,0 +1,24 @@
+{
+  "date_asia_manila": "2026-10-30",
+  "renderer": "Canonical render_docx.py; installed LibreOffice explicitly authorized by user; bundled Python and Poppler",
+  "report_pages": 24,
+  "reflection_pages": 2,
+  "all_pages_visually_inspected": true,
+  "activity_interpretation_pages": [
+    7,
+    10
+  ],
+  "each_interpretation_one_page": true,
+  "embedded_actual_screenshots": 11,
+  "conceptual_diagrams": 1,
+  "all_embedded_images_match_original_file_hashes": true,
+  "screenshots_are_historical_execution_evidence": true,
+  "new_log_warning_browser_execution": "unverified",
+  "reflection_status": "AI-assisted private draft; student revision, contribution verification and disclosure review pending",
+  "docx_sha256": {
+    "report": "c80cef679cc30f164a34416aef4d201dbcb5d610389956dee3da357ea2dc579e",
+    "reflection": "9f091a48d4105185a2373acaad6dc8c62fcce176c625f382b142b9df1d8b3bfc"
+  },
+  "git_public_content": "Technical Markdown report, original screenshots and sanitized evidence; DOCX and personal answers outside repository",
+  "personalization_layout_check": "Name and course/section filled; both changed first pages inspected; all other24 pages pixel-identical to previously inspected renders; page counts24 and2 unchanged"
+}

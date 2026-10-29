@@ -146,3 +146,8 @@ Expected codes: 200/201 success; 401 unauthenticated; 403 forbidden; 404 missing
 Every run records build/commit if available (otherwise explicit uncommitted state and source hash), environment, Asia/Manila/UTC time, preconditions, fictional data, request, expected/actual outcome, duration, evidence path and pass/fail. Preserve original failures and retests. Capture real VS Code saved source with filename and line numbers and actual browser states after those controls exist. Source screenshots alone cannot prove execution success.
 
 Activity 1 will compare three contrasting workflows: immediate consultation confirmation notification, time-based missed/deadline scan, and daily progress summary; compare at least two patterns for each, include adverse behavior and all activity constraints. Activity 2 will predict and execute controlled delivery failure, measure attempts/duplicates/retained records, justify one improvement, and preserve original failure plus regression. Both require a one-page interpretation separating facts, conclusions and recommendations. Neither is complete merely because it is planned here.
+
+
+## Checkpoint08 update — 2026-10-30
+
+The final technical explanation, five topic decisions and measured scope are in WEEK-13-REPORT.md and DECISIONS.md. Activity2 adds an explicit recovery logging-outage response; no new infrastructure or dependency was introduced. Word reflection remains private outside this repository.

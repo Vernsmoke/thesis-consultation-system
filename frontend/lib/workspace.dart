@@ -167,6 +167,7 @@ class _WorkspaceState extends State<Workspace> {
     String path, {
     bool dates = false,
   }) async {
+    var savedMessage = 'Saved. Current record refreshed.';
     final result = await editRecord(context, title, fields, (values) async {
       if (dates) {
         for (final key in ['starts_at', 'ends_at', 'due_at']) {
@@ -183,7 +184,12 @@ class _WorkspaceState extends State<Workspace> {
       if (values.containsKey('status')) {
         values['status'] = values['status'] == 1 ? 'completed' : 'missed';
       }
-      await api.call(method, path, values);
+      final response = await api.call(method, path, values);
+      if (response['log_status'] == 'unavailable') {
+        savedMessage =
+            'Recovery was queued, but its operational log is unavailable. '
+            'The database audit is retained. Ask the maintainer to check logging; do not submit recovery again.';
+      }
     });
     if (!mounted) return;
     if (result is ApiFailure) {
@@ -192,10 +198,7 @@ class _WorkspaceState extends State<Workspace> {
     }
     if (result == true) {
       if (detail != null) {
-        await open(
-          detail!['data']['id'],
-          message: 'Saved. Current record refreshed.',
-        );
+        await open(detail!['data']['id'], message: savedMessage);
       } else {
         page = 1;
         await load(

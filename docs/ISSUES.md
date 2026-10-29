@@ -29,3 +29,8 @@ Checkpoint 06 status supersedes earlier delivery-pending entries: worker/receive
 | W13-21 | Automatic missed inference/correction | Elapsed without recorded outcome is not attendance proof. Human review required; correction policy/endpoint unresolved before broader use |
 | W13-22 | Scan scale and ownership | First coordinator by ID; 100-candidate/category cap fails visibly above capacity. No large-scale pagination, benchmark or continuous OS scheduler verified |
 | W13-23 | Automation migration rollback | Refuses rollback if automated audit history exists; do not delete/relabel history to bypass it. Operator review required |
+
+
+## Checkpoint08 update — 2026-10-30
+
+Current summary supersedes historical pending statements: checkpoints01–07 verified,08 ready; workflow/scans/delivery/selected UI cases implemented. DOCX format reported by student, exact destination/time unknown. Personal reflection stays outside GitHub. Logging-outage observability fixed and API tested; client branch unverified. Word visual verification pending. Automated Flutter execution, human review/reflection, final Git and submission remain pending.

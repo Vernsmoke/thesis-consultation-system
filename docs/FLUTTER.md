@@ -85,3 +85,8 @@ Actual captures cover desktop1280x900, narrow390x844 and tablet768x1024. Scrolli
 Browser automation initially failed to change some Flutter fields using AX setValue/rapid unfocused fills. It was corrected by focusing fields and using input events with state checks, including checking the actual signed-in role. No unauthorized write resulted. An initial tablet screenshot was captured before the layout settled and is retained separately; the final tablet summary capture is the layout evidence.
 
 Not yet verified: real browser419/session expiry, every server422 mapping and every form at all viewport sizes, actual competing worker/process kill, continuous scheduler endurance or real messaging/read acknowledgment. Activities/SA7/lab report, maintainability evaluation, student reflection/AI acknowledgment, understanding/defense and actual submission remain pending.
+
+
+## Checkpoint08 update — 2026-10-30
+
+The recovery form now displays a maintainer warning if the API returns log_status unavailable. Latest analysis/build pass; API fault regression64 tests/325 assertions. The new warning branch was not exercised in a real browser; browser connector reload was unavailable during final checking. Earlier19 browser checks remain historical. Automated Flutter tests still unfinished.

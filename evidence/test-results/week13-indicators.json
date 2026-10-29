@@ -1,0 +1,135 @@
+{
+    "derived_at_utc": "2026-10-29T21:30:26+00:00",
+    "method": "Read-only derivation from named retained JSON evidence; not a new load test or live queue snapshot.",
+    "delivery_source": "evidence/test-results/delivery-live-verified.json",
+    "cohort": "Seven deliberately faulted delivery fixtures, work12-18; one manually initialized interruption boundary",
+    "cases": 7,
+    "accepted_cases": 6,
+    "accepted_case_percent": 85.71,
+    "journal_entries": 14,
+    "interrupted_entries": 1,
+    "recorded_worker_http_attempts": 13,
+    "http_error_responses": 6,
+    "connection_timeouts": 1,
+    "failed_http_attempt_percent": 53.85,
+    "extra_journal_entries_after_first": 7,
+    "elapsed_exercise_seconds": 134,
+    "observed_acceptances_per_minute": 2.687,
+    "recorded_http_duration_ms": {
+        "samples": 13,
+        "mean": 397.31,
+        "median": 6,
+        "maximum": 5019
+    },
+    "receiver_receipts_per_case": {
+        "success": 1,
+        "transient_once": 1,
+        "permanent": 1,
+        "unavailable": 0,
+        "ack_loss_once": 1,
+        "timeout_once": 1,
+        "interrupted": 1
+    },
+    "browser_recorded_cases": 19,
+    "historical_queue_snapshot_utc": "2026-10-29T16:09:35+00:00",
+    "historical_counts": {
+        "users": 6,
+        "consultations": 16,
+        "panel_links": 2,
+        "action_items": 4,
+        "follow_ups": 4,
+        "audit_events": 16,
+        "automation_items": 22,
+        "pending_automation": 3,
+        "delivered_automation": 18
+    },
+    "source_indicators": [
+        {
+            "path": "backend/app/Services/AutomationDelivery.php",
+            "physical_lines": 134,
+            "sha256": "27f6a3be62fbdd30b463fdf3aae189803d4ba307795d965951bd71a18b8af92d"
+        },
+        {
+            "path": "backend/app/Services/AutomationEligibility.php",
+            "physical_lines": 105,
+            "sha256": "e262b28bb10ba4a2bd5efcc4c0634aef046aefbcd55de55feb40c12d6e31913b"
+        },
+        {
+            "path": "backend/app/Services/AutomationScanner.php",
+            "physical_lines": 165,
+            "sha256": "0a3b25fd54e6cd90e1330825b785873431e7e58415e7fb920a29c89ff9e3a16e"
+        },
+        {
+            "path": "backend/app/Http/Controllers/AuthController.php",
+            "physical_lines": 39,
+            "sha256": "ea5b39398b44949e36a61f30a9ba7dbdbbdfc7d244dd52236d6a43990bdf02a1"
+        },
+        {
+            "path": "backend/app/Http/Controllers/AutomationController.php",
+            "physical_lines": 86,
+            "sha256": "27aeb9818526181b00903e992ad76addb6f82450ca6a794c2fd8830991c2d776"
+        },
+        {
+            "path": "backend/app/Http/Controllers/ConsultationController.php",
+            "physical_lines": 96,
+            "sha256": "a67e59309516f7a3af96793e17062549f42abcc29ba958e8531c644eb655f298"
+        },
+        {
+            "path": "backend/app/Http/Controllers/Controller.php",
+            "physical_lines": 8,
+            "sha256": "25d1c1ef8e6cc8a376553faacfba2b07d9dfaee9bdbb84f14f77517580e9deb1"
+        },
+        {
+            "path": "backend/app/Http/Controllers/WorkflowController.php",
+            "physical_lines": 104,
+            "sha256": "2ee2c4639a9c2257f2bef153a7ef48d4506b71c75aa4530cb13ccac5ec2d871d"
+        },
+        {
+            "path": "frontend/lib/api.dart",
+            "physical_lines": 98,
+            "sha256": "db68a7ec2bfe1d0935073b3a2ab5586f64ad9e3e041cdee18053b542fb7ea3f6"
+        },
+        {
+            "path": "frontend/lib/browser_transport.dart",
+            "physical_lines": 2,
+            "sha256": "21d61225b9f83d28485656e89d4e05f6f2e04e48b3b59d17aae8e3e4c5cab653"
+        },
+        {
+            "path": "frontend/lib/browser_transport_stub.dart",
+            "physical_lines": 4,
+            "sha256": "6de240837753943483d8f5c943e12eb55ba1d18f8030817eb1d4dd4a4fa9118d"
+        },
+        {
+            "path": "frontend/lib/browser_transport_web.dart",
+            "physical_lines": 16,
+            "sha256": "513ef7f1f1dcfbf5a2d574e6c5f0f20fa5f55c78cd59a5623f83d9355412a297"
+        },
+        {
+            "path": "frontend/lib/details.dart",
+            "physical_lines": 356,
+            "sha256": "21a5a82458eda259ce6d122c79c35a5c17cae18478ad81b85e20683095f6dc8f"
+        },
+        {
+            "path": "frontend/lib/main.dart",
+            "physical_lines": 26,
+            "sha256": "06b1f592a28a811d5b6e7a30c1aa52d1ee6fd8f2f6d6dc6460714aed073dd2c4"
+        },
+        {
+            "path": "frontend/lib/ui.dart",
+            "physical_lines": 261,
+            "sha256": "199680a4917d0d79785ea250c9a71756863a69d8ef66d37312e130e1ba6f9636"
+        },
+        {
+            "path": "frontend/lib/workspace.dart",
+            "physical_lines": 549,
+            "sha256": "8f3bb3d4c36f322215b85ebb631195007da80475f00164df9faafa56c728b4c5"
+        }
+    ],
+    "limits": [
+        "Fault-heavy cohort is not normal-use reliability or an SLA estimate.",
+        "Exercise rate includes backoff, a manual recovery and operator gaps; it is not sustainable throughput.",
+        "No CPU/memory/load/concurrent-worker measurements were taken.",
+        "Physical lines are navigation/change-impact indicators, not proof of maintainability.",
+        "Counts are historical snapshots; no new scan, worker or app record change performed."
+    ]
+}

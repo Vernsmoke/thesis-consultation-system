@@ -12,6 +12,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Http\Client\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use Tests\TestCase;
 
@@ -33,6 +34,29 @@ class AutomationDeliveryTest extends TestCase
     private function reminder(): AutomationItem
     {
         return AutomationItem::where('kind', 'reminder')->orderBy('id')->firstOrFail();
+    }
+
+    public function test_recovery_reports_log_outage_without_losing_the_committed_audit(): void
+    {
+        $work = $this->reminder();
+        $work->update(['status' => 'needs_review', 'failure_code' => 'http_422']);
+        $originalCorrelation = $work->correlation_id;
+        $this->signIn('coordinator.one');
+        Log::shouldReceive('channel')->once()->with('automation')
+            ->andThrow(new \RuntimeException('Controlled test-only logging outage.'));
+
+        $response = $this->postJson('/api/automation/'.$work->id.'/recover', [
+            'reason' => 'Controlled receiver corrected; investigate unavailable operational log.',
+        ])->assertOk()->assertJsonPath('data.status', 'pending')->assertJsonPath('data.cycle', 2);
+        $this->assertSame($originalCorrelation, $work->fresh()->correlation_id);
+        $this->assertSame(0, $work->fresh()->attempts);
+        $this->assertDatabaseHas('automation_recoveries', [
+            'automation_item_id' => $work->id, 'cycle' => 2,
+            'actor_id' => User::where('role', 'coordinator')->firstOrFail()->id,
+        ]);
+        $this->assertDatabaseCount('automation_recoveries', 1);
+        $this->assertDatabaseCount('automation_attempts', 0);
+        $response->assertJsonPath('log_status', 'unavailable');
     }
 
     private function success(Request $request)
@@ -186,7 +210,7 @@ class AutomationDeliveryTest extends TestCase
         $this->postJson('/api/automation/'.$work->id.'/recover', ['reason' => 'Corrected fictional test service configuration.'])->assertForbidden();
         $this->signIn('coordinator.one');
         $this->postJson('/api/automation/'.$work->id.'/recover', ['reason' => 'x'])->assertUnprocessable();
-        $this->postJson('/api/automation/'.$work->id.'/recover', ['reason' => 'Corrected fictional test service configuration.'])->assertOk()->assertJsonPath('data.cycle', 2);
+        $this->postJson('/api/automation/'.$work->id.'/recover', ['reason' => 'Corrected fictional test service configuration.'])->assertOk()->assertJsonPath('data.cycle', 2)->assertJsonPath('log_status', 'recorded');
         $this->assertDatabaseCount('automation_attempts', 1);
         $this->assertDatabaseCount('automation_recoveries', 1);
         $fixed = true;

@@ -1,5 +1,14 @@
 # Changelog
 
+## Checkpoint 08 ready for student commit — 2026-10-30
+
+- Verified checkpoint07 `1bf5323` locally and on the live remote before changes.
+- Added SA7/lab report, both activities and interpretation text, five topic decisions, conceptual diagram, derived indicators, demo/fallback and final requirements review. Word documents stay outside GitHub; personal reflection has AI-assisted draft answers for student review. Word report24 pages/reflection2 pages visually verified.
+- Preserved a predicted recovery-log outage failure, exposed separate `log_status` after durable recovery, and added a Flutter maintainer warning. API retest 1 pass/10 assertions; full regression 64 pass/325 assertions; analysis clean and web build36.1s. Real browser execution of the new warning remains unverified.
+- Automated Flutter tests remain unfinished. Student reflection, understanding/disclosure review, final Git steps and actual DOCX submission remain pending.
+
+Flutter entry below was committed/pushed by the student as `1bf5323`; its historical counts remain unchanged.
+
 ## Uncommitted Flutter workflow/browser evidence — 2026-10-29–30
 
 - Verified pushed student checkpoint06 commit297f266 and clean starting tree. Inspected tools/services and restarted existing configuration after recorded servers were no longer running.

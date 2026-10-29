@@ -1,0 +1,39 @@
+{
+  "recorded_at": "2026-10-29T22:06:57.856425+00:00",
+  "base_commit": "1bf5323b5e13d25b73c57e911310e7799a73bbc7",
+  "git_staged_files": [],
+  "broken_local_markdown_links": [],
+  "secret_candidate_scan": {
+    "private_value_count": 8,
+    "candidate_text_files": 137,
+    "matching_paths": [],
+    "limit": "Literal private-value scan; not a vulnerability or comprehensive image-secret audit"
+  },
+  "sha256": {
+    "backend/app/Http/Controllers/AutomationController.php": "27aeb9818526181b00903e992ad76addb6f82450ca6a794c2fd8830991c2d776",
+    "backend/tests/Feature/AutomationDeliveryTest.php": "3f29d0d2c65a29c56ebdfe69d7314332cac08284dc5ee21c244c260535723c1e",
+    "backend/tools/summarize-evidence.php": "ac6595d7e8f69053bae3777267fc88b383e230d03b01e41eaaa7655bb676b377",
+    "frontend/lib/workspace.dart": "8f3bb3d4c36f322215b85ebb631195007da80475f00164df9faafa56c728b4c5",
+    "frontend/build/web/main.dart.js": "27a2b64aec6b1fee43f3b3f7376ebf44f2e2cc49348150debefb404b5fc42d8b",
+    "docs/WEEK-13-REPORT.md": "5f8d4e978658456d133aee5e96397eaee3c13820c8f125421c9628853cfe3831",
+    "docs/architecture.png": "166760c2537393d9124a0f062f4bdbebb69bdbb61814245bd80c109c6c591f1e"
+  },
+  "local_docx": {
+    "report": {
+      "exists": true,
+      "paragraphs": 78,
+      "tables": 8,
+      "visual_verification": "complete: all pages visually inspected; student review remains pending",
+      "pages": 24
+    },
+    "reflection": {
+      "exists": true,
+      "paragraphs": 31,
+      "tables": 0,
+      "visual_verification": "complete: all pages visually inspected; student review remains pending",
+      "pages": 2
+    }
+  },
+  "new_client_browser_check": "unverified: in-app browser connector reported browser.user unavailable; previous browser evidence retains its original build",
+  "reflection_in_weekly_repo": false
+}

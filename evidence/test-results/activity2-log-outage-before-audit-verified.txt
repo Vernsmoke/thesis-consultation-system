@@ -1,0 +1,22 @@
+
+   FAIL  Tests\Feature\AutomationDeliveryTest
+  ⨯ recovery reports log outage without losing the committed audit                                               1.10s  
+  ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────  
+   FAILED  Tests\Feature\AutomationDeliveryTest > recovery reports log outage without losing the committed audit        
+  Failed asserting that null is identical to 'unavailable'.
+
+  at tests\Feature\AutomationDeliveryTest.php:59
+     55▕             'actor_id' => User::where('role', 'coordinator')->firstOrFail()->id,
+     56▕         ]);
+     57▕         $this->assertDatabaseCount('automation_recoveries', 1);
+     58▕         $this->assertDatabaseCount('automation_attempts', 0);
+  ➜  59▕         $response->assertJsonPath('log_status', 'unavailable');
+     60▕     }
+     61▕ 
+     62▕     private function success(Request $request)
+     63▕     {
+
+
+  Tests:    1 failed (10 assertions)
+  Duration: 1.28s
+

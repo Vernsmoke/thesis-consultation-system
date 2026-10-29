@@ -114,3 +114,8 @@ These run only against the guarded isolated MariaDB test schema; feature-test CS
 - Installed Sanctum/session middleware and Laravel development router were inspected for actual behavior.
 
 Local HTTP/controlled data only; no real email or production readiness claim. Full Flutter workflow/UI evidence, automation retry/recovery, required activities and SA7 remain unfinished.
+
+
+## Checkpoint08 update — 2026-10-30
+
+Coordinator recovery success now includes `log_status: recorded|unavailable`. A logging outage after committed recovery still returns200/pending and retains its audit; it does not justify repeating recovery. See ACTIVITY-2-RESULTS.md for the controlled fault and regression.

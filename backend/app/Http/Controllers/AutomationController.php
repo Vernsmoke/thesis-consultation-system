@@ -72,13 +72,15 @@ class AutomationController extends Controller
 
             return $work;
         });
+        $logStatus = 'recorded';
         try {
             Log::channel('automation')->info('recovery_authorized', ['work_id' => $work->id, 'correlation_id' => $work->correlation_id,
                 'cycle' => $work->cycle, 'actor_id' => $request->user()->id, 'environment' => app()->environment()]);
         } catch (Throwable) {
             // Recovery remains durable even when telemetry is unavailable.
+            $logStatus = 'unavailable';
         }
 
-        return response()->json(['data' => $work, 'message' => 'Recovery queued; prior history retained.']);
+        return response()->json(['data' => $work, 'message' => 'Recovery queued; prior history retained.', 'log_status' => $logStatus]);
     }
 }

@@ -1,0 +1,7 @@
+
+   PASS  Tests\Feature\AutomationDeliveryTest
+  ✓ recovery reports log outage without losing the committed audit                                               1.07s  
+
+  Tests:    1 passed (10 assertions)
+  Duration: 1.26s
+

@@ -2,7 +2,9 @@
 
 Project 29, PFEBSIT 002. Individual classroom prototype using Flutter Web, Laravel and XAMPP MariaDB through Laravel's MySQL driver.
 
-Status: **Flutter workflow and real browser evidence ready for checkpoint 07**, based on student commit `297f266`. Login, role navigation, bounded consultation workflow, notifications and coordinator recovery now use the actual API. Flutter analysis/build passed; **63 backend tests /314 assertions**, **19 selected real-browser cases** and **7 persisted-effect checks** pass. **Automated Flutter tests remain unfinished**: the browser runner stalled with zero executed; prior VM policy blocker unresolved. Current snapshot: **18 receiver-accepted /3 pending /1 needs_review**. Acceptance is not email/read acknowledgment. Activities/SA7, final evaluation/student review and actual submission remain pending. See [Flutter setup/explanation](docs/FLUTTER.md), [actual results/limits](evidence/test-results/FLUTTER-RESULTS.md), [checklist](SUBMISSION-CHECKLIST.md), [delivery runbook](docs/DELIVERY.md) and [evidence index](evidence/README.md).
+Status: **Checkpoint 08 ready for student review and commit**, based on verified student commit `1bf5323`. The consultation workflow, four automations and selected browser paths work to the recorded scope. Latest regression: **64 backend tests /325 assertions**, Flutter analysis clean and web build successful. **Automated Flutter tests remain unfinished**; prior 19 browser cases and 7 persisted-effect checks are separate evidence. The new recovery-log warning has API fault-test and compilation evidence, but its real browser outage branch is unverified.
+
+Read the [main SA7/laboratory report](docs/WEEK-13-REPORT.md), [Activity 2 improvement](docs/ACTIVITY-2-RESULTS.md), [decisions](docs/DECISIONS.md), [demo and maintenance](docs/DEMO-AND-MAINTENANCE.md), [final review](docs/FINAL-REVIEW.md) and [requirements checklist](SUBMISSION-CHECKLIST.md). The requested Word report and AI-assisted personal reflection draft are local files outside this repository. Personal reflection answers do not belong on GitHub. Word visual verification is complete; student reflection revision/review/submission remain pending; preparation is not submission.
 
 The student reports teacher assignment/approval. The official registry was not independently inspected. Use only fictional data. The student personally reviews, verifies, commits, pushes and defends the work. AI-assisted code and documentation must be reviewed and acknowledged under institutional policy; preparation is not evidence of student understanding.
 
@@ -53,7 +55,7 @@ The **current workspace** has a fresh `thesis_consultation_week13` database, a s
 
 ## Student checkpoint and next milestone
 
-The student completed checkpoints 01–06. Use [checkpoint 07 commands and explanation](docs/CHECKPOINT-07.md) for the Flutter increment. The assistant has staged/committed/pushed nothing. After the student commits, verify history/status before the remaining activities/SA7/report/final-review milestone. Follow [delivery setup](docs/DELIVERY.md#setup-and-operations), preserve its private SQLite ledger and do not reinitialize secrets. No continuous scheduler is running. Browser fault drills are finished and the real Laravel API is restored. The shared parent `PROJECT-PROGRESS.md` holds the handover.
+The student completed checkpoints 01–07; local/live remote checkpoint07 `1bf5323` was verified before these edits. Use [checkpoint 08 commands and explanation](docs/CHECKPOINT-08.md). Nothing has been staged, committed or pushed by the assistant. Preserve private configuration and the receiver ledger; no continuous scheduler is running. The shared parent `PROJECT-PROGRESS.md` holds the current handover.
 
 ## Reference documentation
 

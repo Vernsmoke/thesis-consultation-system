@@ -1,0 +1,22 @@
+
+   FAIL  Tests\Feature\AutomationDeliveryTest
+  ⨯ recovery reports log outage without losing the committed audit                                               1.31s  
+  ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────  
+   FAILED  Tests\Feature\AutomationDeliveryTest > recovery reports log outage without losing the committed audit        
+  Failed asserting that null is identical to 'unavailable'.
+
+  at tests\Feature\AutomationDeliveryTest.php:50
+     46▕             ->andThrow(new \RuntimeException('Controlled test-only logging outage.'));
+     47▕ 
+     48▕         $this->postJson('/api/automation/'.$work->id.'/recover', [
+     49▕             'reason' => 'Controlled receiver corrected; investigate unavailable operational log.',
+  ➜  50▕         ])->assertOk()->assertJsonPath('log_status', 'unavailable')
+     51▕             ->assertJsonPath('data.status', 'pending')->assertJsonPath('data.cycle', 2);
+     52▕         $this->assertSame($originalCorrelation, $work->fresh()->correlation_id);
+     53▕         $this->assertSame(0, $work->fresh()->attempts);
+     54▕         $this->assertDatabaseHas('automation_recoveries', [
+
+
+  Tests:    1 failed (3 assertions)
+  Duration: 1.58s
+
