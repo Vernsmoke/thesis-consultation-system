@@ -1,5 +1,13 @@
 # Week 13 laboratory log
 
+## 2026-10-29 Asia/Manila — checkpoint 06
+
+Verified student commit 0c8a274, fresh Git status and actual services before editing. Added local receiver 8090 using installed PHP/PDO SQLite; fresh private shared key generated once, no old configuration used. App migration adds durable delivery history. Worker uses MariaDB transactions around claims/results, one bounded HTTP call outside the transaction, same receiver identity on retry and finite review/recovery cycles. All four work kinds revalidate.
+
+Actual exercise 21:08–21:11: fictional work 12–18, real clock/HTTP service, seven explicit future meeting fixtures retained. Temporary 503, lost acknowledgment, five-second timeout and simulated interruption boundary recovered. Permanent rejection was reviewed/recovered using actual coordinator session/CSRF API; student recovery denied. Unavailable case remains needs_review after three calls; no fourth. 17 accepted receipts, one review row, 25 attempt entries and one coordinator recovery. This is test activity by AI, not actual stakeholder participation.
+
+Preserved harness failures: replacement HTTP fakes, missing import, restricted PHP is_readable/bootstrap, and live verifier SQLite read cursor blocking receiver writes. Corrected setup/import/cursor, used authorized test runner without security changes. Final 63 tests/314 assertions in 6.40s, Pint passes. Source screenshot in actual VS Code, indexed in DELIVERY-RESULTS.md. Scanner enqueue type widened to the CarbonInterface it already receives, resolving editor warning without domain behavior change. No frontend changes/redundant widget retry. No continuous scheduler launched; full browser workflow/assessments remain pending. Student commits/pushes checkpoint 06 before next milestone.
+
 ## 2026-10-29 Asia/Manila — fresh preparation
 
 - Scope: Project 29, individual Thesis Consultation Reminder System. Student reports instructor assignment/approval. Deadline October 30, 2026; time unspecified.

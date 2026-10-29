@@ -2,6 +2,8 @@
 
 Only evidence generated from the fresh Project 29 build belongs here. Never copy archived evidence or private settings.
 
+Current checkpoint 06: [delivery result map](test-results/DELIVERY-RESULTS.md), [63-test final source output](test-results/delivery-tests-final-source.txt), [live verified snapshot/probes](test-results/delivery-live-verified.json), [actual recovery API trace](test-results/delivery-live-recovery.json), [live worker batch](test-results/delivery-live-worker-batch.json), [safe delivery log](logs/automation-delivery.jsonl), [build fingerprints](test-results/delivery-build.json), and [actual VS Code retry policy](screenshots/source-code/w13-delivery-retry-vscode.jpg). Earlier tables/sections describe their checkpoint-time evidence. No new Flutter workflow screenshot claimed.
+
 | Location | Purpose | Current status |
 | --- | --- | --- |
 | test-results/ | Foundation result record, actual backend retest output and source fingerprints | [Foundation results](test-results/FOUNDATION-RESULTS.md); widget tests blocked; workflow results pending |

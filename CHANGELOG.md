@@ -1,5 +1,15 @@
 # Changelog
 
+## Uncommitted bounded delivery/recovery — 2026-10-29
+
+- Verified clean student scan commit 0c8a274 locally/live remote before implementation.
+- Added protected loopback PHP receiver, durable idempotent receipts, controlled failure modes, bounded Laravel worker, current-source validation, leased/fenced claims and persistent attempt journal.
+- Added finite retries/backoff, coordinator review/recovery API, history and three-cycle limit; scoped recipient notifications. Scanner date parameter now accepts CarbonInterface, resolving the observed editor warning.
+- Final 63 tests/314 assertions and Pint pass. Actual four-kind acceptance, transient/timeout/lost-ack/interruption-boundary reconciliation, three-attempt exhaustion and coordinator recovery recorded; failures and fixes preserved.
+- Current 17 receiver-accepted/1 unresolved needs_review; actual VS Code retry capture, documentation/evidence and handover updated. Full Flutter/activities/SA7/student verification remain pending.
+
+Earlier sections retain their checkpoint-time descriptions; the scan increment below is now committed as 0c8a274 by the student.
+
 ## Uncommitted automation scan foundation — 2026-10-29
 
 - Verified student workflow commit 4a51934 locally/on remote before edits.

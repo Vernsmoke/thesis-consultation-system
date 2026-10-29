@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AutomationController;
 use App\Http\Controllers\ConsultationController;
 use App\Http\Controllers\WorkflowController;
 use Illuminate\Support\Facades\Route;
@@ -15,6 +16,10 @@ Route::get('/health', fn () => response()->json([
 
 Route::post('/login', [AuthController::class, 'login'])->middleware('throttle:6,1');
 Route::middleware('auth:sanctum')->group(function () {
+    Route::get('/automation', [AutomationController::class, 'index']);
+    Route::get('/automation/{automationItem}', [AutomationController::class, 'show']);
+    Route::post('/automation/{automationItem}/recover', [AutomationController::class, 'recover']);
+    Route::get('/notifications', [AutomationController::class, 'notifications']);
     Route::get('/me', [AuthController::class, 'me']);
     Route::post('/logout', [AuthController::class, 'logout']);
     Route::get('/advisers', [ConsultationController::class, 'advisers']);

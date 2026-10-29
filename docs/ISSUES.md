@@ -1,5 +1,7 @@
 # Open issues and limitations
 
+Checkpoint 06 status supersedes earlier delivery-pending entries: worker/receiver/bounded retry/API recovery implemented; [results and retained failures](../evidence/test-results/DELIVERY-RESULTS.md). Current open limits: Flutter workflow/review/browser evidence; continuous scheduling and true competing-process/kill tests; real messaging/read acknowledgment; transport encryption; receiver ledger backup/restore; recovery-log failure not signaled in API response (durable DB recovery retained); terminal automatic missed correction policy; production privilege split; activities/SA7/student review. Prototype not production ready. SQLite cursor lock discovered in verifier was fixed by closing cursor before HTTP, without deleting data.
+
 | ID | Issue | Status / next action |
 | --- | --- | --- |
 | W13-01 | Overall bounded workflow/automation | Workflow APIs and four-kind durable scans verified. Delivery/retry/recovery, full Flutter UI and assessments pending |

@@ -1,0 +1,7 @@
+
+  GET|HEAD   api/automation ............................................................... AutomationController@index
+  GET|HEAD   api/automation/{automationItem} ............................................... AutomationController@show
+  POST       api/automation/{automationItem}/recover .................................... AutomationController@recover
+
+                                                                                                    Showing [3] routes
+

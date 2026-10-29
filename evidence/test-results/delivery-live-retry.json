@@ -1,0 +1,298 @@
+{
+    "phase": "tick",
+    "timestamp_utc": "2026-10-29T13:08:41+00:00",
+    "base_commit": "0c8a2744a8aaa55e2c6737b3ebb56bee872f5578",
+    "build": "uncommitted delivery milestone",
+    "environment": "Actual loopback HTTP receiver/API and MariaDB; real clock",
+    "outcome": "executed",
+    "fixtures": {
+        "success": 12,
+        "transient_once": 13,
+        "permanent": 14,
+        "unavailable": 15,
+        "ack_loss_once": 16,
+        "timeout_once": 17,
+        "interrupted": 18
+    },
+    "worker": {
+        "success": {
+            "work_id": 12,
+            "correlation_id": "abda3850-2690-435a-843d-5230866335cb",
+            "status": "delivered",
+            "cycle": 1,
+            "attempts": 1,
+            "total_attempts": 1,
+            "code": "no_call",
+            "receipt": "rcpt_92c6ad9258557751dd7886b433646c46",
+            "log_status": "recorded"
+        },
+        "transient_once": {
+            "work_id": 13,
+            "correlation_id": "be0f0c11-fe29-467c-85d7-f1f666de4c64",
+            "status": "retry_wait",
+            "cycle": 1,
+            "attempts": 1,
+            "total_attempts": 1,
+            "code": "no_call",
+            "receipt": null,
+            "log_status": "recorded"
+        },
+        "permanent": {
+            "work_id": 14,
+            "correlation_id": "59fd8a3f-4fe4-424a-8c50-3efecaae35c6",
+            "status": "needs_review",
+            "cycle": 1,
+            "attempts": 1,
+            "total_attempts": 1,
+            "code": "no_call",
+            "receipt": null,
+            "log_status": "recorded"
+        },
+        "unavailable": {
+            "work_id": 15,
+            "correlation_id": "524a8f24-57a3-480f-a9e6-5dd441de3466",
+            "status": "retry_wait",
+            "cycle": 1,
+            "attempts": 1,
+            "total_attempts": 1,
+            "code": "no_call",
+            "receipt": null,
+            "log_status": "recorded"
+        },
+        "ack_loss_once": {
+            "work_id": 16,
+            "correlation_id": "aa572174-8ed9-4259-9b5e-d5fa5d30316e",
+            "status": "retry_wait",
+            "cycle": 1,
+            "attempts": 1,
+            "total_attempts": 1,
+            "code": "no_call",
+            "receipt": null,
+            "log_status": "recorded"
+        },
+        "timeout_once": {
+            "work_id": 17,
+            "correlation_id": "025822b0-f7df-4da0-af70-eb2c3ca3fd07",
+            "status": "retry_wait",
+            "cycle": 1,
+            "attempts": 1,
+            "total_attempts": 1,
+            "code": "no_call",
+            "receipt": null,
+            "log_status": "recorded"
+        },
+        "interrupted": {
+            "work_id": 18,
+            "correlation_id": "28ee7af8-8a4f-4efd-be47-88ec51d31bc4",
+            "status": "claimed",
+            "cycle": 1,
+            "attempts": 1,
+            "total_attempts": 1,
+            "code": "no_call",
+            "receipt": null,
+            "log_status": "recorded"
+        }
+    },
+    "items": [
+        {
+            "id": 12,
+            "kind": "reminder",
+            "status": "delivered",
+            "cycle": 1,
+            "attempts": 1,
+            "total_attempts": 1,
+            "available_at": "2026-10-29T13:08:20.000000Z",
+            "claimed_until": null,
+            "failure_code": null,
+            "receipt": "rcpt_92c6ad9258557751dd7886b433646c46"
+        },
+        {
+            "id": 13,
+            "kind": "reminder",
+            "status": "retry_wait",
+            "cycle": 1,
+            "attempts": 1,
+            "total_attempts": 1,
+            "available_at": "2026-10-29T13:08:54.000000Z",
+            "claimed_until": null,
+            "failure_code": "http_503",
+            "receipt": null
+        },
+        {
+            "id": 14,
+            "kind": "reminder",
+            "status": "needs_review",
+            "cycle": 1,
+            "attempts": 1,
+            "total_attempts": 1,
+            "available_at": "2026-10-29T13:08:20.000000Z",
+            "claimed_until": null,
+            "failure_code": "http_422",
+            "receipt": null
+        },
+        {
+            "id": 15,
+            "kind": "reminder",
+            "status": "retry_wait",
+            "cycle": 1,
+            "attempts": 1,
+            "total_attempts": 1,
+            "available_at": "2026-10-29T13:08:54.000000Z",
+            "claimed_until": null,
+            "failure_code": "http_503",
+            "receipt": null
+        },
+        {
+            "id": 16,
+            "kind": "reminder",
+            "status": "retry_wait",
+            "cycle": 1,
+            "attempts": 1,
+            "total_attempts": 1,
+            "available_at": "2026-10-29T13:08:51.000000Z",
+            "claimed_until": null,
+            "failure_code": "http_503",
+            "receipt": null
+        },
+        {
+            "id": 17,
+            "kind": "reminder",
+            "status": "retry_wait",
+            "cycle": 1,
+            "attempts": 1,
+            "total_attempts": 1,
+            "available_at": "2026-10-29T13:08:59.000000Z",
+            "claimed_until": null,
+            "failure_code": "connection_or_timeout",
+            "receipt": null
+        },
+        {
+            "id": 18,
+            "kind": "reminder",
+            "status": "claimed",
+            "cycle": 1,
+            "attempts": 1,
+            "total_attempts": 1,
+            "available_at": "2026-10-29T13:08:20.000000Z",
+            "claimed_until": "2026-10-29T13:08:50.000000Z",
+            "failure_code": null,
+            "receipt": null
+        }
+    ],
+    "attempts": [
+        {
+            "automation_item_id": 18,
+            "cycle": 1,
+            "number": 1,
+            "started_at": "2026-10-29 13:08:20",
+            "finished_at": null,
+            "outcome": "started",
+            "code": null,
+            "http_status": null,
+            "duration_ms": null,
+            "receipt": null
+        },
+        {
+            "automation_item_id": 12,
+            "cycle": 1,
+            "number": 1,
+            "started_at": "2026-10-29 13:08:20",
+            "finished_at": "2026-10-29 13:08:20",
+            "outcome": "delivered",
+            "code": "accepted",
+            "http_status": 201,
+            "duration_ms": 33,
+            "receipt": "rcpt_92c6ad9258557751dd7886b433646c46"
+        },
+        {
+            "automation_item_id": 13,
+            "cycle": 1,
+            "number": 1,
+            "started_at": "2026-10-29 13:08:20",
+            "finished_at": "2026-10-29 13:08:20",
+            "outcome": "retry_wait",
+            "code": "http_503",
+            "http_status": 503,
+            "duration_ms": 6,
+            "receipt": null
+        },
+        {
+            "automation_item_id": 14,
+            "cycle": 1,
+            "number": 1,
+            "started_at": "2026-10-29 13:08:20",
+            "finished_at": "2026-10-29 13:08:20",
+            "outcome": "needs_review",
+            "code": "http_422",
+            "http_status": 422,
+            "duration_ms": 6,
+            "receipt": null
+        },
+        {
+            "automation_item_id": 15,
+            "cycle": 1,
+            "number": 1,
+            "started_at": "2026-10-29 13:08:20",
+            "finished_at": "2026-10-29 13:08:20",
+            "outcome": "retry_wait",
+            "code": "http_503",
+            "http_status": 503,
+            "duration_ms": 6,
+            "receipt": null
+        },
+        {
+            "automation_item_id": 16,
+            "cycle": 1,
+            "number": 1,
+            "started_at": "2026-10-29 13:08:20",
+            "finished_at": "2026-10-29 13:08:20",
+            "outcome": "retry_wait",
+            "code": "http_503",
+            "http_status": 503,
+            "duration_ms": 6,
+            "receipt": null
+        },
+        {
+            "automation_item_id": 17,
+            "cycle": 1,
+            "number": 1,
+            "started_at": "2026-10-29 13:08:20",
+            "finished_at": "2026-10-29 13:08:25",
+            "outcome": "retry_wait",
+            "code": "connection_or_timeout",
+            "http_status": null,
+            "duration_ms": 5019,
+            "receipt": null
+        }
+    ],
+    "receiver": {
+        "success": {
+            "receipt_count": 1,
+            "receipt": "rcpt_92c6ad9258557751dd7886b433646c46"
+        },
+        "transient_once": {
+            "receipt_count": 0,
+            "receipt": null
+        },
+        "permanent": {
+            "receipt_count": 0,
+            "receipt": null
+        },
+        "unavailable": {
+            "receipt_count": 0,
+            "receipt": null
+        },
+        "ack_loss_once": {
+            "receipt_count": 1,
+            "receipt": "rcpt_96309911d4c81f7582cc899656c78623"
+        },
+        "timeout_once": {
+            "receipt_count": 1,
+            "receipt": "rcpt_af8d766a0ebcfdd27af40b0d57210b43"
+        },
+        "interrupted": {
+            "receipt_count": 1,
+            "receipt": "rcpt_b643016de4f4cfc25fcc400f48df19df"
+        }
+    }
+}

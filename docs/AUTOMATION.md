@@ -1,6 +1,6 @@
 # Week 13 automation — scan checkpoint
 
-Implemented at checkpoint 05, based on student commit **4a51934**. This increment creates durable, deduplicated work for all four required kinds and detects elapsed meetings. **No delivery worker or notification service exists yet.** Pending rows, reserved states/fields and schema must not be presented as delivered notifications or tested retry/recovery.
+The scan was implemented at checkpoint 05 (now student commit **0c8a274**). This document preserves that milestone's scan-specific results. Checkpoint 06 implements the [bounded delivery/recovery contract](DELIVERY.md), with [actual delivery evidence](../evidence/test-results/DELIVERY-RESULTS.md). Statements below about a future worker and 11 pending rows describe the historical scan checkpoint; the current snapshot is 17 receiver-accepted / 1 needs_review. Pending rows still never prove delivery.
 
 ## Trigger and ownership
 

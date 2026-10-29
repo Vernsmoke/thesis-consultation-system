@@ -1,0 +1,4 @@
+
+  * * * * *  php artisan consultations:scan ............................................ Next Due: 59 seconds from now
+  * * * * *  php artisan automation:work --limit=20 .................................... Next Due: 59 seconds from now
+

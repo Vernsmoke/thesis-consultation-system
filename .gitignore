@@ -16,3 +16,7 @@
 .vscode/
 *.zip
 
+# Local receiver ledger and controls; examples/source stay tracked.
+/notification-service/storage/*
+!/notification-service/storage/.gitignore
+

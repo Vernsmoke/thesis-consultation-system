@@ -9,3 +9,4 @@ Artisan::command('inspire', function () {
 })->purpose('Display an inspiring quote');
 
 Schedule::command('consultations:scan')->everyMinute()->withoutOverlapping(2);
+Schedule::command('automation:work --limit=20')->everyMinute()->withoutOverlapping(2);

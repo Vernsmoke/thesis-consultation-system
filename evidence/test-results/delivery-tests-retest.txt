@@ -1,0 +1,100 @@
+
+   PASS  Tests\Unit\ExampleTest
+  ✓ that true is true                                                                                            0.01s  
+
+   FAIL  Tests\Feature\AutomationDeliveryTest
+  ✓ success is journaled and repeat does not make another service call                                           0.95s  
+  ✓ transient failure waits then recovers with the same identity                                                 0.07s  
+  ✓ persistent transient failure stops after three attempts                                                      0.07s  
+  ✓ permanent rejection and malformed receipt require review                                                     0.06s  
+  ✓ connection timeout is a bounded persisted retry                                                              0.06s  
+  ✓ expired claim retains interrupted history and uses a new fenced attempt                                      0.06s  
+  ✓ active claim is not reprocessed and late result cannot overwrite new owner                                   0.06s  
+  ✓ obsolete source and forged recipient or payload are not sent                                                 0.06s  
+  ✓ completed action cancels due work without a call                                                             0.08s  
+  ✓ coordinator recovery preserves history and has a total cycle limit                                           0.14s  
+  ✓ review and notifications are scoped to current roles and records                                             0.09s  
+  ✓ worker rejects external endpoint and bad batch limits                                                        0.06s  
+  ⨯ all four work kinds revalidate and deliver                                                                   0.07s  
+
+   PASS  Tests\Feature\AutomationScanTest
+  ✓ all four kinds create minimal work and repeat without duplicates                                             0.11s  
+  ✓ completed and future actions are not queued                                                                  0.06s  
+  ✓ reminders use future window and do not process completed meetings                                            0.05s  
+  ✓ daily summary rolls over at manila midnight not utc midnight                                                 0.08s  
+  ✓ invalid source roles are routed to coordinator without state change                                          0.06s  
+  ✓ missing coordinator fails visibly without work                                                               0.05s  
+  ✓ capacity limit rolls back preceding missed state and work                                                    0.07s  
+  ✓ storage failure late in scan rolls back all changes                                                          0.06s  
+  ✓ log failure is reported after commit without claiming a rollback                                             0.06s  
+  ✓ duplicate identity is enforced by the database                                                               0.07s  
+
+   PASS  Tests\Feature\ConsultationApiTest
+  ✓ login uses server role and does not return a password or token                                               0.06s  
+  ✓ invalid login is generic and unauthenticated reads are 401                                                   0.27s  
+  ✓ login rate limit stops repeated password attempts                                                            1.30s  
+  ✓ logout ends the session                                                                                      0.04s  
+  ✓ student reads only own records and cannot open another students record                                       0.05s  
+  ✓ unassigned adviser has no records and cannot read others                                                     0.04s  
+  ✓ panel is read only and sees only explicit membership                                                         0.05s  
+  ✓ coordinator can review but cannot confirm for the adviser                                                    0.05s  
+  ✓ student request and assigned adviser confirmation are audited                                                0.06s  
+  ✓ request validation rejects missing agenda nonadviser and impersonation                                       0.06s  
+  ✓ student and other adviser cannot confirm a schedule                                                          0.06s  
+  ✓ invalid past reversed and ambiguous dates are rejected                                                       0.05s  
+  ✓ conflicting adviser schedule is rejected without mutation                                                    0.05s  
+  ✓ database failure returns a safe 503 without creating work                                                    0.05s  
+  ✓ an audit write failure rolls back the consultation too                                                       0.05s  
+
+   PASS  Tests\Feature\ConsultationDataTest
+  ✓ seeded workflow relationships and utc dates are consistent                                                   0.05s  
+  ✓ reseeding does not duplicate or overwrite work                                                               0.07s  
+  ✓ demo passwords are hashed and not serialized                                                                 0.05s  
+  ✓ unknown user reference cannot create an orphan action item                                                   0.04s  
+  ✓ database rejects a confirmed meeting without a schedule                                                      0.04s  
+  ✓ database rejects an end before the start                                                                     0.04s  
+  ✓ database rejects a duplicate panel assignment                                                                0.04s  
+  ✓ referenced student cannot be deleted                                                                         0.04s  
+  ✓ database rejects an unknown role                                                                             0.04s  
+
+   PASS  Tests\Feature\ExampleTest
+  ✓ the application returns a successful response                                                                0.03s  
+
+   PASS  Tests\Feature\HealthTest
+  ✓ liveness returns only public project metadata                                                                0.02s  
+  ✓ configured flutter origin can read health                                                                    0.02s  
+  ✓ unlisted origin is not granted browser access                                                                0.02s  
+
+   PASS  Tests\Feature\WorkflowApiTest
+  ✓ request to follow up normal path uses only authorized api actions                                            0.09s  
+  ✓ assigned adviser can record missed once after the end                                                        0.05s  
+  ✓ future and nonconfirmed meetings cannot be closed                                                            0.05s  
+  ✓ students panel coordinator and other adviser cannot record outcomes                                          0.06s  
+  ✓ invalid outcome and missing notes are rejected                                                               0.05s  
+  ✓ action assignment requires assigned adviser completed meeting and valid deadline                             0.06s  
+  ✓ action completion is idempotent and only the owning student can do it                                        0.06s  
+  ✓ follow up permissions content and terminal state are enforced                                                0.07s  
+  ✓ follow up after missed meeting does not create action items                                                  0.05s  
+  ✓ audit failure rolls back meeting status action and follow up                                                 0.07s  
+  ✓ missing session and missing action record have safe errors                                                   0.06s  
+  ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────  
+   FAILED  Tests\Feature\AutomationDeliveryTest > all four work kinds revalidate and deliver                    Error   
+  Class "Tests\Feature\Consultation" not found
+
+  at tests\Feature\AutomationDeliveryTest.php:228
+    224▕     }
+    225▕ 
+    226▕     public function test_all_four_work_kinds_revalidate_and_deliver(): void
+    227▕     {
+  ➜ 228▕         $base = Consultation::where('reference', 'DEMO-CONFIRMED-001')->firstOrFail();
+    229▕         Consultation::create([
+    230▕             'reference' => 'DELIVERY-ELAPSED', 'student_id' => $base->student_id, 'adviser_id' => $base->adviser_id,
+    231▕             'agenda' => 'Controlled delivery test fixture.', 'status' => 'confirmed', 'schedule_version' => 1,
+    232▕             'starts_at' => now()->subHour(), 'ends_at' => now()->subMinutes(30),
+
+  1   tests\Feature\AutomationDeliveryTest.php:228
+
+
+  Tests:    1 failed, 62 passed (303 assertions)
+  Duration: 6.14s
+

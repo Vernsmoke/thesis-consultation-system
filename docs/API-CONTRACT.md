@@ -1,6 +1,19 @@
 # Week 13 API — request and schedule milestone
 
-Session/request/schedule APIs were implemented at checkpoint 03. Checkpoint 04, based on student commit `d2fe529`, adds manual meeting outcomes, action assignment/completion and follow-up. Automation and the full Flutter workflow remain pending. This document describes implemented routes, not proposed future endpoints.
+Session/request/schedule APIs were implemented at checkpoint 03. Checkpoint 04 adds manual meeting outcomes, action assignment/completion and follow-up. Checkpoint 06 adds the automation routes below. Full Flutter workflow remains pending. This document describes implemented routes.
+
+## Automation routes added at checkpoint 06
+
+All require existing Sanctum cookie authentication; POST also requires the established CSRF header. Panel is denied (403). Student/adviser lists contain their own authorized recipient work; coordinator can review all. The existing consultation permissions still apply to detail. See [delivery contract/runbook](DELIVERY.md).
+
+| Method/path | Result |
+| --- | --- |
+| GET /api/automation | Paginated 20 visible rows, latest first |
+| GET /api/notifications | Paginated 20 delivered rows for current recipient only |
+| GET /api/automation/{id} | data + safe attempts; coordinator also gets recovery history/reasons |
+| POST /api/automation/{id}/recover | Coordinator only; JSON reason string 10–500 characters; 200 queues next cycle, not delivered |
+
+Responses hide claim_token/deduplication_key. Attempt detail contains cycle, number, times, outcome, code, HTTP status, duration and receipt. Recovery 422 means invalid reason; 409 means delivered/non-review/obsolete source or cycle limit. Missing IDs return 404, inaccessible existing records 403; this known existence disclosure is unchanged. At most three cycles, three attempts each; original work identity/total history retained. Permanent/exhausted failures remain assigned to review_owner_id; GET is how the coordinator discovers them. No background push/email to the coordinator is claimed. The receipt endpoint for the controlled service is separate from the browser API and requires a private shared key unavailable to Flutter.
 
 ## Authentication decision and local run
 

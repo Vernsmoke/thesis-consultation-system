@@ -7,6 +7,7 @@ use App\Models\AutomationItem;
 use App\Models\Consultation;
 use App\Models\ConsultationEvent;
 use App\Models\User;
+use Carbon\CarbonInterface;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Carbon;
@@ -101,7 +102,7 @@ class AutomationScanner
 
             return [$created, $missed];
         });
-        $result = ['run_id' => $runId, 'created' => count($created), 'missed_detected' => $missed, 'delivery' => 'not_implemented', 'log_status' => 'recorded'];
+        $result = ['run_id' => $runId, 'created' => count($created), 'missed_detected' => $missed, 'delivery' => 'separate_worker', 'log_status' => 'recorded'];
         try {
             foreach ($created as $item) {
                 Log::channel('automation')->info('work_queued', [
@@ -148,7 +149,7 @@ class AutomationScanner
             $created, $meeting, $item, $item?->deadline_version ?? $meeting->schedule_version, 'invalid_source_record');
     }
 
-    private function enqueue(string $kind, string $identity, int $recipient, User $owner, Carbon $scheduledFor, array $payload,
+    private function enqueue(string $kind, string $identity, int $recipient, User $owner, CarbonInterface $scheduledFor, array $payload,
         array &$created, ?Consultation $meeting = null, ?ActionItem $item = null, int $version = 0, ?string $failure = null): void
     {
         $work = AutomationItem::firstOrCreate(['deduplication_key' => hash('sha256', $kind.':'.$identity.':recipient:'.$recipient)], [

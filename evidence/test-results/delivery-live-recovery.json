@@ -1,0 +1,853 @@
+{
+    "phase": "recover",
+    "timestamp_utc": "2026-10-29T13:09:43+00:00",
+    "base_commit": "0c8a2744a8aaa55e2c6737b3ebb56bee872f5578",
+    "build": "uncommitted delivery milestone",
+    "environment": "Actual loopback HTTP receiver/API and MariaDB; real clock",
+    "outcome": "executed",
+    "fixtures": {
+        "success": 12,
+        "transient_once": 13,
+        "permanent": 14,
+        "unavailable": 15,
+        "ack_loss_once": 16,
+        "timeout_once": 17,
+        "interrupted": 18
+    },
+    "worker": {
+        "permanent_after_recovery": {
+            "work_id": 14,
+            "correlation_id": "59fd8a3f-4fe4-424a-8c50-3efecaae35c6",
+            "status": "delivered",
+            "cycle": 2,
+            "attempts": 1,
+            "total_attempts": 2,
+            "code": "accepted",
+            "receipt": "rcpt_e3eabe31fb5fe43e7c4bdff36b30bc86",
+            "log_status": "recorded"
+        }
+    },
+    "api": [
+        {
+            "timestamp_utc": "2026-10-29T13:09:44+00:00",
+            "method": "GET",
+            "path": "/sanctum/csrf-cookie",
+            "request": null,
+            "expected_status": 204,
+            "actual_status": 204,
+            "response": null,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T13:09:44+00:00",
+            "method": "POST",
+            "path": "/api/login",
+            "request": {
+                "email": "student.one@example.test",
+                "password": "[redacted]"
+            },
+            "expected_status": 200,
+            "actual_status": 200,
+            "response": {
+                "data": {
+                    "id": 1,
+                    "name": "Student One (Demo)",
+                    "role": "student"
+                }
+            },
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T13:09:44+00:00",
+            "method": "GET",
+            "path": "/sanctum/csrf-cookie",
+            "request": null,
+            "expected_status": 204,
+            "actual_status": 204,
+            "response": null,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T13:09:45+00:00",
+            "method": "POST",
+            "path": "/api/login",
+            "request": {
+                "email": "coordinator.one@example.test",
+                "password": "[redacted]"
+            },
+            "expected_status": 200,
+            "actual_status": 200,
+            "response": {
+                "data": {
+                    "id": 6,
+                    "name": "Coordinator One (Demo)",
+                    "role": "coordinator"
+                }
+            },
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T13:09:45+00:00",
+            "method": "POST",
+            "path": "/api/automation/14/recover",
+            "request": {
+                "reason": "Unauthorized controlled recovery attempt."
+            },
+            "expected_status": 403,
+            "actual_status": 403,
+            "response": {
+                "message": "This action is unauthorized."
+            },
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T13:09:45+00:00",
+            "method": "GET",
+            "path": "/api/automation/14",
+            "request": null,
+            "expected_status": 200,
+            "actual_status": 200,
+            "response": {
+                "data": {
+                    "id": 14,
+                    "correlation_id": "59fd8a3f-4fe4-424a-8c50-3efecaae35c6",
+                    "kind": "reminder",
+                    "consultation_id": 11,
+                    "action_item_id": null,
+                    "recipient_id": 1,
+                    "review_owner_id": 6,
+                    "source_version": 1,
+                    "scheduled_for": "2026-10-29T15:08:20.000000Z",
+                    "payload": {
+                        "consultation_id": 11,
+                        "schedule_version": 1
+                    },
+                    "status": "needs_review",
+                    "failure_code": "http_422",
+                    "attempts": 1,
+                    "available_at": "2026-10-29T13:08:20.000000Z",
+                    "claimed_until": null,
+                    "receipt": null,
+                    "created_at": "2026-10-29T13:08:20.000000Z",
+                    "updated_at": "2026-10-29T13:08:20.000000Z",
+                    "cycle": 1,
+                    "total_attempts": 1
+                },
+                "attempts": [
+                    {
+                        "id": 4,
+                        "cycle": 1,
+                        "number": 1,
+                        "started_at": "2026-10-29 13:08:20",
+                        "finished_at": "2026-10-29 13:08:20",
+                        "outcome": "needs_review",
+                        "code": "http_422",
+                        "http_status": 422,
+                        "duration_ms": 6,
+                        "receipt": null
+                    }
+                ],
+                "recoveries": []
+            },
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T13:09:45+00:00",
+            "method": "POST",
+            "path": "/api/automation/14/recover",
+            "request": {
+                "reason": "short"
+            },
+            "expected_status": 422,
+            "actual_status": 422,
+            "response": {
+                "message": "The reason field must be at least 10 characters.",
+                "errors": {
+                    "reason": [
+                        "The reason field must be at least 10 characters."
+                    ]
+                }
+            },
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T13:09:45+00:00",
+            "method": "POST",
+            "path": "/api/automation/14/recover",
+            "request": {
+                "reason": "Controlled service rejection corrected; retry same work identity after review."
+            },
+            "expected_status": 200,
+            "actual_status": 200,
+            "response": {
+                "data": {
+                    "id": 14,
+                    "correlation_id": "59fd8a3f-4fe4-424a-8c50-3efecaae35c6",
+                    "kind": "reminder",
+                    "consultation_id": 11,
+                    "action_item_id": null,
+                    "recipient_id": 1,
+                    "review_owner_id": 6,
+                    "source_version": 1,
+                    "scheduled_for": "2026-10-29T15:08:20.000000Z",
+                    "payload": {
+                        "consultation_id": 11,
+                        "schedule_version": 1
+                    },
+                    "status": "pending",
+                    "failure_code": null,
+                    "attempts": 0,
+                    "available_at": "2026-10-29T13:09:45.000000Z",
+                    "claimed_until": null,
+                    "receipt": null,
+                    "created_at": "2026-10-29T13:08:20.000000Z",
+                    "updated_at": "2026-10-29T13:09:45.000000Z",
+                    "cycle": 2,
+                    "total_attempts": 1,
+                    "consultation": {
+                        "id": 11,
+                        "reference": "DELIVERY-2c6a2e49a53f-permanent",
+                        "student_id": 1,
+                        "adviser_id": 3,
+                        "agenda": "Controlled delivery fixture.",
+                        "status": "confirmed",
+                        "starts_at": "2026-10-29T15:08:20.000000Z",
+                        "ends_at": "2026-10-29T16:08:20.000000Z",
+                        "schedule_version": 1,
+                        "meeting_notes": null,
+                        "created_at": "2026-10-29T13:08:20.000000Z",
+                        "updated_at": "2026-10-29T13:08:20.000000Z",
+                        "student": {
+                            "id": 1,
+                            "name": "Student One (Demo)",
+                            "email": "student.one@example.test",
+                            "email_verified_at": null,
+                            "created_at": "2026-10-29T11:21:56.000000Z",
+                            "updated_at": "2026-10-29T11:21:56.000000Z",
+                            "role": "student"
+                        },
+                        "adviser": {
+                            "id": 3,
+                            "name": "Adviser One (Demo)",
+                            "email": "adviser.one@example.test",
+                            "email_verified_at": null,
+                            "created_at": "2026-10-29T11:21:56.000000Z",
+                            "updated_at": "2026-10-29T11:21:56.000000Z",
+                            "role": "adviser"
+                        }
+                    }
+                },
+                "message": "Recovery queued; prior history retained."
+            },
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T13:09:46+00:00",
+            "method": "POST",
+            "path": "/api/automation/14/recover",
+            "request": {
+                "reason": "Delivered work must not be manually repeated."
+            },
+            "expected_status": 409,
+            "actual_status": 409,
+            "response": {
+                "message": "Only unresolved review work may be recovered."
+            },
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T13:09:46+00:00",
+            "method": "GET",
+            "path": "/api/notifications",
+            "request": null,
+            "expected_status": 200,
+            "actual_status": 200,
+            "response": {
+                "current_page": 1,
+                "data": [
+                    {
+                        "id": 18,
+                        "correlation_id": "28ee7af8-8a4f-4efd-be47-88ec51d31bc4",
+                        "kind": "reminder",
+                        "consultation_id": 15,
+                        "action_item_id": null,
+                        "recipient_id": 1,
+                        "review_owner_id": 6,
+                        "source_version": 1,
+                        "scheduled_for": "2026-10-29T15:08:20.000000Z",
+                        "payload": {
+                            "consultation_id": 15,
+                            "schedule_version": 1
+                        },
+                        "status": "delivered",
+                        "failure_code": null,
+                        "attempts": 2,
+                        "available_at": "2026-10-29T13:09:10.000000Z",
+                        "claimed_until": null,
+                        "receipt": "rcpt_b643016de4f4cfc25fcc400f48df19df",
+                        "created_at": "2026-10-29T13:08:20.000000Z",
+                        "updated_at": "2026-10-29T13:09:10.000000Z",
+                        "cycle": 1,
+                        "total_attempts": 2
+                    },
+                    {
+                        "id": 17,
+                        "correlation_id": "025822b0-f7df-4da0-af70-eb2c3ca3fd07",
+                        "kind": "reminder",
+                        "consultation_id": 14,
+                        "action_item_id": null,
+                        "recipient_id": 1,
+                        "review_owner_id": 6,
+                        "source_version": 1,
+                        "scheduled_for": "2026-10-29T15:08:20.000000Z",
+                        "payload": {
+                            "consultation_id": 14,
+                            "schedule_version": 1
+                        },
+                        "status": "delivered",
+                        "failure_code": null,
+                        "attempts": 2,
+                        "available_at": "2026-10-29T13:09:10.000000Z",
+                        "claimed_until": null,
+                        "receipt": "rcpt_af8d766a0ebcfdd27af40b0d57210b43",
+                        "created_at": "2026-10-29T13:08:20.000000Z",
+                        "updated_at": "2026-10-29T13:09:10.000000Z",
+                        "cycle": 1,
+                        "total_attempts": 2
+                    },
+                    {
+                        "id": 16,
+                        "correlation_id": "aa572174-8ed9-4259-9b5e-d5fa5d30316e",
+                        "kind": "reminder",
+                        "consultation_id": 13,
+                        "action_item_id": null,
+                        "recipient_id": 1,
+                        "review_owner_id": 6,
+                        "source_version": 1,
+                        "scheduled_for": "2026-10-29T15:08:20.000000Z",
+                        "payload": {
+                            "consultation_id": 13,
+                            "schedule_version": 1
+                        },
+                        "status": "delivered",
+                        "failure_code": null,
+                        "attempts": 2,
+                        "available_at": "2026-10-29T13:09:10.000000Z",
+                        "claimed_until": null,
+                        "receipt": "rcpt_96309911d4c81f7582cc899656c78623",
+                        "created_at": "2026-10-29T13:08:20.000000Z",
+                        "updated_at": "2026-10-29T13:09:10.000000Z",
+                        "cycle": 1,
+                        "total_attempts": 2
+                    },
+                    {
+                        "id": 14,
+                        "correlation_id": "59fd8a3f-4fe4-424a-8c50-3efecaae35c6",
+                        "kind": "reminder",
+                        "consultation_id": 11,
+                        "action_item_id": null,
+                        "recipient_id": 1,
+                        "review_owner_id": 6,
+                        "source_version": 1,
+                        "scheduled_for": "2026-10-29T15:08:20.000000Z",
+                        "payload": {
+                            "consultation_id": 11,
+                            "schedule_version": 1
+                        },
+                        "status": "delivered",
+                        "failure_code": null,
+                        "attempts": 1,
+                        "available_at": "2026-10-29T13:09:45.000000Z",
+                        "claimed_until": null,
+                        "receipt": "rcpt_e3eabe31fb5fe43e7c4bdff36b30bc86",
+                        "created_at": "2026-10-29T13:08:20.000000Z",
+                        "updated_at": "2026-10-29T13:09:45.000000Z",
+                        "cycle": 2,
+                        "total_attempts": 2
+                    },
+                    {
+                        "id": 13,
+                        "correlation_id": "be0f0c11-fe29-467c-85d7-f1f666de4c64",
+                        "kind": "reminder",
+                        "consultation_id": 10,
+                        "action_item_id": null,
+                        "recipient_id": 1,
+                        "review_owner_id": 6,
+                        "source_version": 1,
+                        "scheduled_for": "2026-10-29T15:08:20.000000Z",
+                        "payload": {
+                            "consultation_id": 10,
+                            "schedule_version": 1
+                        },
+                        "status": "delivered",
+                        "failure_code": null,
+                        "attempts": 2,
+                        "available_at": "2026-10-29T13:09:10.000000Z",
+                        "claimed_until": null,
+                        "receipt": "rcpt_cc692432ef45b8b45c363348691b4f72",
+                        "created_at": "2026-10-29T13:08:20.000000Z",
+                        "updated_at": "2026-10-29T13:09:10.000000Z",
+                        "cycle": 1,
+                        "total_attempts": 2
+                    },
+                    {
+                        "id": 12,
+                        "correlation_id": "abda3850-2690-435a-843d-5230866335cb",
+                        "kind": "reminder",
+                        "consultation_id": 9,
+                        "action_item_id": null,
+                        "recipient_id": 1,
+                        "review_owner_id": 6,
+                        "source_version": 1,
+                        "scheduled_for": "2026-10-29T15:08:19.000000Z",
+                        "payload": {
+                            "consultation_id": 9,
+                            "schedule_version": 1
+                        },
+                        "status": "delivered",
+                        "failure_code": null,
+                        "attempts": 1,
+                        "available_at": "2026-10-29T13:08:20.000000Z",
+                        "claimed_until": null,
+                        "receipt": "rcpt_92c6ad9258557751dd7886b433646c46",
+                        "created_at": "2026-10-29T13:08:20.000000Z",
+                        "updated_at": "2026-10-29T13:08:20.000000Z",
+                        "cycle": 1,
+                        "total_attempts": 1
+                    },
+                    {
+                        "id": 8,
+                        "correlation_id": "c5db8549-e15c-469b-9215-de86555b57de",
+                        "kind": "action_deadline",
+                        "consultation_id": 3,
+                        "action_item_id": 3,
+                        "recipient_id": 1,
+                        "review_owner_id": 6,
+                        "source_version": 1,
+                        "scheduled_for": "2026-10-29T11:28:37.000000Z",
+                        "payload": {
+                            "action_item_id": 3,
+                            "deadline_version": 1
+                        },
+                        "status": "delivered",
+                        "failure_code": null,
+                        "attempts": 1,
+                        "available_at": "2026-10-29T13:09:10.000000Z",
+                        "claimed_until": null,
+                        "receipt": "rcpt_144d2e626358c8e9f2e21bb540d7e719",
+                        "created_at": "2026-10-29T12:28:37.000000Z",
+                        "updated_at": "2026-10-29T13:09:10.000000Z",
+                        "cycle": 1,
+                        "total_attempts": 1
+                    },
+                    {
+                        "id": 5,
+                        "correlation_id": "229d76c5-05ee-4f8f-98eb-cfda9e8bfaa7",
+                        "kind": "missed_session",
+                        "consultation_id": 8,
+                        "action_item_id": null,
+                        "recipient_id": 1,
+                        "review_owner_id": 6,
+                        "source_version": 1,
+                        "scheduled_for": "2026-10-29T11:58:37.000000Z",
+                        "payload": {
+                            "consultation_id": 8,
+                            "requires_human_review": true,
+                            "basis": "elapsed_without_recorded_outcome",
+                            "transition_correlation_id": "947f93aa-53f7-4692-9876-34a33b464642"
+                        },
+                        "status": "delivered",
+                        "failure_code": null,
+                        "attempts": 1,
+                        "available_at": "2026-10-29T13:09:10.000000Z",
+                        "claimed_until": null,
+                        "receipt": "rcpt_645141e621863a12f3cc865a730e0380",
+                        "created_at": "2026-10-29T12:28:37.000000Z",
+                        "updated_at": "2026-10-29T13:09:10.000000Z",
+                        "cycle": 1,
+                        "total_attempts": 1
+                    },
+                    {
+                        "id": 3,
+                        "correlation_id": "a140f703-1b5e-4f21-8213-4b07c448b7e5",
+                        "kind": "reminder",
+                        "consultation_id": 7,
+                        "action_item_id": null,
+                        "recipient_id": 1,
+                        "review_owner_id": 6,
+                        "source_version": 1,
+                        "scheduled_for": "2026-10-29T13:28:37.000000Z",
+                        "payload": {
+                            "consultation_id": 7,
+                            "schedule_version": 1
+                        },
+                        "status": "delivered",
+                        "failure_code": null,
+                        "attempts": 1,
+                        "available_at": "2026-10-29T13:09:10.000000Z",
+                        "claimed_until": null,
+                        "receipt": "rcpt_f6c6745c647d07420a036b33233d7297",
+                        "created_at": "2026-10-29T12:28:37.000000Z",
+                        "updated_at": "2026-10-29T13:09:10.000000Z",
+                        "cycle": 1,
+                        "total_attempts": 1
+                    },
+                    {
+                        "id": 1,
+                        "correlation_id": "75671476-7abb-4bfb-ad12-9f878bb25b2b",
+                        "kind": "reminder",
+                        "consultation_id": 2,
+                        "action_item_id": null,
+                        "recipient_id": 1,
+                        "review_owner_id": 6,
+                        "source_version": 1,
+                        "scheduled_for": "2026-10-30T11:00:00.000000Z",
+                        "payload": {
+                            "consultation_id": 2,
+                            "schedule_version": 1
+                        },
+                        "status": "delivered",
+                        "failure_code": null,
+                        "attempts": 1,
+                        "available_at": "2026-10-29T13:09:10.000000Z",
+                        "claimed_until": null,
+                        "receipt": "rcpt_8b8ad2522ccae159b0a2a826da929b7d",
+                        "created_at": "2026-10-29T12:28:37.000000Z",
+                        "updated_at": "2026-10-29T13:09:10.000000Z",
+                        "cycle": 1,
+                        "total_attempts": 1
+                    }
+                ],
+                "first_page_url": "http://127.0.0.1:8000/api/notifications?page=1",
+                "from": 1,
+                "last_page": 1,
+                "last_page_url": "http://127.0.0.1:8000/api/notifications?page=1",
+                "links": [
+                    {
+                        "url": null,
+                        "label": "&laquo; Previous",
+                        "page": null,
+                        "active": false
+                    },
+                    {
+                        "url": "http://127.0.0.1:8000/api/notifications?page=1",
+                        "label": "1",
+                        "page": 1,
+                        "active": true
+                    },
+                    {
+                        "url": null,
+                        "label": "Next &raquo;",
+                        "page": null,
+                        "active": false
+                    }
+                ],
+                "next_page_url": null,
+                "path": "http://127.0.0.1:8000/api/notifications",
+                "per_page": 20,
+                "prev_page_url": null,
+                "to": 10,
+                "total": 10
+            },
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T13:09:46+00:00",
+            "method": "POST",
+            "path": "/api/logout",
+            "request": [],
+            "expected_status": 200,
+            "actual_status": 200,
+            "response": {
+                "message": "Signed out."
+            },
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T13:09:46+00:00",
+            "method": "POST",
+            "path": "/api/logout",
+            "request": [],
+            "expected_status": 200,
+            "actual_status": 200,
+            "response": {
+                "message": "Signed out."
+            },
+            "outcome": "pass"
+        }
+    ],
+    "items": [
+        {
+            "id": 12,
+            "kind": "reminder",
+            "status": "delivered",
+            "cycle": 1,
+            "attempts": 1,
+            "total_attempts": 1,
+            "available_at": "2026-10-29T13:08:20.000000Z",
+            "claimed_until": null,
+            "failure_code": null,
+            "receipt": "rcpt_92c6ad9258557751dd7886b433646c46"
+        },
+        {
+            "id": 13,
+            "kind": "reminder",
+            "status": "delivered",
+            "cycle": 1,
+            "attempts": 2,
+            "total_attempts": 2,
+            "available_at": "2026-10-29T13:09:10.000000Z",
+            "claimed_until": null,
+            "failure_code": null,
+            "receipt": "rcpt_cc692432ef45b8b45c363348691b4f72"
+        },
+        {
+            "id": 14,
+            "kind": "reminder",
+            "status": "delivered",
+            "cycle": 2,
+            "attempts": 1,
+            "total_attempts": 2,
+            "available_at": "2026-10-29T13:09:45.000000Z",
+            "claimed_until": null,
+            "failure_code": null,
+            "receipt": "rcpt_e3eabe31fb5fe43e7c4bdff36b30bc86"
+        },
+        {
+            "id": 15,
+            "kind": "reminder",
+            "status": "retry_wait",
+            "cycle": 1,
+            "attempts": 2,
+            "total_attempts": 2,
+            "available_at": "2026-10-29T13:10:13.000000Z",
+            "claimed_until": null,
+            "failure_code": "http_503",
+            "receipt": null
+        },
+        {
+            "id": 16,
+            "kind": "reminder",
+            "status": "delivered",
+            "cycle": 1,
+            "attempts": 2,
+            "total_attempts": 2,
+            "available_at": "2026-10-29T13:09:10.000000Z",
+            "claimed_until": null,
+            "failure_code": null,
+            "receipt": "rcpt_96309911d4c81f7582cc899656c78623"
+        },
+        {
+            "id": 17,
+            "kind": "reminder",
+            "status": "delivered",
+            "cycle": 1,
+            "attempts": 2,
+            "total_attempts": 2,
+            "available_at": "2026-10-29T13:09:10.000000Z",
+            "claimed_until": null,
+            "failure_code": null,
+            "receipt": "rcpt_af8d766a0ebcfdd27af40b0d57210b43"
+        },
+        {
+            "id": 18,
+            "kind": "reminder",
+            "status": "delivered",
+            "cycle": 1,
+            "attempts": 2,
+            "total_attempts": 2,
+            "available_at": "2026-10-29T13:09:10.000000Z",
+            "claimed_until": null,
+            "failure_code": null,
+            "receipt": "rcpt_b643016de4f4cfc25fcc400f48df19df"
+        }
+    ],
+    "attempts": [
+        {
+            "automation_item_id": 18,
+            "cycle": 1,
+            "number": 1,
+            "started_at": "2026-10-29 13:08:20",
+            "finished_at": "2026-10-29 13:09:10",
+            "outcome": "interrupted",
+            "code": "lease_expired",
+            "http_status": null,
+            "duration_ms": null,
+            "receipt": null
+        },
+        {
+            "automation_item_id": 12,
+            "cycle": 1,
+            "number": 1,
+            "started_at": "2026-10-29 13:08:20",
+            "finished_at": "2026-10-29 13:08:20",
+            "outcome": "delivered",
+            "code": "accepted",
+            "http_status": 201,
+            "duration_ms": 33,
+            "receipt": "rcpt_92c6ad9258557751dd7886b433646c46"
+        },
+        {
+            "automation_item_id": 13,
+            "cycle": 1,
+            "number": 1,
+            "started_at": "2026-10-29 13:08:20",
+            "finished_at": "2026-10-29 13:08:20",
+            "outcome": "retry_wait",
+            "code": "http_503",
+            "http_status": 503,
+            "duration_ms": 6,
+            "receipt": null
+        },
+        {
+            "automation_item_id": 14,
+            "cycle": 1,
+            "number": 1,
+            "started_at": "2026-10-29 13:08:20",
+            "finished_at": "2026-10-29 13:08:20",
+            "outcome": "needs_review",
+            "code": "http_422",
+            "http_status": 422,
+            "duration_ms": 6,
+            "receipt": null
+        },
+        {
+            "automation_item_id": 15,
+            "cycle": 1,
+            "number": 1,
+            "started_at": "2026-10-29 13:08:20",
+            "finished_at": "2026-10-29 13:08:20",
+            "outcome": "retry_wait",
+            "code": "http_503",
+            "http_status": 503,
+            "duration_ms": 6,
+            "receipt": null
+        },
+        {
+            "automation_item_id": 16,
+            "cycle": 1,
+            "number": 1,
+            "started_at": "2026-10-29 13:08:20",
+            "finished_at": "2026-10-29 13:08:20",
+            "outcome": "retry_wait",
+            "code": "http_503",
+            "http_status": 503,
+            "duration_ms": 6,
+            "receipt": null
+        },
+        {
+            "automation_item_id": 17,
+            "cycle": 1,
+            "number": 1,
+            "started_at": "2026-10-29 13:08:20",
+            "finished_at": "2026-10-29 13:08:25",
+            "outcome": "retry_wait",
+            "code": "connection_or_timeout",
+            "http_status": null,
+            "duration_ms": 5019,
+            "receipt": null
+        },
+        {
+            "automation_item_id": 13,
+            "cycle": 1,
+            "number": 2,
+            "started_at": "2026-10-29 13:09:10",
+            "finished_at": "2026-10-29 13:09:10",
+            "outcome": "delivered",
+            "code": "accepted",
+            "http_status": 201,
+            "duration_ms": 7,
+            "receipt": "rcpt_cc692432ef45b8b45c363348691b4f72"
+        },
+        {
+            "automation_item_id": 15,
+            "cycle": 1,
+            "number": 2,
+            "started_at": "2026-10-29 13:09:10",
+            "finished_at": "2026-10-29 13:09:10",
+            "outcome": "retry_wait",
+            "code": "http_503",
+            "http_status": 503,
+            "duration_ms": 7,
+            "receipt": null
+        },
+        {
+            "automation_item_id": 16,
+            "cycle": 1,
+            "number": 2,
+            "started_at": "2026-10-29 13:09:10",
+            "finished_at": "2026-10-29 13:09:10",
+            "outcome": "delivered",
+            "code": "accepted",
+            "http_status": 200,
+            "duration_ms": 3,
+            "receipt": "rcpt_96309911d4c81f7582cc899656c78623"
+        },
+        {
+            "automation_item_id": 17,
+            "cycle": 1,
+            "number": 2,
+            "started_at": "2026-10-29 13:09:10",
+            "finished_at": "2026-10-29 13:09:10",
+            "outcome": "delivered",
+            "code": "accepted",
+            "http_status": 200,
+            "duration_ms": 3,
+            "receipt": "rcpt_af8d766a0ebcfdd27af40b0d57210b43"
+        },
+        {
+            "automation_item_id": 18,
+            "cycle": 1,
+            "number": 2,
+            "started_at": "2026-10-29 13:09:10",
+            "finished_at": "2026-10-29 13:09:10",
+            "outcome": "delivered",
+            "code": "accepted",
+            "http_status": 200,
+            "duration_ms": 3,
+            "receipt": "rcpt_b643016de4f4cfc25fcc400f48df19df"
+        },
+        {
+            "automation_item_id": 14,
+            "cycle": 2,
+            "number": 1,
+            "started_at": "2026-10-29 13:09:45",
+            "finished_at": "2026-10-29 13:09:45",
+            "outcome": "delivered",
+            "code": "accepted",
+            "http_status": 201,
+            "duration_ms": 33,
+            "receipt": "rcpt_e3eabe31fb5fe43e7c4bdff36b30bc86"
+        }
+    ],
+    "receiver": {
+        "success": {
+            "receipt_count": 1,
+            "receipt": "rcpt_92c6ad9258557751dd7886b433646c46"
+        },
+        "transient_once": {
+            "receipt_count": 1,
+            "receipt": "rcpt_cc692432ef45b8b45c363348691b4f72"
+        },
+        "permanent": {
+            "receipt_count": 1,
+            "receipt": "rcpt_e3eabe31fb5fe43e7c4bdff36b30bc86"
+        },
+        "unavailable": {
+            "receipt_count": 0,
+            "receipt": null
+        },
+        "ack_loss_once": {
+            "receipt_count": 1,
+            "receipt": "rcpt_96309911d4c81f7582cc899656c78623"
+        },
+        "timeout_once": {
+            "receipt_count": 1,
+            "receipt": "rcpt_af8d766a0ebcfdd27af40b0d57210b43"
+        },
+        "interrupted": {
+            "receipt_count": 1,
+            "receipt": "rcpt_b643016de4f4cfc25fcc400f48df19df"
+        }
+    }
+}

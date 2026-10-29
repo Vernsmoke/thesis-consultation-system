@@ -2,7 +2,7 @@
 
 Project 29, PFEBSIT 002. Individual classroom prototype using Flutter Web, Laravel and XAMPP MariaDB through Laravel's MySQL driver.
 
-Status: **durable four-kind scan ready for checkpoint 05**. Student workflow commit `4a51934` is verified on GitHub. The bounded server workflow and scan eligibility/deduplication are implemented. **50 backend tests pass (242 assertions)**; actual first/repeat/scheduled scans created 11 pending rows without duplicates and one explicitly automated missed inference. **No notifications delivered; delivery/retry/recovery and full Flutter workflow are pending.** Activities/SA7 and widget-test machine-policy blocker remain unfinished. See [checklist](SUBMISSION-CHECKLIST.md), [automation boundary](docs/AUTOMATION.md), [actual scan results](evidence/test-results/SCAN-RESULTS.md), [API contract](docs/API-CONTRACT.md) and [evidence index](evidence/README.md).
+Status: **bounded delivery/recovery ready for checkpoint 06**. Student scan commit `0c8a274` was verified before this increment. **63 backend tests pass (314 assertions)**. The actual controlled receiver accepted all four kinds; temporary failure, timeout, lost acknowledgment, bounded exhaustion and coordinator recovery were exercised. Current snapshot: **17 delivered / 1 needs_review**. Delivered means receiver acceptance, not email/read acknowledgment. Full Flutter workflow, activities/SA7, final evidence/student review remain pending; widget tests remain blocked by machine policy. See [checklist](SUBMISSION-CHECKLIST.md), [delivery setup/contract/runbook](docs/DELIVERY.md), [actual delivery results](evidence/test-results/DELIVERY-RESULTS.md), [API contract](docs/API-CONTRACT.md) and [evidence index](evidence/README.md).
 
 The student reports teacher assignment/approval. The official registry was not independently inspected. Use only fictional data. The student personally reviews, verifies, commits, pushes and defends the work. AI-assisted code and documentation must be reviewed and acknowledged under institutional policy; preparation is not evidence of student understanding.
 
@@ -53,7 +53,7 @@ The **current workspace** has a fresh `thesis_consultation_week13` database, a s
 
 ## Student checkpoint and next milestone
 
-The student completed checkpoints 01–04. Use [checkpoint 05 commands and explanation](docs/CHECKPOINT-05.md) for this scan increment. No commit or push has been performed by the assistant. After the student commits, verify history/status before adding bounded notification delivery/retry/recovery. The current Flutter screen still shows the foundation connection check; it does not yet expose authenticated workflow or automation actions. The shared parent `PROJECT-PROGRESS.md` holds the handover for another chat.
+The student completed checkpoints 01–05. Use [checkpoint 06 commands and explanation](docs/CHECKPOINT-06.md) for delivery/recovery. No commit or push has been performed by the assistant. After the student commits, verify history/status before implementing the Flutter workflow/review screens. The current Flutter screen still shows the foundation connection check. Notification service setup is an additional local process: follow [delivery setup](docs/DELIVERY.md#setup-and-operations), preserve its private SQLite ledger and do not reinitialize existing secrets. The shared parent `PROJECT-PROGRESS.md` holds the handover for another chat.
 
 ## Reference documentation
 

@@ -1,0 +1,259 @@
+{
+  "base_commit": "0c8a2744a8aaa55e2c6737b3ebb56bee872f5578",
+  "files": [
+    {
+      "path": "backend/app/Console/Commands/DeliverAutomation.php",
+      "sha256": "0cc6fcbb0067fc5ff8807c33ef294b02c04b2053b0b6f02ea5e003cb361c2165"
+    },
+    {
+      "path": "backend/app/Http/Controllers/AutomationController.php",
+      "sha256": "d21dba2c50682fe52fcc365a85007af64e14da361ddbf1b00bba13cbcec0e2d9"
+    },
+    {
+      "path": "backend/app/Policies/AutomationItemPolicy.php",
+      "sha256": "c74bf680e596085936e9d9371652a4d24e501f2b9ef23810f0eff7409db5b572"
+    },
+    {
+      "path": "backend/app/Services/AutomationDelivery.php",
+      "sha256": "27f6a3be62fbdd30b463fdf3aae189803d4ba307795d965951bd71a18b8af92d"
+    },
+    {
+      "path": "backend/app/Services/AutomationEligibility.php",
+      "sha256": "e262b28bb10ba4a2bd5efcc4c0634aef046aefbcd55de55feb40c12d6e31913b"
+    },
+    {
+      "path": "backend/database/migrations/2026_10_29_000006_create_delivery_history.php",
+      "sha256": "fdddb804e6021a1ea00a1038bb9a17f1cff4f158170cc9b2073814b4e19e03b3"
+    },
+    {
+      "path": "backend/tests/Feature/AutomationDeliveryTest.php",
+      "sha256": "ae8edd4c30b219d16493a553b8600ba444f788856db60b6fdc3c1b09beb57471"
+    },
+    {
+      "path": "backend/tools/configure-notifications.php",
+      "sha256": "875f7de5283d4d1cc07304beb8403a7d74676a5a3e0a6e23aa6af0c2e68aa5f3"
+    },
+    {
+      "path": "backend/tools/verify-delivery.php",
+      "sha256": "d0ae7981f9412bfb89e6d93308bb8eab1b8951448f5671848497914b5a9556b5"
+    },
+    {
+      "path": "notification-service/public/index.php",
+      "sha256": "a18a7b763cb50a4c3556b7b9f78342588e0edf225122880adeeda42027a848fa"
+    },
+    {
+      "path": "backend/app/Console/Commands/ScanConsultations.php",
+      "sha256": "34b9d3d7fc7174909b14bb0ab48bbb42fbe6efc0648a64291a3b3f2b817cf30e"
+    },
+    {
+      "path": "backend/app/Http/Controllers/AuthController.php",
+      "sha256": "ea5b39398b44949e36a61f30a9ba7dbdbbdfc7d244dd52236d6a43990bdf02a1"
+    },
+    {
+      "path": "backend/app/Http/Controllers/ConsultationController.php",
+      "sha256": "a67e59309516f7a3af96793e17062549f42abcc29ba958e8531c644eb655f298"
+    },
+    {
+      "path": "backend/app/Http/Controllers/Controller.php",
+      "sha256": "25d1c1ef8e6cc8a376553faacfba2b07d9dfaee9bdbb84f14f77517580e9deb1"
+    },
+    {
+      "path": "backend/app/Http/Controllers/WorkflowController.php",
+      "sha256": "2ee2c4639a9c2257f2bef153a7ef48d4506b71c75aa4530cb13ccac5ec2d871d"
+    },
+    {
+      "path": "backend/app/Models/ActionItem.php",
+      "sha256": "294dd12ba3b8cf6d032bcd49861d0295d5a7f35b29a0431041e9cb6880e02aec"
+    },
+    {
+      "path": "backend/app/Models/AutomationItem.php",
+      "sha256": "dc5d3d2cabcd0d32f6b3b7e53c017d974ba7b8130d86eab48c0e2fd84684c2fb"
+    },
+    {
+      "path": "backend/app/Models/Consultation.php",
+      "sha256": "1d831e809b6b5a4b60dbadd7a4f6c17bad6f90983a12a5297bbfa885b253efd3"
+    },
+    {
+      "path": "backend/app/Models/ConsultationEvent.php",
+      "sha256": "66b1db655e5959872e9ef6097dcdcd9f53431814f52f099eb04ff87c893aa44c"
+    },
+    {
+      "path": "backend/app/Models/FollowUp.php",
+      "sha256": "17263e7dab4bfb5d1c1f22672b55ea267e597a985021499b3559dd9bdf6728b3"
+    },
+    {
+      "path": "backend/app/Models/User.php",
+      "sha256": "a21974a644efee4764a7ca967c9e45636b22964dc6dfb1d00f409dd04c925524"
+    },
+    {
+      "path": "backend/app/Policies/ActionItemPolicy.php",
+      "sha256": "78d11bc64de03567f4d269add7533aff6ef22273589e01dc0f39b85f072d8bc3"
+    },
+    {
+      "path": "backend/app/Policies/ConsultationPolicy.php",
+      "sha256": "80c5aee1e199e44062b374aa746ad4e5640171c525e2c568039ef5634d320ee3"
+    },
+    {
+      "path": "backend/app/Providers/AppServiceProvider.php",
+      "sha256": "caf306ef6a25a547bbb7edd5508a39b51c365083eb6dd58378cf2242018e94c7"
+    },
+    {
+      "path": "backend/app/Services/AutomationScanner.php",
+      "sha256": "0a3b25fd54e6cd90e1330825b785873431e7e58415e7fb920a29c89ff9e3a16e"
+    },
+    {
+      "path": "backend/config/app.php",
+      "sha256": "c8863128d674a2c067542d6d83b9f0a899a8ad1c5f84a60e5cc9ca5e37654935"
+    },
+    {
+      "path": "backend/config/auth.php",
+      "sha256": "09c46d5c0e950f0a35ae95c21ff998cc5e4157a78cb3d8ec7b9925322f00869f"
+    },
+    {
+      "path": "backend/config/cache.php",
+      "sha256": "dc3a64749bc19946ba6a054be0b67ae8c450c9401799cb176ac0a0b8d4756664"
+    },
+    {
+      "path": "backend/config/consultation.php",
+      "sha256": "64077b42d2dab47cd644cd747d86c8e66c1b4df0164845cfba5d96f91cb9b6b8"
+    },
+    {
+      "path": "backend/config/cors.php",
+      "sha256": "cac0505f09b5a3f6b9cb63d83d0c8043075329598731d0c7a84e62e53de0ee26"
+    },
+    {
+      "path": "backend/config/database.php",
+      "sha256": "4c831a869f4335805c6ca67c3f583e71329622ee8f70dbdc70c57a523a6b6021"
+    },
+    {
+      "path": "backend/config/filesystems.php",
+      "sha256": "46b977d9555ed617aa0d42055a0c76a34c9d16c63ee634ff6683bc95712c9317"
+    },
+    {
+      "path": "backend/config/logging.php",
+      "sha256": "20552e2e6c8ae48fc03e7a2869122eae254dd352e74f1a607ee16d14de6ffbb9"
+    },
+    {
+      "path": "backend/config/mail.php",
+      "sha256": "433acc0d5342a074b32e44b3d7ffba153c3eaf292a5a2fc94d7cb6ee0addb147"
+    },
+    {
+      "path": "backend/config/queue.php",
+      "sha256": "a185a3e86b65db26938204f4f50cf0c0ca99974e9926b9cdcef6b7743feea482"
+    },
+    {
+      "path": "backend/config/sanctum.php",
+      "sha256": "91f2e8e2b77d7599401fbd3069cdfcd29af6165cb2ce84c830f9b6c41918c88c"
+    },
+    {
+      "path": "backend/config/services.php",
+      "sha256": "2226be3fa0e560fc8cd628f3e8f50fcd78639a24375f5e931d0c656eaf1d4ce8"
+    },
+    {
+      "path": "backend/config/session.php",
+      "sha256": "c7f637c49f3e61d5488a11653b06a6b5a8a73b335d1dadbd84666be5ec4f6de6"
+    },
+    {
+      "path": "backend/database/migrations/0001_01_01_000000_create_users_table.php",
+      "sha256": "10d79883bc08ce46510f9ad8b1830b4d06d586dc56ae2c8bac3b3e491f69a90f"
+    },
+    {
+      "path": "backend/database/migrations/0001_01_01_000001_create_cache_table.php",
+      "sha256": "20f769d3c11748c1cc42c41cd3789b0b9b2cd0db44ee22d378addac3ff8aed4f"
+    },
+    {
+      "path": "backend/database/migrations/0001_01_01_000002_create_jobs_table.php",
+      "sha256": "7c9c712adf4091c87bf2612f4d0dccdfa1df4501553e4ac068b83d7bd5462fa5"
+    },
+    {
+      "path": "backend/database/migrations/2026_10_29_000001_add_role_to_users_table.php",
+      "sha256": "1ad65c4b69a03fb7a374095b2092afbb749b01d7c5fe63f514da181816ed3d2c"
+    },
+    {
+      "path": "backend/database/migrations/2026_10_29_000002_create_consultation_tables.php",
+      "sha256": "77e7b5153d8641c5c14d4a15fba41a59e49cc09598552f0649f618d1b197728a"
+    },
+    {
+      "path": "backend/database/migrations/2026_10_29_000003_create_consultation_events_table.php",
+      "sha256": "3a3973f1e366b0ab9732ec7177a263dd90c80757ef9767a6c77c1c708ed71acd"
+    },
+    {
+      "path": "backend/database/migrations/2026_10_29_000004_add_follow_ups_and_action_audit.php",
+      "sha256": "3542e99cfdeaf63e4dab9b580861e46e24ef335970db78c443e2cd35d84fa865"
+    },
+    {
+      "path": "backend/database/migrations/2026_10_29_000005_create_automation_items.php",
+      "sha256": "2171adbc7b8046201bdf6463d8c8f9f579694606a2ab5e9e1dde69d582ca5ea2"
+    },
+    {
+      "path": "backend/database/migrations/2026_10_29_113825_create_personal_access_tokens_table.php",
+      "sha256": "c81ecde85ea5072188c468dcaf79776728b6eb8f684d63fc0d88a4908484ca75"
+    },
+    {
+      "path": "backend/routes/api.php",
+      "sha256": "4fdf5cde6fe513b73d4d7035362ab43f6305baacfd2959b454a0ce23d2836392"
+    },
+    {
+      "path": "backend/routes/console.php",
+      "sha256": "2a171f8732cfdbe17d16d566505550993547c7edcaee54d87c5369425555bfea"
+    },
+    {
+      "path": "backend/routes/web.php",
+      "sha256": "248c7eeeb43bb61ee4fb6603e52b44843c64f72a841d671bcd41871aab23f970"
+    },
+    {
+      "path": "backend/tests/Feature/AutomationScanTest.php",
+      "sha256": "bae4faaa6e3675218350d35a0c87f5e6d8466b585f3e6a6fac3539b75a227328"
+    },
+    {
+      "path": "backend/tests/Feature/ConsultationApiTest.php",
+      "sha256": "0088372e88eff9abf091d8461a53eb451badca5f57267697f82854b22537c0d3"
+    },
+    {
+      "path": "backend/tests/Feature/ConsultationDataTest.php",
+      "sha256": "73e8c8cfbf2d4c41b7fcd0fc96c8939614a9dc53187c6318568f4eef7ed764e5"
+    },
+    {
+      "path": "backend/tests/Feature/ExampleTest.php",
+      "sha256": "aaa4a192fb4aa96d4e81eda06a29968da3d9a73b71026b87a67297e66dd985b8"
+    },
+    {
+      "path": "backend/tests/Feature/HealthTest.php",
+      "sha256": "55a7be7742a470684205988248b13434c1452822c0aa91031384f3ff38b1db51"
+    },
+    {
+      "path": "backend/tests/Feature/WorkflowApiTest.php",
+      "sha256": "83cda0b27846ce99f4d49e8258720132ce4c8858d84a509e5831f85e49f26590"
+    },
+    {
+      "path": "backend/tests/TestCase.php",
+      "sha256": "0b7e555e9c7d57c62e7ad03fe807f2bae9861f12cccefe30236c46c69545f181"
+    },
+    {
+      "path": "backend/tests/Unit/ExampleTest.php",
+      "sha256": "ffacae5c1a2a44c809420af5b3b404910da1b12167d58764dac6d10b8ba8cfaf"
+    },
+    {
+      "path": "backend/tools/inspect-data.php",
+      "sha256": "d63687ba604e72dec42a8dcbc0ca374f8fc6c0183452f857746ca68a50bb5c9d"
+    },
+    {
+      "path": "backend/tools/provision-local.php",
+      "sha256": "43c8ba83a2aa80075c5291da594cde4518c4eeaa57d9d79526db1712bc5ef9b9"
+    },
+    {
+      "path": "backend/tools/verify-api.php",
+      "sha256": "ed86218bceadd9df91edf98975aec747861b640e096cee05be3573566e510d3d"
+    },
+    {
+      "path": "backend/tools/verify-scan.php",
+      "sha256": "edda7cca441d86eb5f079f3bccb4f4bf4f2a1ca818c25839f445249f8122e016"
+    },
+    {
+      "path": "backend/tools/verify-workflow.php",
+      "sha256": "e826f46474b43559a8fef362b422e4e5b85dab0a1448a4fa5798e28f83d2dd34"
+    }
+  ],
+  "build": "Uncommitted checkpoint 06 delivery source",
+  "timestamp_utc": "2026-10-29T13:17:44.4717896Z"
+}

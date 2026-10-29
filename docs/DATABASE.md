@@ -1,5 +1,7 @@
 # Local consultation data foundation
 
+Checkpoint 06 adds migration `2026_10_29_000006_create_delivery_history.php`: work cycle/total_attempts/claim_token; append-only-by-application automation_attempts with unique item/cycle/number and claim token; automation_recoveries with actor, reason and new cycle. Runtime DB accounts still have migration privileges in this prototype. The receiver's separate private SQLite ledger stores only identity/payload hash/receipt/time and fault counters; domain/work data remains in XAMPP MariaDB. See [delivery setup/retention](DELIVERY.md). Migration rollback refuses existing attempt/recovery history; do not reset the app to bypass it. Earlier schema descriptions below are historical foundations; API/automation now exist.
+
 Implemented at checkpoint 02, based on foundation commit `d43b0df`. This is a data milestone, not a working consultation API or proof of authorization/automation.
 
 ## Databases and safe setup

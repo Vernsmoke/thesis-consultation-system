@@ -1,0 +1,3 @@
+PHPUnit 11.5.57 by Sebastian Bergmann and contributors.
+
+Cannot open bootstrap script "C:\Users\Laure\Documents\ChatGPT\IPT\week-13\backend\vendor/autoload.php"

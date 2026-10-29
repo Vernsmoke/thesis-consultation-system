@@ -1,0 +1,126 @@
+
+   PASS  Tests\Unit\ExampleTest
+  ✓ that true is true                                                                                            0.01s  
+
+   FAIL  Tests\Feature\AutomationDeliveryTest
+  ✓ success is journaled and repeat does not make another service call                                           1.02s  
+  ✓ transient failure waits then recovers with the same identity                                                 0.08s  
+  ✓ persistent transient failure stops after three attempts                                                      0.08s  
+  ⨯ permanent rejection and malformed receipt require review                                                     0.09s  
+  ✓ connection timeout is a bounded persisted retry                                                              0.07s  
+  ✓ expired claim retains interrupted history and uses a new fenced attempt                                      0.10s  
+  ✓ active claim is not reprocessed and late result cannot overwrite new owner                                   0.07s  
+  ✓ obsolete source and forged recipient or payload are not sent                                                 0.08s  
+  ✓ completed action cancels due work without a call                                                             0.10s  
+  ⨯ coordinator recovery preserves history and has a total cycle limit                                           0.13s  
+  ✓ review and notifications are scoped to current roles and records                                             0.08s  
+  ✓ worker rejects external endpoint and bad batch limits                                                        0.05s  
+
+   PASS  Tests\Feature\AutomationScanTest
+  ✓ all four kinds create minimal work and repeat without duplicates                                             0.12s  
+  ✓ completed and future actions are not queued                                                                  0.07s  
+  ✓ reminders use future window and do not process completed meetings                                            0.05s  
+  ✓ daily summary rolls over at manila midnight not utc midnight                                                 0.06s  
+  ✓ invalid source roles are routed to coordinator without state change                                          0.07s  
+  ✓ missing coordinator fails visibly without work                                                               0.05s  
+  ✓ capacity limit rolls back preceding missed state and work                                                    0.06s  
+  ✓ storage failure late in scan rolls back all changes                                                          0.06s  
+  ✓ log failure is reported after commit without claiming a rollback                                             0.05s  
+  ✓ duplicate identity is enforced by the database                                                               0.05s  
+
+   PASS  Tests\Feature\ConsultationApiTest
+  ✓ login uses server role and does not return a password or token                                               0.08s  
+  ✓ invalid login is generic and unauthenticated reads are 401                                                   0.25s  
+  ✓ login rate limit stops repeated password attempts                                                            1.29s  
+  ✓ logout ends the session                                                                                      0.04s  
+  ✓ student reads only own records and cannot open another students record                                       0.05s  
+  ✓ unassigned adviser has no records and cannot read others                                                     0.05s  
+  ✓ panel is read only and sees only explicit membership                                                         0.06s  
+  ✓ coordinator can review but cannot confirm for the adviser                                                    0.05s  
+  ✓ student request and assigned adviser confirmation are audited                                                0.07s  
+  ✓ request validation rejects missing agenda nonadviser and impersonation                                       0.05s  
+  ✓ student and other adviser cannot confirm a schedule                                                          0.06s  
+  ✓ invalid past reversed and ambiguous dates are rejected                                                       0.05s  
+  ✓ conflicting adviser schedule is rejected without mutation                                                    0.06s  
+  ✓ database failure returns a safe 503 without creating work                                                    0.05s  
+  ✓ an audit write failure rolls back the consultation too                                                       0.05s  
+
+   PASS  Tests\Feature\ConsultationDataTest
+  ✓ seeded workflow relationships and utc dates are consistent                                                   0.05s  
+  ✓ reseeding does not duplicate or overwrite work                                                               0.05s  
+  ✓ demo passwords are hashed and not serialized                                                                 0.04s  
+  ✓ unknown user reference cannot create an orphan action item                                                   0.04s  
+  ✓ database rejects a confirmed meeting without a schedule                                                      0.04s  
+  ✓ database rejects an end before the start                                                                     0.04s  
+  ✓ database rejects a duplicate panel assignment                                                                0.04s  
+  ✓ referenced student cannot be deleted                                                                         0.04s  
+  ✓ database rejects an unknown role                                                                             0.04s  
+
+   PASS  Tests\Feature\ExampleTest
+  ✓ the application returns a successful response                                                                0.03s  
+
+   PASS  Tests\Feature\HealthTest
+  ✓ liveness returns only public project metadata                                                                0.02s  
+  ✓ configured flutter origin can read health                                                                    0.02s  
+  ✓ unlisted origin is not granted browser access                                                                0.02s  
+
+   PASS  Tests\Feature\WorkflowApiTest
+  ✓ request to follow up normal path uses only authorized api actions                                            0.09s  
+  ✓ assigned adviser can record missed once after the end                                                        0.05s  
+  ✓ future and nonconfirmed meetings cannot be closed                                                            0.05s  
+  ✓ students panel coordinator and other adviser cannot record outcomes                                          0.05s  
+  ✓ invalid outcome and missing notes are rejected                                                               0.06s  
+  ✓ action assignment requires assigned adviser completed meeting and valid deadline                             0.08s  
+  ✓ action completion is idempotent and only the owning student can do it                                        0.06s  
+  ✓ follow up permissions content and terminal state are enforced                                                0.07s  
+  ✓ follow up after missed meeting does not create action items                                                  0.05s  
+  ✓ audit failure rolls back meeting status action and follow up                                                 0.07s  
+  ✓ missing session and missing action record have safe errors                                                   0.04s  
+  ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────  
+   FAILED  Tests\Feature\AutomationDeliveryTest > permanent rejection and malformed receipt require review              
+  Failed asserting that two strings are identical.
+--- Expected
++++ Actual
+@@ @@
+-'invalid_receipt'
++'http_422'
+
+  at tests\Feature\AutomationDeliveryTest.php:108
+    104▕         $this->assertSame('needs_review', $this->deliver($work)['status']);
+    105▕         $other = AutomationItem::where('kind', 'reminder')->whereKeyNot($work->id)->firstOrFail();
+    106▕         Http::fake(fn () => Http::response(['receipt' => 'bad'], 200));
+    107▕         $this->assertSame('needs_review', $this->deliver($other)['status']);
+  ➜ 108▕         $this->assertSame('invalid_receipt', $other->fresh()->failure_code);
+    109▕     }
+    110▕ 
+    111▕     public function test_connection_timeout_is_a_bounded_persisted_retry(): void
+    112▕     {
+
+  1   tests\Feature\AutomationDeliveryTest.php:108
+
+  ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────  
+   FAILED  Tests\Feature\AutomationDeliveryTest > coordinator recovery preserves history and has a total cycle limit    
+  Failed asserting that two strings are identical.
+--- Expected
++++ Actual
+@@ @@
+-'delivered'
++'needs_review'
+
+  at tests\Feature\AutomationDeliveryTest.php:190
+    186▕         $this->postJson('/api/automation/'.$work->id.'/recover', ['reason' => 'Corrected fictional test service configuration.'])->assertOk()->assertJsonPath('data.cycle', 2);
+    187▕         $this->assertDatabaseCount('automation_attempts', 1);
+    188▕         $this->assertDatabaseCount('automation_recoveries', 1);
+    189▕         Http::fake(fn (Request $request) => $this->success($request));
+  ➜ 190▕         $this->assertSame('delivered', $this->deliver($work)['status']);
+    191▕         $this->assertSame(2, $work->fresh()->total_attempts);
+    192▕         $this->postJson('/api/automation/'.$work->id.'/recover', ['reason' => 'Cannot recover delivered work.'])->assertStatus(409);
+    193▕         $work->update(['status' => 'needs_review', 'receipt' => null, 'cycle' => 3]);
+    194▕         $this->postJson('/api/automation/'.$work->id.'/recover', ['reason' => 'Recovery cycle limit demonstration.'])->assertStatus(409);
+
+  1   tests\Feature\AutomationDeliveryTest.php:190
+
+
+  Tests:    2 failed, 60 passed (300 assertions)
+  Duration: 6.32s
+

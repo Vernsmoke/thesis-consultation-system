@@ -1,6 +1,6 @@
 # Week 13 bounded design
 
-Status: proposed implementation decisions, prepared before application code. Validate these decisions against execution evidence as each milestone is built.
+Status: original proposals below preserve the preparation decisions and checkpoint history. Current checkpoint 06 implements the bounded backend workflow, scans, receiver, retry/recovery and scoped automation API; see [delivery contract/runbook](DELIVERY.md) and [actual results](../evidence/test-results/DELIVERY-RESULTS.md). Three attempts per cycle, at most three cycles, 30-second lease and 30–35/60–65 second backoff are now implemented. Full Flutter/activities/report remain pending. Earlier pending statements describe earlier checkpoints; accepted receipts never prove external email/user reading. The original diagram is a design view; actual receiver storage is separate private SQLite, domain/work data remains MariaDB.
 
 Implementation update at checkpoint 02: the [data foundation](DATABASE.md) now implements roles, consultation/panel/action-item tables and models with fresh isolated MariaDB app/test databases. [Actual tests](../evidence/test-results/DATA-RESULTS.md) verify relationships, seed stability and constraints. Workflow/API permissions, audit and automation policies below remain proposals pending implementation. Seeded statuses are fictional fixtures, not execution of those policies.
 
