@@ -1,0 +1,20 @@
+
+Fatal error: Uncaught ReflectionException: Class "Kernel" does not exist in C:\Users\Laure\Documents\ChatGPT\IPT\week-13\backend\vendor\laravel\framework\src\Illuminate\Container\Container.php:1122
+Stack trace:
+#0 C:\Users\Laure\Documents\ChatGPT\IPT\week-13\backend\vendor\laravel\framework\src\Illuminate\Container\Container.php(1122): ReflectionClass->__construct('Kernel')
+#1 C:\Users\Laure\Documents\ChatGPT\IPT\week-13\backend\vendor\laravel\framework\src\Illuminate\Container\Container.php(933): Illuminate\Container\Container->build('Kernel')
+#2 C:\Users\Laure\Documents\ChatGPT\IPT\week-13\backend\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(1078): Illuminate\Container\Container->resolve('Kernel', Array, true)
+#3 C:\Users\Laure\Documents\ChatGPT\IPT\week-13\backend\vendor\laravel\framework\src\Illuminate\Container\Container.php(864): Illuminate\Foundation\Application->resolve('Kernel', Array)
+#4 C:\Users\Laure\Documents\ChatGPT\IPT\week-13\backend\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(1058): Illuminate\Container\Container->make('Kernel', Array)
+#5 C:\Users\Laure\Documents\ChatGPT\IPT\week-13\backend\tools\inspect-data.php(6): Illuminate\Foundation\Application->make('Kernel')
+#6 {main}
+
+Next Illuminate\Contracts\Container\BindingResolutionException: Target class [Kernel] does not exist. in C:\Users\Laure\Documents\ChatGPT\IPT\week-13\backend\vendor\laravel\framework\src\Illuminate\Container\Container.php:1124
+Stack trace:
+#0 C:\Users\Laure\Documents\ChatGPT\IPT\week-13\backend\vendor\laravel\framework\src\Illuminate\Container\Container.php(933): Illuminate\Container\Container->build('Kernel')
+#1 C:\Users\Laure\Documents\ChatGPT\IPT\week-13\backend\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(1078): Illuminate\Container\Container->resolve('Kernel', Array, true)
+#2 C:\Users\Laure\Documents\ChatGPT\IPT\week-13\backend\vendor\laravel\framework\src\Illuminate\Container\Container.php(864): Illuminate\Foundation\Application->resolve('Kernel', Array)
+#3 C:\Users\Laure\Documents\ChatGPT\IPT\week-13\backend\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(1058): Illuminate\Container\Container->make('Kernel', Array)
+#4 C:\Users\Laure\Documents\ChatGPT\IPT\week-13\backend\tools\inspect-data.php(6): Illuminate\Foundation\Application->make('Kernel')
+#5 {main}
+  thrown in C:\Users\Laure\Documents\ChatGPT\IPT\week-13\backend\vendor\laravel\framework\src\Illuminate\Container\Container.php on line 1124

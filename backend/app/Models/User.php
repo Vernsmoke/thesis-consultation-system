@@ -10,6 +10,8 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
+    public const ROLES = ['student', 'adviser', 'panel', 'coordinator'];
+
     /** @use HasFactory<UserFactory> */
     use HasFactory, Notifiable;
 

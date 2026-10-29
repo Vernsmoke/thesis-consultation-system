@@ -1,0 +1,26 @@
+
+   PASS  Tests\Unit\ExampleTest
+  ✓ that true is true                                                                                            0.01s  
+
+   PASS  Tests\Feature\ConsultationDataTest
+  ✓ seeded workflow relationships and utc dates are consistent                                                   0.60s  
+  ✓ reseeding does not duplicate or overwrite work                                                               0.05s  
+  ✓ demo passwords are hashed and not serialized                                                                 0.04s  
+  ✓ unknown user reference cannot create an orphan action item                                                   0.06s  
+  ✓ database rejects a confirmed meeting without a schedule                                                      0.04s  
+  ✓ database rejects an end before the start                                                                     0.06s  
+  ✓ database rejects a duplicate panel assignment                                                                0.04s  
+  ✓ referenced student cannot be deleted                                                                         0.04s  
+  ✓ database rejects an unknown role                                                                             0.04s  
+
+   PASS  Tests\Feature\ExampleTest
+  ✓ the application returns a successful response                                                                0.05s  
+
+   PASS  Tests\Feature\HealthTest
+  ✓ liveness returns only public project metadata                                                                0.02s  
+  ✓ configured flutter origin can read health                                                                    0.02s  
+  ✓ unlisted origin is not granted browser access                                                                0.02s  
+
+  Tests:    14 passed (35 assertions)
+  Duration: 1.25s
+

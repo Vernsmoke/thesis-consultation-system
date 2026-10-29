@@ -1,5 +1,15 @@
 # Changelog
 
+## Uncommitted data foundation — 2026-10-29
+
+- Verified the student's foundation commit d43b0df locally and on GitHub before changes.
+- Provisioned fresh database-scoped app/test accounts and schemas on loopback XAMPP MariaDB; generated secrets only in ignored files; no archived data/settings used.
+- Added user roles, consultations, panel links, action items and relationships, indexed schedule/deadline fields and checked database invariants.
+- Replaced generic seeder with repeatable fictional Project 29 fixtures; hashed demo passwords and preserved existing edits on repeat seeding.
+- Added isolated MariaDB tests with a pre-reset connection guard. Final suite: 14 pass/35 assertions; initial assertion-method error and inspector import failure retained with corrected results.
+- Verified denied cross-database read and unchanged live seed snapshots; captured actual migration constraints in VS Code.
+- Authentication/workflow APIs and all four automations remain pending; frontend unchanged.
+
 ## Uncommitted foundation — 2026-10-29
 
 - Prepared a source-mapped Week 13 checklist and bounded Project 29 design before application implementation.

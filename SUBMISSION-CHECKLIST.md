@@ -9,9 +9,10 @@ Status: **prepared** means a reviewable plan exists, **pending** means the imple
 | ID | Requirement and origin | Status | Artifact / planned proof |
 | --- | --- | --- | --- |
 | GOV-01 | One individual approved/registered project; no production data (guide) | Student reports assigned and approved; official registry not inspected | [Scope and authority](docs/DESIGN.md#scope-and-authority); student must retain instructor confirmation |
-| GOV-02 | Fresh Week 13 history, separate folder, student commits/pushes (student) | Independent repository initialized; first student commit/push pending | Branch codex/week13-foundation, new supplied origin; no archived source/evidence used |
+| GOV-02 | Fresh Week 13 history, separate folder, student commits/pushes (student) | First commit d43b0df verified locally/on remote; data increment uncommitted | Branch codex/week13-foundation, new supplied origin; student handles every commit/push |
 | PREP-01 | Feature branch, evidence folders, lab log with date, environment, versions, scope (guided part 1) | Complete for foundation | [Lab log](docs/LAB-LOG.md) |
 | FND-01 | Fresh scaffold/API connection (implementation milestone, not a separate teacher requirement) | Verified; widget tests blocked | [Results](evidence/test-results/FOUNDATION-RESULTS.md); five backend tests, analysis, web build, real browser connection |
+| DATA-01 | Consultation/role/action-item data foundation (implementation milestone supporting workflow) | Verified; checkpoint 02 awaiting student commit | [Database guide](docs/DATABASE.md), [14-test result](evidence/test-results/DATA-RESULTS.md); fresh scoped MariaDB app/test databases, fictional seeder and constraints |
 | DES-01 | Actors, trigger, trusted inputs, boundary, outputs, dependencies, human approval, non-goals (topic 1) | Prepared | [Design](docs/DESIGN.md) |
 | DES-02 | Data-flow/sequence diagram marks trust, credentials, sensitive data, logs and failure/approval paths | Prepared | [Design diagram](docs/DESIGN.md#data-flow-and-trust-boundaries) |
 | DES-03 | At least two approaches with fit, security, reliability, performance, effort, skills, ownership and verification tradeoffs | Prepared; execution evidence pending | [Decision record](docs/DESIGN.md#decision-record) |
@@ -42,7 +43,7 @@ Status: **prepared** means a reviewable plan exists, **pending** means the imple
 | ACT-03 | Each activity: assumptions/constraints/dependencies/acceptance role, adverse case, limitations, next improvement and one-page interpretation separating fact/conclusion/recommendation | Pending | Two clearly labeled one-page interpretations in main report |
 | SA7-01 | SA7 case plus lab portfolio: source, example config, diagram, logs, failure evidence, recovery notes, maintainability | Pending | Main report and linked supporting artifacts |
 | SA7-02 | Concept explanation/control selection (15%); guided Flutter/API build (35%); adverse test (25%); report/viva (25%) | Pending | Assessment mapping in report; student oral review remains human work |
-| DOC-01 | README setup/run/retest, manifests/lockfiles, migrations/fictional seeders, issue record, limitations, recovery and maintenance match build | Pending | README, CHANGELOG, docs and source |
+| DOC-01 | README setup/run/retest, manifests/lockfiles, migrations/fictional seeders, issue record, limitations, recovery and maintenance match build | Foundation/data setup documented; full workflow/recovery/maintenance pending | README, CHANGELOG, [database guide](docs/DATABASE.md), docs and source |
 | EVD-01 | Actual saved-source VS Code screenshots and actual running Flutter browser screenshots; no secrets | Foundation captures complete; required workflow/failure captures pending | [Index](evidence/README.md); connected screen, narrow layout and actual VS Code health route |
 | EVD-02 | Safe API requests/responses, logs, timings, descriptive filenames, evidence index | Pending | evidence/api-tests, logs and test-results |
 | DEMO-01 | Short controlled demonstration and backup path if dependency unavailable | Pending | Demo script and preserved execution evidence |

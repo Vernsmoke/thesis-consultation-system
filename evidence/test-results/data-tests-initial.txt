@@ -1,0 +1,23 @@
+
+  ...⨯..........
+  ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────  
+   FAILED  Tests\Feature\ConsultationDataTest > demo passwords are hashed and not serialized                    Error   
+  Call to undefined method Tests\Feature\ConsultationDataTest::assertSameCanonicalizing()
+
+  at tests\Feature\ConsultationDataTest.php:65
+     61▕         $user = User::where('email', 'student.one@example.test')->firstOrFail();
+     62▕         $this->assertTrue(Hash::check('Test-only-fictional-password', $user->password));
+     63▕         $this->assertArrayNotHasKey('password', $user->toArray());
+     64▕         $this->assertFalse($user->isFillable('role'));
+  ➜  65▕         $this->assertSameCanonicalizing(User::ROLES, User::distinct()->pluck('role')->all());
+     66▕     }
+     67▕ 
+     68▕     public function test_unknown_user_reference_cannot_create_an_orphan_action_item(): void
+     69▕     {
+
+  1   tests\Feature\ConsultationDataTest.php:65
+
+
+  Tests:    1 failed, 13 passed (34 assertions)
+  Duration: 1.20s
+
