@@ -38,6 +38,7 @@ $result = [
     'counts' => [
         'users' => User::count(), 'consultations' => Consultation::count(),
         'panel_links' => DB::table('consultation_panel')->count(), 'action_items' => ActionItem::count(),
+        'follow_ups' => DB::table('follow_ups')->count(), 'audit_events' => DB::table('consultation_events')->count(),
     ],
     'roles' => User::select('role')->selectRaw('COUNT(*) AS count')->groupBy('role')->orderBy('role')->get(),
     'consultations' => Consultation::orderBy('reference')->get(['reference', 'status', 'starts_at', 'ends_at', 'schedule_version']),

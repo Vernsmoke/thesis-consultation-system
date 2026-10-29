@@ -31,3 +31,11 @@ No new browser-workflow capture is claimed for a schema-only increment. The exis
 - [Actual saved record policy in VS Code](screenshots/source-code/w13-api-record-policy-vscode.jpg). This proves source; tests/live responses prove execution.
 
 Full Flutter login/workflow/browser states and automation evidence remain pending. API HTTP evidence uses curl, not a fabricated browser screenshot.
+
+## Checkpoint 04 workflow evidence
+
+- [Workflow result map](test-results/WORKFLOW-RESULTS.md), [first 40-test output](test-results/workflow-tests-initial.txt), [actual migration](test-results/workflow-migration.txt).
+- [Actual HTTP workflow, 36 checks](api-tests/workflow-live-initial.json), [routes](api-tests/workflow-routes.txt), [current safe app snapshot](test-results/workflow-app-snapshot.json), [source/build metadata](test-results/workflow-build.json).
+- [Actual completion/follow-up code in VS Code](screenshots/source-code/w13-workflow-completion-vscode.jpg). Repeat-completion behavior is supported by test/live execution, not the screenshot alone.
+
+Two live starting meetings were explicitly initialized fictional past-confirmed fixtures. No real meeting, Flutter workflow, notification or automatic missed-session behavior is claimed. No execution failure occurred in this increment; prior checkpoint failures remain preserved.

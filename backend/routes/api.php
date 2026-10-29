@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ConsultationController;
+use App\Http\Controllers\WorkflowController;
 use Illuminate\Support\Facades\Route;
 
 // Public liveness only: database and notification delivery are checked separately.
@@ -21,4 +22,8 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/consultations', [ConsultationController::class, 'store']);
     Route::get('/consultations/{consultation}', [ConsultationController::class, 'show']);
     Route::patch('/consultations/{consultation}/schedule', [ConsultationController::class, 'confirmSchedule']);
+    Route::patch('/consultations/{consultation}/status', [WorkflowController::class, 'recordOutcome']);
+    Route::post('/consultations/{consultation}/action-items', [WorkflowController::class, 'addActionItem']);
+    Route::patch('/action-items/{actionItem}/complete', [WorkflowController::class, 'completeActionItem']);
+    Route::post('/consultations/{consultation}/follow-ups', [WorkflowController::class, 'followUp']);
 });

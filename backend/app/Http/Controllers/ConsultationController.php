@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Consultation;
+use App\Models\ConsultationEvent;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
@@ -33,7 +34,7 @@ class ConsultationController extends Controller
     {
         Gate::authorize('view', $consultation);
 
-        return response()->json(['data' => $consultation->load(self::PARTICIPANTS)->load('actionItems')]);
+        return response()->json(['data' => $consultation->load(self::PARTICIPANTS)->load('actionItems', 'followUps.author:id,name,role')]);
     }
 
     public function store(Request $request)
@@ -53,7 +54,7 @@ class ConsultationController extends Controller
                 'adviser_id' => $data['adviser_id'], 'agenda' => $data['agenda'],
                 'status' => 'requested', 'schedule_version' => 0,
             ]);
-            $this->recordEvent($consultation, $request->user(), 'consultation_requested', null, $id);
+            ConsultationEvent::record($consultation, $request->user(), 'consultation_requested', null, $id);
 
             return $consultation;
         });
@@ -85,20 +86,11 @@ class ConsultationController extends Controller
                 'status' => 'confirmed', 'starts_at' => $data['starts_at'], 'ends_at' => $data['ends_at'],
                 'schedule_version' => $meeting->schedule_version + 1,
             ]);
-            $this->recordEvent($meeting, $request->user(), 'schedule_confirmed', 'requested', $id);
+            ConsultationEvent::record($meeting, $request->user(), 'schedule_confirmed', 'requested', $id);
 
             return $meeting;
         });
 
         return response()->json(['data' => $meeting->load(self::PARTICIPANTS), 'correlation_id' => $id]);
-    }
-
-    private function recordEvent(Consultation $meeting, User $actor, string $event, ?string $from, string $correlation): void
-    {
-        DB::table('consultation_events')->insert([
-            'consultation_id' => $meeting->id, 'actor_id' => $actor->id, 'correlation_id' => $correlation,
-            'event' => $event, 'from_status' => $from, 'to_status' => $meeting->status,
-            'schedule_version' => $meeting->schedule_version, 'created_at' => now(),
-        ]);
     }
 }

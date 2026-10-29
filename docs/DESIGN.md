@@ -6,6 +6,8 @@ Implementation update at checkpoint 02: the [data foundation](DATABASE.md) now i
 
 Checkpoint 03 update supersedes the permission/request/schedule proposal: [API contract](API-CONTRACT.md) implements Sanctum cookie sessions, policies, scoped reads, student requests, assigned-adviser confirmation and transactional audit events. [Actual API evidence](../evidence/test-results/API-RESULTS.md) includes a retained request/confirmed record. Remaining mutations, UI and automation policies below are still pending; no notification/outbox behavior is implied by a schedule confirmation yet.
 
+Checkpoint 04 update: manual meeting outcomes, action assignment/completion and participant follow-up now implement the bounded server workflow; see [workflow evidence](../evidence/test-results/WORKFLOW-RESULTS.md). Follow-up author/assignee come from the server, notes are appended, and repeat action completion creates no extra audit. No Flutter workflow or automation behavior is implied by these API results; all four required automations remain pending.
+
 ## Scope and authority
 
 The student reports on 2026-10-29 that the teacher assigned and approved Project 29, Thesis Consultation Reminder System, in response to the approval/registration status question. This is the student's confirmation, not an independent inspection of the official class registry. The student retains responsibility for checking the instructor's written approval/registry; this repository must never modify it. Deadline: October 30, 2026, Asia/Manila; submission time unspecified.

@@ -1,6 +1,6 @@
 # Week 13 API — request and schedule milestone
 
-Implemented at checkpoint 03, based on student commit `27960ba`. Login, scoped consultation reads, student requests and adviser confirmation now work. Meeting-status updates, action-item writes, follow-up and all automation endpoints remain pending. This document describes implemented routes, not proposed future endpoints.
+Session/request/schedule APIs were implemented at checkpoint 03. Checkpoint 04, based on student commit `d2fe529`, adds manual meeting outcomes, action assignment/completion and follow-up. Automation and the full Flutter workflow remain pending. This document describes implemented routes, not proposed future endpoints.
 
 ## Authentication decision and local run
 
@@ -19,7 +19,7 @@ php -S 127.0.0.1:8000 ../vendor/laravel/framework/src/Illuminate/Foundation/reso
 
 Do not run the router from backend/; it expects public/index.php. Stop an existing verified API process before starting a replacement. During verification, the older Artisan/no-reload server returned a safe 503 with database authentication error 1045 while current CLI DB inspection succeeded. After removing the inspected duplicate API processes and running one direct server from public/, the full live flow passed. The first direct attempt used the wrong working directory and returned a non-JSON failure; its failed record is retained. This does not justify a database/password/system repair; none was performed. Use one server and reload it after private configuration changes.
 
-For a fresh checkout after installing locked dependencies and configuring fresh app/test databases as described in DATABASE.md, run `php artisan migrate --no-interaction`. There are now seven migrations including consultation_events and Sanctum's table. Do not recreate databases or reset live fixtures.
+For a fresh checkout after installing locked dependencies and configuring fresh app/test databases as described in DATABASE.md, run `php artisan migrate --no-interaction`. There are now eight migrations including consultation_events, Sanctum's table and follow-ups/action audit. Do not recreate databases or reset live fixtures.
 
 ## Implemented endpoints
 
@@ -36,6 +36,10 @@ All business paths below use base `http://127.0.0.1:8000/api`. The CSRF-cookie b
 | GET /consultations/{id} | 200 data consultation + limited participant names/roles + action_items | Same record permission |
 | POST /consultations | adviser_id + agenda; 201 data + correlation_id | Student only; student_id comes from authenticated user |
 | PATCH /consultations/{id}/schedule | starts_at + ends_at; 200 data + correlation_id | Assigned adviser only, requested state only |
+| PATCH /consultations/{id}/status | status completed/missed + meeting_notes; 200 data + correlation_id | Assigned adviser; confirmed meeting after its scheduled end |
+| POST /consultations/{id}/action-items | description + due_at; 201 data + correlation_id | Assigned adviser; completed meeting |
+| PATCH /action-items/{id}/complete | No body required; 200 data + changed + correlation_id | Assigned student who also owns the consultation |
+| POST /consultations/{id}/follow-ups | message; 201 data + correlation_id | Owning student or assigned adviser; completed/missed meeting |
 
 Responses include IDs, references, relevant agenda/status/schedule and permitted participant details. Consultation participant relationships select id/name/role; they do not expose passwords/hashes or account emails. GET /me and login expose only id/name/role. No user-directory endpoint exposes arbitrary accounts.
 
@@ -44,6 +48,20 @@ Request agenda: required string, 10–2000 characters. adviser_id must reference
 Schedule values use exact UTC format `YYYY-MM-DDTHH:mm:ssZ`, e.g. `2026-11-05T01:00:00Z`. starts_at must be in the future; ends_at must be later. The client converts Manila display/input to UTC. The adviser and consultation rows are locked in a transaction; an existing confirmed interval for that adviser must not overlap (existing start < proposed end AND existing end > proposed start). Adjacent intervals are allowed. This checks the prototype's recorded consultations, **not actual adviser availability** or external calendars. Same-adviser lock serialization is implemented; an actual competing-process race test remains pending.
 
 A second confirmation returns 409 and does not increment schedule_version or add another audit event. Rescheduling is not part of this endpoint. It does not send a reminder or create notification work yet. Student conflicts across different advisers and real panel calendars are not checked by this bounded implementation.
+
+## Meeting, action and follow-up rules (checkpoint 04)
+
+The assigned adviser can move a confirmed consultation to completed or missed only once, after ends_at. Required meeting_notes is a string of 10–2000 characters. Invalid target statuses/notes return 422; premature or repeated outcomes return 409. There is no terminal-outcome correction/reopen endpoint. These are bounded prototype choices, not university attendance policies. Automatic missed-session detection remains unimplemented.
+
+Only the assigned adviser can create an action item after completed status. description is 10–500 characters; due_at is an explicit future UTC timestamp using the schedule format. assigned_to_id, completed_at and deadline_version are prohibited client fields: the server uses the consultation's student, null completion and version 1. Noncompleted meetings return 409. This endpoint does not yet send deadline notices.
+
+Only the assigned student who owns the linked consultation can complete its action item. The consultation and item are locked in that order, permission/state rechecked, and completion time comes from the server. The first call returns changed=true and an audit correlation ID. Repeat calls preserve the original timestamp, return changed=false/correlation_id=null, and create no audit event. This is the idempotent completion guarantee; ordinary action creation POSTs are not idempotent on retries.
+
+After completed or missed status, the owning student and assigned adviser may append a follow-up message (10–2000 characters); the server supplies author_id and rejects a supplied author_id. Read-only panel/coordinator roles cannot append. Authorized detail responses include action_items and ordered follow_ups with limited author id/name/role. No note edit/delete endpoint exists. Detail currently returns the linked note/action collection for the bounded classroom data; large-history pagination is not evaluated. Follow-up POST creates another note on each valid call; no duplicate-submission guarantee is claimed.
+
+ConsultationEvent is now a small shared audit writer used by both controllers, keeping audit fields consistent without a separate service layer. Action events include the action_item_id; follow-up events identify the consultation/actor and correlation. Note bodies/descriptions stay out of the audit payload. All four new writes include their audit in the same transaction. The audit-failure test checks rollback of meeting state, action assignment, action completion and follow-up creation.
+
+Eight migrations are now applied. Existing rows/events from earlier checkpoints were preserved. Real checkpoint-04 HTTP evidence used two explicit past-confirmed fixtures (IDs 5/6), then executed actual outcome/action/follow-up calls. This initialization is disclosed; it is not real-meeting evidence. The current app snapshot has 6 consultations, 2 actions, 3 follow-ups and 9 total audit events. See [workflow result map](../evidence/test-results/WORKFLOW-RESULTS.md).
 
 ## Errors and audit
 
@@ -80,4 +98,4 @@ These run only against the guarded isolated MariaDB test schema; feature-test CS
 - [Laravel authorization policies](https://laravel.com/docs/12.x/authorization)
 - Installed Sanctum/session middleware and Laravel development router were inspected for actual behavior.
 
-Local HTTP/controlled data only; no real email or production readiness claim. Full workflow, UI state evidence, automation retry/recovery, required activities and SA7 remain unfinished.
+Local HTTP/controlled data only; no real email or production readiness claim. Full Flutter workflow/UI evidence, automation retry/recovery, required activities and SA7 remain unfinished.

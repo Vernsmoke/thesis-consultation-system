@@ -1,0 +1,87 @@
+{
+    "case": "DATA-LIVE",
+    "timestamp_utc": "2026-10-29T12:13:55+00:00",
+    "timezone": "UTC; display Asia/Manila",
+    "database": "thesis_consultation_week13",
+    "connection": {
+        "version": "10.4.32-MariaDB",
+        "account": "thesis_week13@127.0.0.1"
+    },
+    "counts": {
+        "users": 6,
+        "consultations": 6,
+        "panel_links": 2,
+        "action_items": 2,
+        "follow_ups": 3,
+        "audit_events": 9
+    },
+    "roles": [
+        {
+            "role": "student",
+            "count": 2
+        },
+        {
+            "role": "adviser",
+            "count": 2
+        },
+        {
+            "role": "panel",
+            "count": 1
+        },
+        {
+            "role": "coordinator",
+            "count": 1
+        }
+    ],
+    "consultations": [
+        {
+            "reference": "31685814-07bf-4996-878a-52356b29168f",
+            "status": "confirmed",
+            "starts_at": "2026-11-05T11:45:51.000000Z",
+            "ends_at": "2026-11-05T12:15:51.000000Z",
+            "schedule_version": 1
+        },
+        {
+            "reference": "DEMO-COMPLETED-001",
+            "status": "completed",
+            "starts_at": "2026-10-28T11:00:00.000000Z",
+            "ends_at": "2026-10-28T11:30:00.000000Z",
+            "schedule_version": 1
+        },
+        {
+            "reference": "DEMO-CONFIRMED-001",
+            "status": "confirmed",
+            "starts_at": "2026-10-30T11:00:00.000000Z",
+            "ends_at": "2026-10-30T11:30:00.000000Z",
+            "schedule_version": 1
+        },
+        {
+            "reference": "DEMO-REQUEST-001",
+            "status": "requested",
+            "starts_at": null,
+            "ends_at": null,
+            "schedule_version": 0
+        },
+        {
+            "reference": "W13-COMPLETE-5bf695121a72",
+            "status": "completed",
+            "starts_at": "2026-10-29T11:12:50.000000Z",
+            "ends_at": "2026-10-29T11:42:50.000000Z",
+            "schedule_version": 1
+        },
+        {
+            "reference": "W13-MISSED-5bf695121a72",
+            "status": "missed",
+            "starts_at": "2026-10-29T11:12:50.000000Z",
+            "ends_at": "2026-10-29T11:42:50.000000Z",
+            "schedule_version": 1
+        }
+    ],
+    "cross_database_isolation": {
+        "outcome": "pass",
+        "sqlstate": "42000",
+        "driver_code": 1142,
+        "reason": "App account denied access to test database; no data returned."
+    },
+    "limitation": "Seeded fixtures and database constraints only; no user workflow, role authorization or automation execution demonstrated."
+}

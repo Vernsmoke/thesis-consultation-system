@@ -50,4 +50,9 @@ class Consultation extends Model
     {
         return $this->hasMany(ActionItem::class);
     }
+
+    public function followUps(): HasMany
+    {
+        return $this->hasMany(FollowUp::class)->orderBy('id');
+    }
 }

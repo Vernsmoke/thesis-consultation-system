@@ -1,5 +1,13 @@
 # Changelog
 
+## Uncommitted remaining workflow API — 2026-10-29
+
+- Verified student API commit d2fe529 locally/on remote and clean starting tree.
+- Added adviser meeting outcomes after the end, adviser action assignment, owning-student idempotent completion and participant follow-up notes with explicit state/field/record checks.
+- Added follow-ups/action audit linkage and a small shared audit writer; domain changes roll back when audit writing fails. Earlier rows/events retained.
+- First regression: 40 tests/197 assertions passed; actual HTTP exercise: 36 expected results, two disclosed fictional starting fixtures (5/6), seven new events, no duplicate completion event.
+- Captured actual saved completion control in VS Code; updated API contract, evidence/checklist and handover. No frontend change, automation or real consultation/notification claim.
+
 ## Uncommitted API milestone — 2026-10-29
 
 - Verified student data commit 27960ba locally/on remote before changes.

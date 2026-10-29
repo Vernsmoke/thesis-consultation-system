@@ -1,0 +1,17 @@
+
+  PATCH      api/action-items/{actionItem}/complete ............................ WorkflowController@completeActionItem
+  GET|HEAD   api/advisers ............................................................ ConsultationController@advisers
+  GET|HEAD   api/consultations .......................................................... ConsultationController@index
+  POST       api/consultations .......................................................... ConsultationController@store
+  GET|HEAD   api/consultations/{consultation} ............................................ ConsultationController@show
+  POST       api/consultations/{consultation}/action-items .......................... WorkflowController@addActionItem
+  POST       api/consultations/{consultation}/follow-ups ................................. WorkflowController@followUp
+  PATCH      api/consultations/{consultation}/schedule ........................ ConsultationController@confirmSchedule
+  PATCH      api/consultations/{consultation}/status ................................ WorkflowController@recordOutcome
+  GET|HEAD   api/health ............................................................................. routes/api.php:9
+  POST       api/login .......................................................................... AuthController@login
+  POST       api/logout ........................................................................ AuthController@logout
+  GET|HEAD   api/me ................................................................................ AuthController@me
+
+                                                                                                   Showing [13] routes
+

@@ -32,4 +32,20 @@ class ConsultationPolicy
     {
         return $user->role === 'adviser' && $consultation->adviser_id === $user->id;
     }
+
+    public function recordOutcome(User $user, Consultation $consultation): bool
+    {
+        return $user->role === 'adviser' && $consultation->adviser_id === $user->id;
+    }
+
+    public function addActionItem(User $user, Consultation $consultation): bool
+    {
+        return $user->role === 'adviser' && $consultation->adviser_id === $user->id;
+    }
+
+    public function followUp(User $user, Consultation $consultation): bool
+    {
+        return ($user->role === 'student' && $consultation->student_id === $user->id)
+            || ($user->role === 'adviser' && $consultation->adviser_id === $user->id);
+    }
 }

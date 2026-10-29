@@ -1,0 +1,902 @@
+{
+    "run": "5bf695121a72",
+    "base_commit": "d2fe52978020f52051dba888773bdb8a62a0a8c9",
+    "build": "uncommitted workflow milestone",
+    "environment": "Actual loopback Laravel HTTP, Sanctum cookie/CSRF, MariaDB app database",
+    "preconditions": "Two directly initialized fictional past-confirmed fixtures; one explicit panel link. They were not requested/confirmed via API and are not real meetings.",
+    "fixture_ids": [
+        5,
+        6
+    ],
+    "outcome": "pass",
+    "failure": null,
+    "requests": [
+        {
+            "timestamp_utc": "2026-10-29T12:12:50+00:00",
+            "method": "GET",
+            "path": "/sanctum/csrf-cookie",
+            "request": null,
+            "expected_status": 204,
+            "actual_status": 204,
+            "response": null,
+            "duration_ms": 188.31,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T12:12:50+00:00",
+            "method": "POST",
+            "path": "/api/login",
+            "request": {
+                "email": "student.one@example.test",
+                "password": "[redacted]"
+            },
+            "expected_status": 200,
+            "actual_status": 200,
+            "response": {
+                "data": {
+                    "id": 1,
+                    "name": "Student One (Demo)",
+                    "role": "student"
+                }
+            },
+            "duration_ms": 403.69,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T12:12:50+00:00",
+            "method": "GET",
+            "path": "/sanctum/csrf-cookie",
+            "request": null,
+            "expected_status": 204,
+            "actual_status": 204,
+            "response": null,
+            "duration_ms": 181.84,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T12:12:51+00:00",
+            "method": "POST",
+            "path": "/api/login",
+            "request": {
+                "email": "student.two@example.test",
+                "password": "[redacted]"
+            },
+            "expected_status": 200,
+            "actual_status": 200,
+            "response": {
+                "data": {
+                    "id": 2,
+                    "name": "Student Two (Demo)",
+                    "role": "student"
+                }
+            },
+            "duration_ms": 399.06,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T12:12:51+00:00",
+            "method": "GET",
+            "path": "/sanctum/csrf-cookie",
+            "request": null,
+            "expected_status": 204,
+            "actual_status": 204,
+            "response": null,
+            "duration_ms": 192.6,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T12:12:51+00:00",
+            "method": "POST",
+            "path": "/api/login",
+            "request": {
+                "email": "adviser.one@example.test",
+                "password": "[redacted]"
+            },
+            "expected_status": 200,
+            "actual_status": 200,
+            "response": {
+                "data": {
+                    "id": 3,
+                    "name": "Adviser One (Demo)",
+                    "role": "adviser"
+                }
+            },
+            "duration_ms": 413.71,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T12:12:52+00:00",
+            "method": "GET",
+            "path": "/sanctum/csrf-cookie",
+            "request": null,
+            "expected_status": 204,
+            "actual_status": 204,
+            "response": null,
+            "duration_ms": 180.87,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T12:12:52+00:00",
+            "method": "POST",
+            "path": "/api/login",
+            "request": {
+                "email": "adviser.two@example.test",
+                "password": "[redacted]"
+            },
+            "expected_status": 200,
+            "actual_status": 200,
+            "response": {
+                "data": {
+                    "id": 4,
+                    "name": "Adviser Two (Demo)",
+                    "role": "adviser"
+                }
+            },
+            "duration_ms": 397.01,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T12:12:52+00:00",
+            "method": "GET",
+            "path": "/sanctum/csrf-cookie",
+            "request": null,
+            "expected_status": 204,
+            "actual_status": 204,
+            "response": null,
+            "duration_ms": 189.95,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T12:12:53+00:00",
+            "method": "POST",
+            "path": "/api/login",
+            "request": {
+                "email": "panel.one@example.test",
+                "password": "[redacted]"
+            },
+            "expected_status": 200,
+            "actual_status": 200,
+            "response": {
+                "data": {
+                    "id": 5,
+                    "name": "Panel One (Demo)",
+                    "role": "panel"
+                }
+            },
+            "duration_ms": 426.21,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T12:12:53+00:00",
+            "method": "GET",
+            "path": "/sanctum/csrf-cookie",
+            "request": null,
+            "expected_status": 204,
+            "actual_status": 204,
+            "response": null,
+            "duration_ms": 186.41,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T12:12:53+00:00",
+            "method": "POST",
+            "path": "/api/login",
+            "request": {
+                "email": "coordinator.one@example.test",
+                "password": "[redacted]"
+            },
+            "expected_status": 200,
+            "actual_status": 200,
+            "response": {
+                "data": {
+                    "id": 6,
+                    "name": "Coordinator One (Demo)",
+                    "role": "coordinator"
+                }
+            },
+            "duration_ms": 399.91,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T12:12:53+00:00",
+            "method": "PATCH",
+            "path": "/api/consultations/5/status",
+            "request": {
+                "status": "completed",
+                "meeting_notes": "Controlled fictional meeting outcome for run 5bf695121a72."
+            },
+            "expected_status": 403,
+            "actual_status": 403,
+            "response": {
+                "message": "This action is unauthorized."
+            },
+            "duration_ms": 238.34,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T12:12:54+00:00",
+            "method": "PATCH",
+            "path": "/api/consultations/5/status",
+            "request": {
+                "status": "completed",
+                "meeting_notes": "Controlled fictional meeting outcome for run 5bf695121a72."
+            },
+            "expected_status": 403,
+            "actual_status": 403,
+            "response": {
+                "message": "This action is unauthorized."
+            },
+            "duration_ms": 178.37,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T12:12:54+00:00",
+            "method": "PATCH",
+            "path": "/api/consultations/5/status",
+            "request": {
+                "status": "completed",
+                "meeting_notes": "Controlled fictional meeting outcome for run 5bf695121a72."
+            },
+            "expected_status": 200,
+            "actual_status": 200,
+            "response": {
+                "data": {
+                    "id": 5,
+                    "reference": "W13-COMPLETE-5bf695121a72",
+                    "student_id": 1,
+                    "adviser_id": 3,
+                    "agenda": "Controlled past-meeting fixture 5bf695121a72 for HTTP workflow evidence.",
+                    "status": "completed",
+                    "starts_at": "2026-10-29T11:12:50.000000Z",
+                    "ends_at": "2026-10-29T11:42:50.000000Z",
+                    "schedule_version": 1,
+                    "meeting_notes": "Controlled fictional meeting outcome for run 5bf695121a72.",
+                    "created_at": "2026-10-29T12:12:50.000000Z",
+                    "updated_at": "2026-10-29T12:12:54.000000Z"
+                },
+                "correlation_id": "6a63ebb2-6f01-4285-8b9d-e0516c267886"
+            },
+            "duration_ms": 204.16,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T12:12:54+00:00",
+            "method": "PATCH",
+            "path": "/api/consultations/5/status",
+            "request": {
+                "status": "completed",
+                "meeting_notes": "Controlled fictional meeting outcome for run 5bf695121a72."
+            },
+            "expected_status": 409,
+            "actual_status": 409,
+            "response": {
+                "message": "Only a confirmed meeting can receive an outcome."
+            },
+            "duration_ms": 195.13,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T12:12:54+00:00",
+            "method": "POST",
+            "path": "/api/consultations/5/action-items",
+            "request": [],
+            "expected_status": 422,
+            "actual_status": 422,
+            "response": {
+                "message": "The description field is required. (and 1 more error)",
+                "errors": {
+                    "description": [
+                        "The description field is required."
+                    ],
+                    "due_at": [
+                        "The due at field is required."
+                    ]
+                }
+            },
+            "duration_ms": 179.2,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T12:12:54+00:00",
+            "method": "POST",
+            "path": "/api/consultations/5/action-items",
+            "request": {
+                "description": "Revise the fictional sampling notes for run 5bf695121a72.",
+                "due_at": "2026-10-31T12:12:54Z"
+            },
+            "expected_status": 201,
+            "actual_status": 201,
+            "response": {
+                "data": {
+                    "consultation_id": 5,
+                    "assigned_to_id": 1,
+                    "description": "Revise the fictional sampling notes for run 5bf695121a72.",
+                    "due_at": "2026-10-31T12:12:54.000000Z",
+                    "deadline_version": 1,
+                    "completed_at": null,
+                    "updated_at": "2026-10-29T12:12:54.000000Z",
+                    "created_at": "2026-10-29T12:12:54.000000Z",
+                    "id": 2
+                },
+                "correlation_id": "2907d054-080d-460f-8bd7-1612ddfd2b40"
+            },
+            "duration_ms": 225.91,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T12:12:55+00:00",
+            "method": "PATCH",
+            "path": "/api/action-items/2/complete",
+            "request": null,
+            "expected_status": 403,
+            "actual_status": 403,
+            "response": {
+                "message": "This action is unauthorized."
+            },
+            "duration_ms": 182,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T12:12:55+00:00",
+            "method": "PATCH",
+            "path": "/api/action-items/2/complete",
+            "request": null,
+            "expected_status": 403,
+            "actual_status": 403,
+            "response": {
+                "message": "This action is unauthorized."
+            },
+            "duration_ms": 180.32,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T12:12:55+00:00",
+            "method": "PATCH",
+            "path": "/api/action-items/2/complete",
+            "request": null,
+            "expected_status": 200,
+            "actual_status": 200,
+            "response": {
+                "data": {
+                    "id": 2,
+                    "consultation_id": 5,
+                    "assigned_to_id": 1,
+                    "description": "Revise the fictional sampling notes for run 5bf695121a72.",
+                    "due_at": "2026-10-31T12:12:54.000000Z",
+                    "deadline_version": 1,
+                    "completed_at": "2026-10-29T12:12:55.000000Z",
+                    "created_at": "2026-10-29T12:12:54.000000Z",
+                    "updated_at": "2026-10-29T12:12:55.000000Z",
+                    "consultation": {
+                        "id": 5,
+                        "reference": "W13-COMPLETE-5bf695121a72",
+                        "student_id": 1,
+                        "adviser_id": 3,
+                        "agenda": "Controlled past-meeting fixture 5bf695121a72 for HTTP workflow evidence.",
+                        "status": "completed",
+                        "starts_at": "2026-10-29T11:12:50.000000Z",
+                        "ends_at": "2026-10-29T11:42:50.000000Z",
+                        "schedule_version": 1,
+                        "meeting_notes": "Controlled fictional meeting outcome for run 5bf695121a72.",
+                        "created_at": "2026-10-29T12:12:50.000000Z",
+                        "updated_at": "2026-10-29T12:12:54.000000Z"
+                    }
+                },
+                "changed": true,
+                "correlation_id": "200dea7e-bf5a-46af-9463-ba8b7ce4e193"
+            },
+            "duration_ms": 183.85,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T12:12:55+00:00",
+            "method": "PATCH",
+            "path": "/api/action-items/2/complete",
+            "request": null,
+            "expected_status": 200,
+            "actual_status": 200,
+            "response": {
+                "data": {
+                    "id": 2,
+                    "consultation_id": 5,
+                    "assigned_to_id": 1,
+                    "description": "Revise the fictional sampling notes for run 5bf695121a72.",
+                    "due_at": "2026-10-31T12:12:54.000000Z",
+                    "deadline_version": 1,
+                    "completed_at": "2026-10-29T12:12:55.000000Z",
+                    "created_at": "2026-10-29T12:12:54.000000Z",
+                    "updated_at": "2026-10-29T12:12:55.000000Z",
+                    "consultation": {
+                        "id": 5,
+                        "reference": "W13-COMPLETE-5bf695121a72",
+                        "student_id": 1,
+                        "adviser_id": 3,
+                        "agenda": "Controlled past-meeting fixture 5bf695121a72 for HTTP workflow evidence.",
+                        "status": "completed",
+                        "starts_at": "2026-10-29T11:12:50.000000Z",
+                        "ends_at": "2026-10-29T11:42:50.000000Z",
+                        "schedule_version": 1,
+                        "meeting_notes": "Controlled fictional meeting outcome for run 5bf695121a72.",
+                        "created_at": "2026-10-29T12:12:50.000000Z",
+                        "updated_at": "2026-10-29T12:12:54.000000Z"
+                    }
+                },
+                "changed": false,
+                "correlation_id": null
+            },
+            "duration_ms": 181.27,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T12:12:55+00:00",
+            "method": "POST",
+            "path": "/api/consultations/5/follow-ups",
+            "request": {
+                "message": "Fictional student revision is ready for review, run 5bf695121a72."
+            },
+            "expected_status": 201,
+            "actual_status": 201,
+            "response": {
+                "data": {
+                    "author_id": 1,
+                    "message": "Fictional student revision is ready for review, run 5bf695121a72.",
+                    "consultation_id": 5,
+                    "updated_at": "2026-10-29T12:12:55.000000Z",
+                    "created_at": "2026-10-29T12:12:55.000000Z",
+                    "id": 1,
+                    "author": {
+                        "id": 1,
+                        "name": "Student One (Demo)",
+                        "role": "student"
+                    }
+                },
+                "correlation_id": "e3a17896-c440-4dfe-8133-7db69f609cf9"
+            },
+            "duration_ms": 210.06,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T12:12:56+00:00",
+            "method": "POST",
+            "path": "/api/consultations/5/follow-ups",
+            "request": {
+                "message": "Fictional adviser acknowledged the progress update, run 5bf695121a72."
+            },
+            "expected_status": 201,
+            "actual_status": 201,
+            "response": {
+                "data": {
+                    "author_id": 3,
+                    "message": "Fictional adviser acknowledged the progress update, run 5bf695121a72.",
+                    "consultation_id": 5,
+                    "updated_at": "2026-10-29T12:12:56.000000Z",
+                    "created_at": "2026-10-29T12:12:56.000000Z",
+                    "id": 2,
+                    "author": {
+                        "id": 3,
+                        "name": "Adviser One (Demo)",
+                        "role": "adviser"
+                    }
+                },
+                "correlation_id": "44ebdd3a-e0af-47cf-b48c-199d6049732c"
+            },
+            "duration_ms": 205.17,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T12:12:56+00:00",
+            "method": "GET",
+            "path": "/api/consultations/5",
+            "request": null,
+            "expected_status": 200,
+            "actual_status": 200,
+            "response": {
+                "data": {
+                    "id": 5,
+                    "reference": "W13-COMPLETE-5bf695121a72",
+                    "student_id": 1,
+                    "adviser_id": 3,
+                    "agenda": "Controlled past-meeting fixture 5bf695121a72 for HTTP workflow evidence.",
+                    "status": "completed",
+                    "starts_at": "2026-10-29T11:12:50.000000Z",
+                    "ends_at": "2026-10-29T11:42:50.000000Z",
+                    "schedule_version": 1,
+                    "meeting_notes": "Controlled fictional meeting outcome for run 5bf695121a72.",
+                    "created_at": "2026-10-29T12:12:50.000000Z",
+                    "updated_at": "2026-10-29T12:12:54.000000Z",
+                    "student": {
+                        "id": 1,
+                        "name": "Student One (Demo)",
+                        "role": "student"
+                    },
+                    "adviser": {
+                        "id": 3,
+                        "name": "Adviser One (Demo)",
+                        "role": "adviser"
+                    },
+                    "panel_members": [
+                        {
+                            "id": 5,
+                            "name": "Panel One (Demo)",
+                            "role": "panel",
+                            "pivot": {
+                                "consultation_id": 5,
+                                "user_id": 5
+                            }
+                        }
+                    ],
+                    "action_items": [
+                        {
+                            "id": 2,
+                            "consultation_id": 5,
+                            "assigned_to_id": 1,
+                            "description": "Revise the fictional sampling notes for run 5bf695121a72.",
+                            "due_at": "2026-10-31T12:12:54.000000Z",
+                            "deadline_version": 1,
+                            "completed_at": "2026-10-29T12:12:55.000000Z",
+                            "created_at": "2026-10-29T12:12:54.000000Z",
+                            "updated_at": "2026-10-29T12:12:55.000000Z"
+                        }
+                    ],
+                    "follow_ups": [
+                        {
+                            "id": 1,
+                            "consultation_id": 5,
+                            "author_id": 1,
+                            "message": "Fictional student revision is ready for review, run 5bf695121a72.",
+                            "created_at": "2026-10-29T12:12:55.000000Z",
+                            "updated_at": "2026-10-29T12:12:55.000000Z",
+                            "author": {
+                                "id": 1,
+                                "name": "Student One (Demo)",
+                                "role": "student"
+                            }
+                        },
+                        {
+                            "id": 2,
+                            "consultation_id": 5,
+                            "author_id": 3,
+                            "message": "Fictional adviser acknowledged the progress update, run 5bf695121a72.",
+                            "created_at": "2026-10-29T12:12:56.000000Z",
+                            "updated_at": "2026-10-29T12:12:56.000000Z",
+                            "author": {
+                                "id": 3,
+                                "name": "Adviser One (Demo)",
+                                "role": "adviser"
+                            }
+                        }
+                    ]
+                }
+            },
+            "duration_ms": 198.25,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T12:12:56+00:00",
+            "method": "POST",
+            "path": "/api/consultations/5/follow-ups",
+            "request": {
+                "message": "Forbidden fictional panel write."
+            },
+            "expected_status": 403,
+            "actual_status": 403,
+            "response": {
+                "message": "This action is unauthorized."
+            },
+            "duration_ms": 181.14,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T12:12:56+00:00",
+            "method": "GET",
+            "path": "/api/consultations/5",
+            "request": null,
+            "expected_status": 200,
+            "actual_status": 200,
+            "response": {
+                "data": {
+                    "id": 5,
+                    "reference": "W13-COMPLETE-5bf695121a72",
+                    "student_id": 1,
+                    "adviser_id": 3,
+                    "agenda": "Controlled past-meeting fixture 5bf695121a72 for HTTP workflow evidence.",
+                    "status": "completed",
+                    "starts_at": "2026-10-29T11:12:50.000000Z",
+                    "ends_at": "2026-10-29T11:42:50.000000Z",
+                    "schedule_version": 1,
+                    "meeting_notes": "Controlled fictional meeting outcome for run 5bf695121a72.",
+                    "created_at": "2026-10-29T12:12:50.000000Z",
+                    "updated_at": "2026-10-29T12:12:54.000000Z",
+                    "student": {
+                        "id": 1,
+                        "name": "Student One (Demo)",
+                        "role": "student"
+                    },
+                    "adviser": {
+                        "id": 3,
+                        "name": "Adviser One (Demo)",
+                        "role": "adviser"
+                    },
+                    "panel_members": [
+                        {
+                            "id": 5,
+                            "name": "Panel One (Demo)",
+                            "role": "panel",
+                            "pivot": {
+                                "consultation_id": 5,
+                                "user_id": 5
+                            }
+                        }
+                    ],
+                    "action_items": [
+                        {
+                            "id": 2,
+                            "consultation_id": 5,
+                            "assigned_to_id": 1,
+                            "description": "Revise the fictional sampling notes for run 5bf695121a72.",
+                            "due_at": "2026-10-31T12:12:54.000000Z",
+                            "deadline_version": 1,
+                            "completed_at": "2026-10-29T12:12:55.000000Z",
+                            "created_at": "2026-10-29T12:12:54.000000Z",
+                            "updated_at": "2026-10-29T12:12:55.000000Z"
+                        }
+                    ],
+                    "follow_ups": [
+                        {
+                            "id": 1,
+                            "consultation_id": 5,
+                            "author_id": 1,
+                            "message": "Fictional student revision is ready for review, run 5bf695121a72.",
+                            "created_at": "2026-10-29T12:12:55.000000Z",
+                            "updated_at": "2026-10-29T12:12:55.000000Z",
+                            "author": {
+                                "id": 1,
+                                "name": "Student One (Demo)",
+                                "role": "student"
+                            }
+                        },
+                        {
+                            "id": 2,
+                            "consultation_id": 5,
+                            "author_id": 3,
+                            "message": "Fictional adviser acknowledged the progress update, run 5bf695121a72.",
+                            "created_at": "2026-10-29T12:12:56.000000Z",
+                            "updated_at": "2026-10-29T12:12:56.000000Z",
+                            "author": {
+                                "id": 3,
+                                "name": "Adviser One (Demo)",
+                                "role": "adviser"
+                            }
+                        }
+                    ]
+                }
+            },
+            "duration_ms": 180.55,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T12:12:56+00:00",
+            "method": "POST",
+            "path": "/api/consultations/5/follow-ups",
+            "request": {
+                "message": "Forbidden fictional coordinator write."
+            },
+            "expected_status": 403,
+            "actual_status": 403,
+            "response": {
+                "message": "This action is unauthorized."
+            },
+            "duration_ms": 165.33,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T12:12:57+00:00",
+            "method": "PATCH",
+            "path": "/api/consultations/6/status",
+            "request": {
+                "status": "missed",
+                "meeting_notes": "Controlled fictional missed-session outcome, run 5bf695121a72."
+            },
+            "expected_status": 200,
+            "actual_status": 200,
+            "response": {
+                "data": {
+                    "id": 6,
+                    "reference": "W13-MISSED-5bf695121a72",
+                    "student_id": 1,
+                    "adviser_id": 3,
+                    "agenda": "Controlled past-meeting fixture 5bf695121a72 for HTTP workflow evidence.",
+                    "status": "missed",
+                    "starts_at": "2026-10-29T11:12:50.000000Z",
+                    "ends_at": "2026-10-29T11:42:50.000000Z",
+                    "schedule_version": 1,
+                    "meeting_notes": "Controlled fictional missed-session outcome, run 5bf695121a72.",
+                    "created_at": "2026-10-29T12:12:50.000000Z",
+                    "updated_at": "2026-10-29T12:12:57.000000Z"
+                },
+                "correlation_id": "5714a8bf-ecb2-4e1c-ae8e-ccbaf83f97df"
+            },
+            "duration_ms": 187.48,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T12:12:57+00:00",
+            "method": "POST",
+            "path": "/api/consultations/6/follow-ups",
+            "request": {
+                "message": "Request a new fictional consultation after the missed meeting, run 5bf695121a72."
+            },
+            "expected_status": 201,
+            "actual_status": 201,
+            "response": {
+                "data": {
+                    "author_id": 1,
+                    "message": "Request a new fictional consultation after the missed meeting, run 5bf695121a72.",
+                    "consultation_id": 6,
+                    "updated_at": "2026-10-29T12:12:57.000000Z",
+                    "created_at": "2026-10-29T12:12:57.000000Z",
+                    "id": 3,
+                    "author": {
+                        "id": 1,
+                        "name": "Student One (Demo)",
+                        "role": "student"
+                    }
+                },
+                "correlation_id": "5c813482-d776-47d1-a074-e35581a686d0"
+            },
+            "duration_ms": 193.52,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T12:12:57+00:00",
+            "method": "POST",
+            "path": "/api/logout",
+            "request": [],
+            "expected_status": 200,
+            "actual_status": 200,
+            "response": {
+                "message": "Signed out."
+            },
+            "duration_ms": 173.09,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T12:12:57+00:00",
+            "method": "POST",
+            "path": "/api/logout",
+            "request": [],
+            "expected_status": 200,
+            "actual_status": 200,
+            "response": {
+                "message": "Signed out."
+            },
+            "duration_ms": 208.93,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T12:12:57+00:00",
+            "method": "POST",
+            "path": "/api/logout",
+            "request": [],
+            "expected_status": 200,
+            "actual_status": 200,
+            "response": {
+                "message": "Signed out."
+            },
+            "duration_ms": 210.18,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T12:12:58+00:00",
+            "method": "POST",
+            "path": "/api/logout",
+            "request": [],
+            "expected_status": 200,
+            "actual_status": 200,
+            "response": {
+                "message": "Signed out."
+            },
+            "duration_ms": 250.1,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T12:12:58+00:00",
+            "method": "POST",
+            "path": "/api/logout",
+            "request": [],
+            "expected_status": 200,
+            "actual_status": 200,
+            "response": {
+                "message": "Signed out."
+            },
+            "duration_ms": 230.33,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T12:12:58+00:00",
+            "method": "POST",
+            "path": "/api/logout",
+            "request": [],
+            "expected_status": 200,
+            "actual_status": 200,
+            "response": {
+                "message": "Signed out."
+            },
+            "duration_ms": 234.34,
+            "outcome": "pass"
+        }
+    ],
+    "audit_events": [
+        {
+            "consultation_id": 5,
+            "actor_id": 3,
+            "event": "meeting_completed",
+            "from_status": "confirmed",
+            "to_status": "completed",
+            "schedule_version": 1,
+            "action_item_id": null,
+            "correlation_id": "6a63ebb2-6f01-4285-8b9d-e0516c267886"
+        },
+        {
+            "consultation_id": 5,
+            "actor_id": 3,
+            "event": "action_item_assigned",
+            "from_status": "completed",
+            "to_status": "completed",
+            "schedule_version": 1,
+            "action_item_id": 2,
+            "correlation_id": "2907d054-080d-460f-8bd7-1612ddfd2b40"
+        },
+        {
+            "consultation_id": 5,
+            "actor_id": 1,
+            "event": "action_item_completed",
+            "from_status": "completed",
+            "to_status": "completed",
+            "schedule_version": 1,
+            "action_item_id": 2,
+            "correlation_id": "200dea7e-bf5a-46af-9463-ba8b7ce4e193"
+        },
+        {
+            "consultation_id": 5,
+            "actor_id": 1,
+            "event": "follow_up_added",
+            "from_status": "completed",
+            "to_status": "completed",
+            "schedule_version": 1,
+            "action_item_id": null,
+            "correlation_id": "e3a17896-c440-4dfe-8133-7db69f609cf9"
+        },
+        {
+            "consultation_id": 5,
+            "actor_id": 3,
+            "event": "follow_up_added",
+            "from_status": "completed",
+            "to_status": "completed",
+            "schedule_version": 1,
+            "action_item_id": null,
+            "correlation_id": "44ebdd3a-e0af-47cf-b48c-199d6049732c"
+        },
+        {
+            "consultation_id": 6,
+            "actor_id": 3,
+            "event": "meeting_missed",
+            "from_status": "confirmed",
+            "to_status": "missed",
+            "schedule_version": 1,
+            "action_item_id": null,
+            "correlation_id": "5714a8bf-ecb2-4e1c-ae8e-ccbaf83f97df"
+        },
+        {
+            "consultation_id": 6,
+            "actor_id": 1,
+            "event": "follow_up_added",
+            "from_status": "missed",
+            "to_status": "missed",
+            "schedule_version": 1,
+            "action_item_id": null,
+            "correlation_id": "5c813482-d776-47d1-a074-e35581a686d0"
+        }
+    ],
+    "limitation": "Retains two new fictional consultations and all resulting actions/notes per run. No computer clock changes, automation, real notifications or Flutter workflow demonstrated. Secrets/cookies omitted."
+}

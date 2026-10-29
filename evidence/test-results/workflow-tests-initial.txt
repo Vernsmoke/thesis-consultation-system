@@ -1,0 +1,56 @@
+
+   PASS  Tests\Unit\ExampleTest
+  ✓ that true is true                                                                                            0.01s  
+
+   PASS  Tests\Feature\ConsultationApiTest
+  ✓ login uses server role and does not return a password or token                                               0.85s  
+  ✓ invalid login is generic and unauthenticated reads are 401                                                   0.26s  
+  ✓ login rate limit stops repeated password attempts                                                            1.30s  
+  ✓ logout ends the session                                                                                      0.05s  
+  ✓ student reads only own records and cannot open another students record                                       0.07s  
+  ✓ unassigned adviser has no records and cannot read others                                                     0.06s  
+  ✓ panel is read only and sees only explicit membership                                                         0.07s  
+  ✓ coordinator can review but cannot confirm for the adviser                                                    0.06s  
+  ✓ student request and assigned adviser confirmation are audited                                                0.12s  
+  ✓ request validation rejects missing agenda nonadviser and impersonation                                       0.06s  
+  ✓ student and other adviser cannot confirm a schedule                                                          0.07s  
+  ✓ invalid past reversed and ambiguous dates are rejected                                                       0.09s  
+  ✓ conflicting adviser schedule is rejected without mutation                                                    0.05s  
+  ✓ database failure returns a safe 503 without creating work                                                    0.06s  
+  ✓ an audit write failure rolls back the consultation too                                                       0.05s  
+
+   PASS  Tests\Feature\ConsultationDataTest
+  ✓ seeded workflow relationships and utc dates are consistent                                                   0.06s  
+  ✓ reseeding does not duplicate or overwrite work                                                               0.06s  
+  ✓ demo passwords are hashed and not serialized                                                                 0.04s  
+  ✓ unknown user reference cannot create an orphan action item                                                   0.04s  
+  ✓ database rejects a confirmed meeting without a schedule                                                      0.04s  
+  ✓ database rejects an end before the start                                                                     0.04s  
+  ✓ database rejects a duplicate panel assignment                                                                0.04s  
+  ✓ referenced student cannot be deleted                                                                         0.04s  
+  ✓ database rejects an unknown role                                                                             0.04s  
+
+   PASS  Tests\Feature\ExampleTest
+  ✓ the application returns a successful response                                                                0.03s  
+
+   PASS  Tests\Feature\HealthTest
+  ✓ liveness returns only public project metadata                                                                0.02s  
+  ✓ configured flutter origin can read health                                                                    0.02s  
+  ✓ unlisted origin is not granted browser access                                                                0.02s  
+
+   PASS  Tests\Feature\WorkflowApiTest
+  ✓ request to follow up normal path uses only authorized api actions                                            0.08s  
+  ✓ assigned adviser can record missed once after the end                                                        0.08s  
+  ✓ future and nonconfirmed meetings cannot be closed                                                            0.07s  
+  ✓ students panel coordinator and other adviser cannot record outcomes                                          0.07s  
+  ✓ invalid outcome and missing notes are rejected                                                               0.06s  
+  ✓ action assignment requires assigned adviser completed meeting and valid deadline                             0.08s  
+  ✓ action completion is idempotent and only the owning student can do it                                        0.07s  
+  ✓ follow up permissions content and terminal state are enforced                                                0.11s  
+  ✓ follow up after missed meeting does not create action items                                                  0.07s  
+  ✓ audit failure rolls back meeting status action and follow up                                                 0.09s  
+  ✓ missing session and missing action record have safe errors                                                   0.05s  
+
+  Tests:    40 passed (197 assertions)
+  Duration: 4.82s
+
