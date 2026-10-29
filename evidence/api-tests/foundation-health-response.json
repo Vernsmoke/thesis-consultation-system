@@ -1,0 +1,32 @@
+{
+  "case": "FND-01",
+  "build": "Uncommitted foundation; source fingerprints in foundation-build.json",
+  "timestamp_utc": "2026-10-29T11:10:44.9117820+00:00",
+  "timezone": "Asia/Manila",
+  "environment": "Windows; PHP 8.2.12; Laravel 12.70.2; loopback HTTP; database not connected",
+  "preconditions": "Fresh backend serving on 127.0.0.1:8000; no authentication needed for public liveness",
+  "request": {
+    "method": "GET",
+    "uri": "http://127.0.0.1:8000/api/health",
+    "origin": "http://127.0.0.1:8080"
+  },
+  "expected": {
+    "allowed_origin": "http://127.0.0.1:8080",
+    "status": 200,
+    "milestone": "foundation",
+    "project": "Thesis Consultation Reminder System"
+  },
+  "actual": {
+    "duration_ms": 359,
+    "body": {
+      "status": "ok",
+      "project": "Thesis Consultation Reminder System",
+      "week": 13,
+      "milestone": "foundation"
+    },
+    "allowed_origin": "http://127.0.0.1:8080",
+    "status": 200
+  },
+  "outcome": "pass",
+  "limitation": "Liveness only. Does not prove database, workflow, authentication or automation readiness."
+}

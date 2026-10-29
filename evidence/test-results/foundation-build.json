@@ -1,0 +1,308 @@
+{
+  "build": "uncommitted foundation",
+  "timestamp_utc": "2026-10-29T11:15:33.2444673+00:00",
+  "branch": "codex/week13-foundation",
+  "scope": "Application source/configuration/manifests only. No .env, dependency or generated build files. Documentation finalized after execution.",
+  "files": [
+    {
+      "path": "backend/.editorconfig",
+      "sha256": "D9A5756CA5ADEA55000BE0EE4F5AF68946E3554C986981B7F8E35E7ACAAD28FA"
+    },
+    {
+      "path": "backend/.env.example",
+      "sha256": "949F1EDC142489AE7EE0AE75558818AEA10F228A76B759C7D4BE696E4842BC89"
+    },
+    {
+      "path": "backend/.gitattributes",
+      "sha256": "A40EB27EE0B545CA5B5542DAAF99FEC51F84F23B3766A6353864EF2A115BC51C"
+    },
+    {
+      "path": "backend/.gitignore",
+      "sha256": "2049DB033D4F531564A125D6BB85FEF678D924F998B75C895E9D3E5BB2E68CCA"
+    },
+    {
+      "path": "backend/README.md",
+      "sha256": "44B83AFE2178CA6FD420F84D447DE3B1DAB72B996804C3FF719BDF68C265147F"
+    },
+    {
+      "path": "backend/app/Http/Controllers/Controller.php",
+      "sha256": "25D1C1EF8E6CC8A376553FAACFBA2B07D9DFAEE9BDBB84F14F77517580E9DEB1"
+    },
+    {
+      "path": "backend/app/Models/User.php",
+      "sha256": "41D800FFD4887C75E66AF8EAEDC756EDCE052EB662BAAE357308C6E364A6C9D2"
+    },
+    {
+      "path": "backend/app/Providers/AppServiceProvider.php",
+      "sha256": "CAF306EF6A25A547BBB7EDD5508A39B51C365083EB6DD58378CF2242018E94C7"
+    },
+    {
+      "path": "backend/artisan",
+      "sha256": "F91A517C0C5D3A904C3F390933964A5E08EC1FC68146882730DAAC4ACA4FFCEC"
+    },
+    {
+      "path": "backend/bootstrap/app.php",
+      "sha256": "3D37897EDA1D7734D5081C42124EAFAC7237A34B1C3259F7DBCFEB5C0E40FD14"
+    },
+    {
+      "path": "backend/bootstrap/cache/.gitignore",
+      "sha256": "240A3E0D37D2E86B614063F5347EB02D4F99CA6C254DE6B82871FF8D95532A7D"
+    },
+    {
+      "path": "backend/bootstrap/providers.php",
+      "sha256": "F720E185207A343D4C19FC99DBB317A4187EFBCD7D38A303A695BBDD77FFB943"
+    },
+    {
+      "path": "backend/composer.json",
+      "sha256": "2C2EE477271A0DCDF9AE5830B75DA13049F5236E556D9E086D8F0CBB5E645BF5"
+    },
+    {
+      "path": "backend/composer.lock",
+      "sha256": "34A6505235CB9CB4341EE6D6E84529DB6A5F37557DDF9E0CB5838993D67835A6"
+    },
+    {
+      "path": "backend/config/app.php",
+      "sha256": "C8863128D674A2C067542D6D83B9F0A899A8AD1C5F84A60E5CC9CA5E37654935"
+    },
+    {
+      "path": "backend/config/auth.php",
+      "sha256": "09C46D5C0E950F0A35AE95C21FF998CC5E4157A78CB3D8EC7B9925322F00869F"
+    },
+    {
+      "path": "backend/config/cache.php",
+      "sha256": "DC3A64749BC19946BA6A054BE0B67AE8C450C9401799CB176AC0A0B8D4756664"
+    },
+    {
+      "path": "backend/config/cors.php",
+      "sha256": "B260727E030B746018D82BF1313B5B6501708296D3E0ABCD3158DC94919AE0B8"
+    },
+    {
+      "path": "backend/config/database.php",
+      "sha256": "4C831A869F4335805C6CA67C3F583E71329622EE8F70DBDC70C57A523A6B6021"
+    },
+    {
+      "path": "backend/config/filesystems.php",
+      "sha256": "46B977D9555ED617AA0D42055A0C76A34C9D16C63EE634FF6683BC95712C9317"
+    },
+    {
+      "path": "backend/config/logging.php",
+      "sha256": "6E0885A09B96F9E3E9CCFAE9E536DA3C33DBD53A7710A518C05AC0F2B6808FB8"
+    },
+    {
+      "path": "backend/config/mail.php",
+      "sha256": "433ACC0D5342A074B32E44B3D7FFBA153C3EAF292A5A2FC94D7CB6EE0ADDB147"
+    },
+    {
+      "path": "backend/config/queue.php",
+      "sha256": "A185A3E86B65DB26938204F4F50CF0C0CA99974E9926B9CDCEF6B7743FEEA482"
+    },
+    {
+      "path": "backend/config/services.php",
+      "sha256": "2226BE3FA0E560FC8CD628F3E8F50FCD78639A24375F5E931D0C656EAF1D4CE8"
+    },
+    {
+      "path": "backend/config/session.php",
+      "sha256": "C7F637C49F3E61D5488A11653B06A6B5A8A73B335D1DADBD84666BE5EC4F6DE6"
+    },
+    {
+      "path": "backend/database/.gitignore",
+      "sha256": "E758642D95E83E907E010B6E46B07B3F953C7CEF11FE5EBEFC2A77B9D7B4D5F7"
+    },
+    {
+      "path": "backend/database/factories/UserFactory.php",
+      "sha256": "50BDC543F1B09D1A57260BE55AD0E1A68AEE4B34F63E1109DC94D9BCD3080526"
+    },
+    {
+      "path": "backend/database/migrations/0001_01_01_000000_create_users_table.php",
+      "sha256": "10D79883BC08CE46510F9AD8B1830B4D06D586DC56AE2C8BAC3B3E491F69A90F"
+    },
+    {
+      "path": "backend/database/migrations/0001_01_01_000001_create_cache_table.php",
+      "sha256": "20F769D3C11748C1CC42C41CD3789B0B9B2CD0DB44EE22D378ADDAC3FF8AED4F"
+    },
+    {
+      "path": "backend/database/migrations/0001_01_01_000002_create_jobs_table.php",
+      "sha256": "7C9C712ADF4091C87BF2612F4D0DCCDFA1DF4501553E4AC068B83D7BD5462FA5"
+    },
+    {
+      "path": "backend/database/seeders/DatabaseSeeder.php",
+      "sha256": "03B392BF45EF0E52D2FA3DBA22E33F8C1A66F50E94546B1815B72D07B56AD9B6"
+    },
+    {
+      "path": "backend/package.json",
+      "sha256": "F468A85E1FC5E344FF9505F0AAA407B3307FDC2AF2F4AD9891A31C6C5D0A2845"
+    },
+    {
+      "path": "backend/phpunit.xml",
+      "sha256": "E232DB04F03301E1A45A4D7E2EF8309E61D116965A7BABAA4A952CEAC8DD4FCE"
+    },
+    {
+      "path": "backend/public/.htaccess",
+      "sha256": "B7E379C77639FD56144947DBAE84C84EB466D9C686EA81F2F013AE85421DA923"
+    },
+    {
+      "path": "backend/public/favicon.ico",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "backend/public/index.php",
+      "sha256": "EBA77CBA39695B6BD091FE5211D481F7EBB2CE2D8D26230B5A609465D0A4AFF9"
+    },
+    {
+      "path": "backend/public/robots.txt",
+      "sha256": "E5C4B84484EE4216E9373BE99380320C25DD94805F99F0A805846F087636553F"
+    },
+    {
+      "path": "backend/resources/css/app.css",
+      "sha256": "370514B05335F69079D62747E4A119469213DE68DC760ED0566CE0F9E22A56FD"
+    },
+    {
+      "path": "backend/resources/js/app.js",
+      "sha256": "CF6DAB196C721F6911FF99CC4F910897F978599A2D289971A316A5FC33091F94"
+    },
+    {
+      "path": "backend/resources/js/bootstrap.js",
+      "sha256": "6FD9FC82E68FA915A882F4E227B9FAACBE7BFD66CB953C628840E83BDA6B72F4"
+    },
+    {
+      "path": "backend/resources/views/welcome.blade.php",
+      "sha256": "2712F5909E694CF0676ACE8A9B9DA3E190293E7A6CB5995FDE756491C8385521"
+    },
+    {
+      "path": "backend/routes/api.php",
+      "sha256": "9BB3C8061B4FA2ADA6BC63C81022A16191CCDDECE8B7EC1B8E1355D9B8B0234D"
+    },
+    {
+      "path": "backend/routes/console.php",
+      "sha256": "9ADCCC33E7DD400683E434774077C7FDB2F299C5712CEDF16A43FDF56F2850FA"
+    },
+    {
+      "path": "backend/routes/web.php",
+      "sha256": "248C7EEEB43BB61EE4FB6603E52B44843C64F72A841D671BCD41871AAB23F970"
+    },
+    {
+      "path": "backend/storage/app/.gitignore",
+      "sha256": "993B9E3709D7B5189DA331725D1169D79E561A509DB2490B722B525073D2D976"
+    },
+    {
+      "path": "backend/storage/app/private/.gitignore",
+      "sha256": "240A3E0D37D2E86B614063F5347EB02D4F99CA6C254DE6B82871FF8D95532A7D"
+    },
+    {
+      "path": "backend/storage/app/public/.gitignore",
+      "sha256": "240A3E0D37D2E86B614063F5347EB02D4F99CA6C254DE6B82871FF8D95532A7D"
+    },
+    {
+      "path": "backend/storage/framework/.gitignore",
+      "sha256": "2D452D65596636197757AFA17DF52331C84DA7BB74EE0F3462FD5BE4EB6AFDC6"
+    },
+    {
+      "path": "backend/storage/framework/cache/.gitignore",
+      "sha256": "32F79194633DDB34F013C6EE8819D112104FF822357ADF308EC385B46A7F42F6"
+    },
+    {
+      "path": "backend/storage/framework/cache/data/.gitignore",
+      "sha256": "240A3E0D37D2E86B614063F5347EB02D4F99CA6C254DE6B82871FF8D95532A7D"
+    },
+    {
+      "path": "backend/storage/framework/sessions/.gitignore",
+      "sha256": "240A3E0D37D2E86B614063F5347EB02D4F99CA6C254DE6B82871FF8D95532A7D"
+    },
+    {
+      "path": "backend/storage/framework/testing/.gitignore",
+      "sha256": "240A3E0D37D2E86B614063F5347EB02D4F99CA6C254DE6B82871FF8D95532A7D"
+    },
+    {
+      "path": "backend/storage/framework/views/.gitignore",
+      "sha256": "240A3E0D37D2E86B614063F5347EB02D4F99CA6C254DE6B82871FF8D95532A7D"
+    },
+    {
+      "path": "backend/storage/logs/.gitignore",
+      "sha256": "240A3E0D37D2E86B614063F5347EB02D4F99CA6C254DE6B82871FF8D95532A7D"
+    },
+    {
+      "path": "backend/tests/Feature/ExampleTest.php",
+      "sha256": "AAA4A192FB4AA96D4E81EDA06A29968DA3D9A73B71026B87A67297E66DD985B8"
+    },
+    {
+      "path": "backend/tests/Feature/HealthTest.php",
+      "sha256": "55A7BE7742A470684205988248B13434C1452822C0AA91031384F3FF38B1DB51"
+    },
+    {
+      "path": "backend/tests/TestCase.php",
+      "sha256": "C7C209F5579C42647C1F7B2A79AC828E8B54AC62A98442045A6E94FA2C0D0EBC"
+    },
+    {
+      "path": "backend/tests/Unit/ExampleTest.php",
+      "sha256": "FFACAE5C1A2A44C809420AF5B3B404910DA1B12167D58764DAC6D10B8BA8CFAF"
+    },
+    {
+      "path": "backend/vite.config.js",
+      "sha256": "1BD7F75AE1DF969C819E63114E9BE5F0E2A69E399D4DCAB4373AA680314A93D9"
+    },
+    {
+      "path": "frontend/.env.example",
+      "sha256": "5017921AD354646A2D4BBB3B8C871E50AE2B4DBC514A131B62103A2B7F36A2D4"
+    },
+    {
+      "path": "frontend/.gitignore",
+      "sha256": "0581D23086F7283DC97D2D5BDE4F60724F8115F67BAA76949596790AB9800DD7"
+    },
+    {
+      "path": "frontend/.metadata",
+      "sha256": "FD14EFF939DAD5D54AD3A8E3132697BB04DFBC8864D7FE681D397CEF581FB4F9"
+    },
+    {
+      "path": "frontend/README.md",
+      "sha256": "6C4014180F75312239F858E8735C501D25005633A4A7061E1BD7C9D066DB099B"
+    },
+    {
+      "path": "frontend/analysis_options.yaml",
+      "sha256": "5ED95B15F3691D1363EB38408668A5126690898DA0FE5AFD00C9D1E8DBB50D2E"
+    },
+    {
+      "path": "frontend/lib/main.dart",
+      "sha256": "FAFF87E358EF09F21760EA66F49557C1ACD87006C9758E824E90B3B4B45772DA"
+    },
+    {
+      "path": "frontend/pubspec.lock",
+      "sha256": "F30F38CC1CA7942743EECDA2C725DEC53D9CD1C2BE1BE4AE22F497D6BDF0B21A"
+    },
+    {
+      "path": "frontend/pubspec.yaml",
+      "sha256": "A64EEEEC0982632DF189AFBC0543266215C7A2E964DF2F75322AD411F599B32D"
+    },
+    {
+      "path": "frontend/test/widget_test.dart",
+      "sha256": "7CE9D4B3DC37F97F2B99E51D8A231A64A45643FC313DB46D20FAD2FD08F0CC66"
+    },
+    {
+      "path": "frontend/web/favicon.png",
+      "sha256": "7AB2525F4B86B65D3E4C70358A17E5A1AAF6F437F99CBCC046DAD73D59BB9015"
+    },
+    {
+      "path": "frontend/web/icons/Icon-192.png",
+      "sha256": "3DCE99077602F70421C1C6B2A240BC9B83D64D86681D45F2154143310C980BE3"
+    },
+    {
+      "path": "frontend/web/icons/Icon-512.png",
+      "sha256": "BACCB205AE45F0B421BE1657259B4943AC40C95094AB877F3BCBE12CD544DCBE"
+    },
+    {
+      "path": "frontend/web/icons/Icon-maskable-192.png",
+      "sha256": "D2C842E22A9F4EC9D996B23373A905C88D9A203B220C5C151885AD621F974B5C"
+    },
+    {
+      "path": "frontend/web/icons/Icon-maskable-512.png",
+      "sha256": "6AEE06CDCAB6B2AEF74B1734C4778F4421D2DA100B0FF9E52B21B55240202929"
+    },
+    {
+      "path": "frontend/web/index.html",
+      "sha256": "A23562CA0D86B6264543E9BA50C226BD075E199F7EC6211B646DDC6F545C75FF"
+    },
+    {
+      "path": "frontend/web/manifest.json",
+      "sha256": "68F534F53F836B8DF439CDEE388F9694F17B95D59D1278007675C7F046FE27E8"
+    }
+  ]
+}

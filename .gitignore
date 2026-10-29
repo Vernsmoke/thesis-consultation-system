@@ -1,0 +1,17 @@
+# Private local configuration and generated dependencies
+**/.env
+**/.env.*
+!**/.env.example
+**/vendor/
+**/node_modules/
+**/.dart_tool/
+**/build/
+**/.flutter-plugins-dependencies
+**/.phpunit.cache/
+**/.phpunit.result.cache
+**/storage/logs/*.log
+**/database/*.sqlite*
+.idea/
+.vscode/
+*.zip
+
