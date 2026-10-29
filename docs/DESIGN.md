@@ -4,6 +4,8 @@ Status: proposed implementation decisions, prepared before application code. Val
 
 Implementation update at checkpoint 02: the [data foundation](DATABASE.md) now implements roles, consultation/panel/action-item tables and models with fresh isolated MariaDB app/test databases. [Actual tests](../evidence/test-results/DATA-RESULTS.md) verify relationships, seed stability and constraints. Workflow/API permissions, audit and automation policies below remain proposals pending implementation. Seeded statuses are fictional fixtures, not execution of those policies.
 
+Checkpoint 03 update supersedes the permission/request/schedule proposal: [API contract](API-CONTRACT.md) implements Sanctum cookie sessions, policies, scoped reads, student requests, assigned-adviser confirmation and transactional audit events. [Actual API evidence](../evidence/test-results/API-RESULTS.md) includes a retained request/confirmed record. Remaining mutations, UI and automation policies below are still pending; no notification/outbox behavior is implied by a schedule confirmation yet.
+
 ## Scope and authority
 
 The student reports on 2026-10-29 that the teacher assigned and approved Project 29, Thesis Consultation Reminder System, in response to the approval/registration status question. This is the student's confirmation, not an independent inspection of the official class registry. The student retains responsibility for checking the instructor's written approval/registry; this repository must never modify it. Deadline: October 30, 2026, Asia/Manila; submission time unspecified.

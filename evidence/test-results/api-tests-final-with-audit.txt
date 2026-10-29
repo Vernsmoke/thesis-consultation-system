@@ -1,0 +1,43 @@
+
+   PASS  Tests\Unit\ExampleTest
+  ✓ that true is true                                                                                            0.01s  
+
+   PASS  Tests\Feature\ConsultationApiTest
+  ✓ login uses server role and does not return a password or token                                               0.74s  
+  ✓ invalid login is generic and unauthenticated reads are 401                                                   0.27s  
+  ✓ login rate limit stops repeated password attempts                                                            1.27s  
+  ✓ logout ends the session                                                                                      0.05s  
+  ✓ student reads only own records and cannot open another students record                                       0.06s  
+  ✓ unassigned adviser has no records and cannot read others                                                     0.05s  
+  ✓ panel is read only and sees only explicit membership                                                         0.06s  
+  ✓ coordinator can review but cannot confirm for the adviser                                                    0.05s  
+  ✓ student request and assigned adviser confirmation are audited                                                0.08s  
+  ✓ request validation rejects missing agenda nonadviser and impersonation                                       0.07s  
+  ✓ student and other adviser cannot confirm a schedule                                                          0.06s  
+  ✓ invalid past reversed and ambiguous dates are rejected                                                       0.06s  
+  ✓ conflicting adviser schedule is rejected without mutation                                                    0.06s  
+  ✓ database failure returns a safe 503 without creating work                                                    0.07s  
+  ✓ an audit write failure rolls back the consultation too                                                       0.05s  
+
+   PASS  Tests\Feature\ConsultationDataTest
+  ✓ seeded workflow relationships and utc dates are consistent                                                   0.06s  
+  ✓ reseeding does not duplicate or overwrite work                                                               0.06s  
+  ✓ demo passwords are hashed and not serialized                                                                 0.05s  
+  ✓ unknown user reference cannot create an orphan action item                                                   0.06s  
+  ✓ database rejects a confirmed meeting without a schedule                                                      0.04s  
+  ✓ database rejects an end before the start                                                                     0.04s  
+  ✓ database rejects a duplicate panel assignment                                                                0.05s  
+  ✓ referenced student cannot be deleted                                                                         0.06s  
+  ✓ database rejects an unknown role                                                                             0.05s  
+
+   PASS  Tests\Feature\ExampleTest
+  ✓ the application returns a successful response                                                                0.04s  
+
+   PASS  Tests\Feature\HealthTest
+  ✓ liveness returns only public project metadata                                                                0.02s  
+  ✓ configured flutter origin can read health                                                                    0.02s  
+  ✓ unlisted origin is not granted browser access                                                                0.02s  
+
+  Tests:    29 passed (111 assertions)
+  Duration: 3.83s
+

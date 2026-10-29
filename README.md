@@ -2,7 +2,7 @@
 
 Project 29, PFEBSIT 002. Individual classroom prototype using Flutter Web, Laravel and XAMPP MariaDB through Laravel's MySQL driver.
 
-Status: **data foundation ready for checkpoint 02**. Foundation commit `d43b0df` is verified on GitHub. Fresh MariaDB schemas/accounts, consultation models, fictional seed data and isolated tests are implemented; 14 backend tests pass (35 assertions). Flutter's prior analysis/build and real API connection passed; widget tests remain blocked by Windows Application Control. Login/workflow APIs, automation, full workflow evidence, activities and SA7 are unfinished. See [requirements/status](SUBMISSION-CHECKLIST.md), [bounded design](docs/DESIGN.md), [laboratory log](docs/LAB-LOG.md) and [evidence index](evidence/README.md).
+Status: **authentication/request/schedule API ready for checkpoint 03**. Student commit `27960ba` is verified on GitHub. Cookie-session login, role/record permissions, consultation requests, adviser confirmation and minimal audit records are implemented; **29 backend tests pass (111 assertions)**. A real HTTP cookie/CSRF exercise matched 24 expected responses and retained consultation 4 plus two audit events. Remaining meeting/action/follow-up actions, full Flutter workflow, automation, activities and SA7 are unfinished. Flutter widget tests remain blocked by the recorded Windows policy. See [checklist](SUBMISSION-CHECKLIST.md), [API contract](docs/API-CONTRACT.md), [actual API results](evidence/test-results/API-RESULTS.md), [lab log](docs/LAB-LOG.md) and [evidence index](evidence/README.md).
 
 The student reports teacher assignment/approval. The official registry was not independently inspected. Use only fictional data. The student personally reviews, verifies, commits, pushes and defends the work. AI-assisted code and documentation must be reviewed and acknowledged under institutional policy; preparation is not evidence of student understanding.
 
@@ -27,7 +27,8 @@ php tools/provision-local.php
 php artisan migrate --no-interaction
 php artisan db:seed --no-interaction
 php artisan test --compact
-php artisan serve --host=127.0.0.1 --port=8000 --no-reload
+Set-Location public
+php -S 127.0.0.1:8000 ../vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php
 ```
 
 `Copy-Item` above is for a fresh checkout only. In the current workspace `.env` and a newly generated key already exist: do not overwrite them. The health endpoint needs no database connection. File cache/sessions allow this foundation check while database setup is pending. Queue configuration is not a running automation worker.
@@ -44,7 +45,7 @@ php -S 127.0.0.1:8080 -t build/web
 
 Open `http://127.0.0.1:8080` and select **Check connection**. It should display **Connected to the Week 13 Laravel API.** Use `127.0.0.1`, not `localhost`, because the configured CORS origin is exact. The frontend `.env.example` documents a public compile-time option; Flutter does not load that file automatically. No Node/Vite build is required: Flutter provides the frontend; Laravel's default frontend resources are unused scaffold files.
 
-Alternative development command: `flutter run -d web-server --web-hostname=127.0.0.1 --web-port=8080 --dart-define=API_BASE_URL=http://127.0.0.1:8000/api`. This command has not been verified in this fresh build. Do not start another process on an occupied port. At the first checkpoint the fresh backend and static Flutter server remain running on 8000 and 8080; inspect services before restarting. Ctrl+C stops a server in its owning terminal.
+Alternative development command: `flutter run -d web-server --web-hostname=127.0.0.1 --web-port=8080 --dart-define=API_BASE_URL=http://127.0.0.1:8000/api`. This command has not been verified in this fresh build. Do not start another process on an occupied port. At checkpoint 03, the API uses one direct PHP server from backend/public on 8000; the static Flutter server remains on 8080, MariaDB on 3306. Inspect services before restarting. Ctrl+C stops a server in its owning terminal. Previous HTTP failures and server working-directory correction are documented in the API results.
 
 `flutter test` was attempted but Windows Application Control blocked `dartaotruntime.exe`; no widget test pass is claimed. Analysis, web compilation and real browser verification are separate successful checks. No SDK/security-policy repair was applied. See [recorded results and limits](evidence/test-results/FOUNDATION-RESULTS.md).
 
@@ -52,7 +53,7 @@ The **current workspace** has a fresh `thesis_consultation_week13` database, a s
 
 ## Student checkpoint and next milestone
 
-The student completed [checkpoint 01](docs/CHECKPOINT-01.md). Use [checkpoint 02 commands and explanation](docs/CHECKPOINT-02.md) for this data increment. No commit or push has been performed by the assistant. After the student commits this increment, verify history/status before adding authentication/authorization and workflow APIs. The shared parent `PROJECT-PROGRESS.md` holds the handover for another chat.
+The student completed checkpoints 01 and 02. Use [checkpoint 03 commands and explanation](docs/CHECKPOINT-03.md) for this API increment. No commit or push has been performed by the assistant. After the student commits, verify history/status before adding meeting-status/action-item/follow-up APIs. The current Flutter screen still shows the foundation connection check; it does not yet expose authenticated workflow actions. The shared parent `PROJECT-PROGRESS.md` holds the handover for another chat.
 
 ## Reference documentation
 

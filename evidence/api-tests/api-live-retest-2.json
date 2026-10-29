@@ -1,0 +1,23 @@
+{
+    "run": "9afeeddf39d6",
+    "base_commit": "27960ba0bee39bc40b003090df61e9782570f895",
+    "build": "uncommitted API milestone",
+    "environment": "PHP curl -> actual local Laravel HTTP server; MariaDB app database; origin 127.0.0.1:8080",
+    "outcome": "fail",
+    "failure": "Unexpected status for GET /api/me; see sanitized results.",
+    "requests": [
+        {
+            "timestamp_utc": "2026-10-29T11:44:58+00:00",
+            "method": "GET",
+            "path": "/api/me",
+            "request": null,
+            "expected_status": 401,
+            "actual_status": 200,
+            "response": null,
+            "duration_ms": 6.01,
+            "outcome": "fail"
+        }
+    ],
+    "audit_events": [],
+    "limitation": "Creates and retains one fictional evidence consultation per run; does not prove Flutter UI, concurrent overlap races, notifications or automation. Cookies/secrets omitted."
+}

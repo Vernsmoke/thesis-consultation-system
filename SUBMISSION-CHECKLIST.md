@@ -9,10 +9,11 @@ Status: **prepared** means a reviewable plan exists, **pending** means the imple
 | ID | Requirement and origin | Status | Artifact / planned proof |
 | --- | --- | --- | --- |
 | GOV-01 | One individual approved/registered project; no production data (guide) | Student reports assigned and approved; official registry not inspected | [Scope and authority](docs/DESIGN.md#scope-and-authority); student must retain instructor confirmation |
-| GOV-02 | Fresh Week 13 history, separate folder, student commits/pushes (student) | First commit d43b0df verified locally/on remote; data increment uncommitted | Branch codex/week13-foundation, new supplied origin; student handles every commit/push |
+| GOV-02 | Fresh Week 13 history, separate folder, student commits/pushes (student) | d43b0df and 27960ba verified locally/on remote; API increment uncommitted | Branch codex/week13-foundation; student handles every commit/push |
 | PREP-01 | Feature branch, evidence folders, lab log with date, environment, versions, scope (guided part 1) | Complete for foundation | [Lab log](docs/LAB-LOG.md) |
 | FND-01 | Fresh scaffold/API connection (implementation milestone, not a separate teacher requirement) | Verified; widget tests blocked | [Results](evidence/test-results/FOUNDATION-RESULTS.md); five backend tests, analysis, web build, real browser connection |
-| DATA-01 | Consultation/role/action-item data foundation (implementation milestone supporting workflow) | Verified; checkpoint 02 awaiting student commit | [Database guide](docs/DATABASE.md), [14-test result](evidence/test-results/DATA-RESULTS.md); fresh scoped MariaDB app/test databases, fictional seeder and constraints |
+| DATA-01 | Consultation/role/action-item data foundation (implementation milestone supporting workflow) | Committed 27960ba; verified | [Database guide](docs/DATABASE.md), [data evidence](evidence/test-results/DATA-RESULTS.md) |
+| API-01 | Session authentication, scoped reads, request/confirmation (implementation milestone supporting workflow) | Verified; checkpoint 03 awaiting student commit | [API contract](docs/API-CONTRACT.md), [29-test/24-live-request result](evidence/test-results/API-RESULTS.md) |
 | DES-01 | Actors, trigger, trusted inputs, boundary, outputs, dependencies, human approval, non-goals (topic 1) | Prepared | [Design](docs/DESIGN.md) |
 | DES-02 | Data-flow/sequence diagram marks trust, credentials, sensitive data, logs and failure/approval paths | Prepared | [Design diagram](docs/DESIGN.md#data-flow-and-trust-boundaries) |
 | DES-03 | At least two approaches with fit, security, reliability, performance, effort, skills, ownership and verification tradeoffs | Prepared; execution evidence pending | [Decision record](docs/DESIGN.md#decision-record) |
@@ -20,7 +21,7 @@ Status: **prepared** means a reviewable plan exists, **pending** means the imple
 | DES-05 | Failure taxonomy, retry policy and recovery runbook (topic 3) | Prepared policy; runbook pending implementation | [Retry design](docs/DESIGN.md#failure-and-recovery-policy) |
 | DES-06 | Security checklist and protected configuration evidence (topic 4) | Pending | Configuration example, ignore checks, validation/authorization tests, safe logs |
 | DES-07 | Reliability and maintainability report supported by measurements (topic 5) | Pending | Weekly report, counts/timings, error/retry rates, queue depth, limitations |
-| WF-01 | Consultation request with agenda; assigned adviser confirms schedule (Project 29) | Pending | API tests, Flutter demonstration, state audit |
+| WF-01 | Consultation request with agenda; assigned adviser confirms schedule (Project 29) | API/audit verified; Flutter demonstration pending | [API results](evidence/test-results/API-RESULTS.md); actual consultation 4 and two audit records |
 | WF-02 | Meeting status, action items with deadlines and follow-up (Project 29) | Pending | State-transition, ownership and deadline tests |
 | AUTO-01 | Consultation reminders | Pending | Controlled due record, service receipt, structured outcome |
 | AUTO-02 | Missed-session handling | Pending | Controlled elapsed session, no duplicate transition, coordinator alert |
@@ -29,13 +30,13 @@ Status: **prepared** means a reviewable plan exists, **pending** means the imple
 | AUTO-05 | Validate queued records, call bounded service, audit result, notify responsible role (guided build) | Pending | Durable work records, service test requests/receipts, logs |
 | REL-01 | Bounded retries, timeout, transient recovery, permanent failures routed for human action | Pending | Actual recovered retry, exhausted retry, permanent failure, review/recovery evidence |
 | REL-02 | Idempotency/duplicate protection, crash recovery; no endless retries or silent loss | Pending | Duplicate/concurrency and interruption/recovery tests; Activity 2 |
-| SEC-01 | Server-side authentication, role/record authorization, safe consistent errors and input validation (common rules/module) | Pending | Unauthenticated 401, forbidden 403, invalid 422 and ownership tests |
+| SEC-01 | Server-side authentication, role/record authorization, safe consistent errors and input validation (common rules/module) | Verified for implemented API subset; remaining workflow/UI pending | Session/CSRF, scoped reads, 401/403/404/409/419/422/429/503 checks in [API results](evidence/test-results/API-RESULTS.md) |
 | SEC-02 | Secrets outside source/client, least privilege, controlled data, safe logs and correlation IDs | Pending | Fresh local settings, sanitized example, log review, dependency checks |
 | WEB-01 | Flutter Web source with minimum workflow navigation and reusable widgets | Pending | Source and real browser/API demonstration |
 | WEB-02 | Client validation agrees with authoritative server validation | Pending | Invalid form and API results |
 | WEB-03 | Loading, success, empty, validation, authentication, authorization, network and server failure states | Pending | Real browser captures plus repeatable checks |
 | WEB-04 | Desktop, tablet and narrow layout; keyboard, labels, focus, contrast/status feedback | Pending | Actual viewport captures and usability record |
-| TEST-01 | Measurable success and at least four adverse cases: invalid, unauthorized, dependency failure, recovery | Prepared criteria; tests pending | [Acceptance plan](docs/DESIGN.md#acceptance-and-evidence-plan), API scripts/requests/results |
+| TEST-01 | Measurable success and at least four adverse cases: invalid, unauthorized, dependency failure, recovery | API subset executed; full workflow/browser/automation cases pending | [API result map](evidence/test-results/API-RESULTS.md), preserved actual failures/retests |
 | TEST-02 | Expected/actual, build ID, environment, date/time, data, preconditions, evidence paths | Pending execution | [Evidence index](evidence/README.md), dated result records |
 | TEST-03 | Predict controlled failure; preserve failed run; justified improvement, retest and regression | Pending | Activity 2 and retained original/retest records |
 | ACT-01 | Three contrasting office workflows, compare at least two patterns for each against latency/volume/reliability/security/staffing | Pending | Main weekly report Activity 1, matrix, diagram and reproducible proof |

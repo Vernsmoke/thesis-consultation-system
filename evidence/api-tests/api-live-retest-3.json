@@ -1,0 +1,472 @@
+{
+    "run": "ab4832621cd3",
+    "base_commit": "27960ba0bee39bc40b003090df61e9782570f895",
+    "build": "uncommitted API milestone",
+    "environment": "PHP curl -> actual local Laravel HTTP server; MariaDB app database; origin 127.0.0.1:8080",
+    "outcome": "pass",
+    "failure": null,
+    "requests": [
+        {
+            "timestamp_utc": "2026-10-29T11:45:50+00:00",
+            "method": "GET",
+            "path": "/api/me",
+            "request": null,
+            "expected_status": 401,
+            "actual_status": 401,
+            "response": {
+                "message": "Unauthenticated."
+            },
+            "duration_ms": 246.9,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T11:45:50+00:00",
+            "method": "POST",
+            "path": "/api/login",
+            "request": {
+                "email": "student.one@example.test",
+                "password": "[redacted]"
+            },
+            "expected_status": 419,
+            "actual_status": 419,
+            "response": {
+                "message": "CSRF token mismatch."
+            },
+            "duration_ms": 155.91,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T11:45:50+00:00",
+            "method": "GET",
+            "path": "/sanctum/csrf-cookie",
+            "request": null,
+            "expected_status": 204,
+            "actual_status": 204,
+            "response": null,
+            "duration_ms": 142.13,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T11:45:51+00:00",
+            "method": "POST",
+            "path": "/api/login",
+            "request": {
+                "email": "student.one@example.test",
+                "password": "[redacted]"
+            },
+            "expected_status": 200,
+            "actual_status": 200,
+            "response": {
+                "data": {
+                    "id": 1,
+                    "name": "Student One (Demo)",
+                    "role": "student"
+                }
+            },
+            "duration_ms": 412.53,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T11:45:51+00:00",
+            "method": "GET",
+            "path": "/api/advisers",
+            "request": null,
+            "expected_status": 200,
+            "actual_status": 200,
+            "response": {
+                "data": [
+                    {
+                        "id": 3,
+                        "name": "Adviser One (Demo)"
+                    },
+                    {
+                        "id": 4,
+                        "name": "Adviser Two (Demo)"
+                    }
+                ]
+            },
+            "duration_ms": 242.68,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T11:45:51+00:00",
+            "method": "POST",
+            "path": "/api/consultations",
+            "request": {
+                "adviser_id": 3
+            },
+            "expected_status": 422,
+            "actual_status": 422,
+            "response": {
+                "message": "The agenda field is required.",
+                "errors": {
+                    "agenda": [
+                        "The agenda field is required."
+                    ]
+                }
+            },
+            "duration_ms": 199.26,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T11:45:51+00:00",
+            "method": "POST",
+            "path": "/api/consultations",
+            "request": {
+                "adviser_id": 3,
+                "agenda": "Controlled API evidence ab4832621cd3: review fictional methodology."
+            },
+            "expected_status": 201,
+            "actual_status": 201,
+            "response": {
+                "data": {
+                    "reference": "31685814-07bf-4996-878a-52356b29168f",
+                    "student_id": 1,
+                    "adviser_id": 3,
+                    "agenda": "Controlled API evidence ab4832621cd3: review fictional methodology.",
+                    "status": "requested",
+                    "schedule_version": 0,
+                    "updated_at": "2026-10-29T11:45:51.000000Z",
+                    "created_at": "2026-10-29T11:45:51.000000Z",
+                    "id": 4,
+                    "student": {
+                        "id": 1,
+                        "name": "Student One (Demo)",
+                        "role": "student"
+                    },
+                    "adviser": {
+                        "id": 3,
+                        "name": "Adviser One (Demo)",
+                        "role": "adviser"
+                    },
+                    "panel_members": []
+                },
+                "correlation_id": "7c1cfd79-8bcd-4fb8-9046-37689398f88b"
+            },
+            "duration_ms": 256.44,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T11:45:52+00:00",
+            "method": "PATCH",
+            "path": "/api/consultations/4/schedule",
+            "request": {
+                "starts_at": "2026-11-05T11:45:51Z",
+                "ends_at": "2026-11-05T12:15:51Z"
+            },
+            "expected_status": 403,
+            "actual_status": 403,
+            "response": {
+                "message": "This action is unauthorized."
+            },
+            "duration_ms": 217.99,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T11:45:52+00:00",
+            "method": "GET",
+            "path": "/sanctum/csrf-cookie",
+            "request": null,
+            "expected_status": 204,
+            "actual_status": 204,
+            "response": null,
+            "duration_ms": 176.2,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T11:45:52+00:00",
+            "method": "POST",
+            "path": "/api/login",
+            "request": {
+                "email": "adviser.one@example.test",
+                "password": "[redacted]"
+            },
+            "expected_status": 200,
+            "actual_status": 200,
+            "response": {
+                "data": {
+                    "id": 3,
+                    "name": "Adviser One (Demo)",
+                    "role": "adviser"
+                }
+            },
+            "duration_ms": 433.56,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T11:45:53+00:00",
+            "method": "PATCH",
+            "path": "/api/consultations/4/schedule",
+            "request": {
+                "starts_at": "2026-11-05T11:45:51Z",
+                "ends_at": "2026-11-05T12:15:51Z"
+            },
+            "expected_status": 200,
+            "actual_status": 200,
+            "response": {
+                "data": {
+                    "id": 4,
+                    "reference": "31685814-07bf-4996-878a-52356b29168f",
+                    "student_id": 1,
+                    "adviser_id": 3,
+                    "agenda": "Controlled API evidence ab4832621cd3: review fictional methodology.",
+                    "status": "confirmed",
+                    "starts_at": "2026-11-05T11:45:51.000000Z",
+                    "ends_at": "2026-11-05T12:15:51.000000Z",
+                    "schedule_version": 1,
+                    "meeting_notes": null,
+                    "created_at": "2026-10-29T11:45:51.000000Z",
+                    "updated_at": "2026-10-29T11:45:53.000000Z",
+                    "student": {
+                        "id": 1,
+                        "name": "Student One (Demo)",
+                        "role": "student"
+                    },
+                    "adviser": {
+                        "id": 3,
+                        "name": "Adviser One (Demo)",
+                        "role": "adviser"
+                    },
+                    "panel_members": []
+                },
+                "correlation_id": "2d58e3aa-252a-48b4-985a-da0683431d99"
+            },
+            "duration_ms": 364.4,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T11:45:53+00:00",
+            "method": "PATCH",
+            "path": "/api/consultations/4/schedule",
+            "request": {
+                "starts_at": "2026-11-05T11:45:51Z",
+                "ends_at": "2026-11-05T12:15:51Z"
+            },
+            "expected_status": 409,
+            "actual_status": 409,
+            "response": {
+                "message": "Only a requested consultation can be confirmed."
+            },
+            "duration_ms": 248.54,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T11:45:53+00:00",
+            "method": "GET",
+            "path": "/sanctum/csrf-cookie",
+            "request": null,
+            "expected_status": 204,
+            "actual_status": 204,
+            "response": null,
+            "duration_ms": 143.38,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T11:45:53+00:00",
+            "method": "POST",
+            "path": "/api/login",
+            "request": {
+                "email": "adviser.two@example.test",
+                "password": "[redacted]"
+            },
+            "expected_status": 200,
+            "actual_status": 200,
+            "response": {
+                "data": {
+                    "id": 4,
+                    "name": "Adviser Two (Demo)",
+                    "role": "adviser"
+                }
+            },
+            "duration_ms": 389.36,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T11:45:54+00:00",
+            "method": "GET",
+            "path": "/api/consultations/4",
+            "request": null,
+            "expected_status": 403,
+            "actual_status": 403,
+            "response": {
+                "message": "This action is unauthorized."
+            },
+            "duration_ms": 226.8,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T11:45:54+00:00",
+            "method": "GET",
+            "path": "/sanctum/csrf-cookie",
+            "request": null,
+            "expected_status": 204,
+            "actual_status": 204,
+            "response": null,
+            "duration_ms": 143,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T11:45:54+00:00",
+            "method": "POST",
+            "path": "/api/login",
+            "request": {
+                "email": "panel.one@example.test",
+                "password": "[redacted]"
+            },
+            "expected_status": 200,
+            "actual_status": 200,
+            "response": {
+                "data": {
+                    "id": 5,
+                    "name": "Panel One (Demo)",
+                    "role": "panel"
+                }
+            },
+            "duration_ms": 395.19,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T11:45:54+00:00",
+            "method": "GET",
+            "path": "/api/consultations/4",
+            "request": null,
+            "expected_status": 403,
+            "actual_status": 403,
+            "response": {
+                "message": "This action is unauthorized."
+            },
+            "duration_ms": 232.87,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T11:45:55+00:00",
+            "method": "GET",
+            "path": "/sanctum/csrf-cookie",
+            "request": null,
+            "expected_status": 204,
+            "actual_status": 204,
+            "response": null,
+            "duration_ms": 132.64,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T11:45:55+00:00",
+            "method": "POST",
+            "path": "/api/login",
+            "request": {
+                "email": "coordinator.one@example.test",
+                "password": "[redacted]"
+            },
+            "expected_status": 200,
+            "actual_status": 200,
+            "response": {
+                "data": {
+                    "id": 6,
+                    "name": "Coordinator One (Demo)",
+                    "role": "coordinator"
+                }
+            },
+            "duration_ms": 385.02,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T11:45:55+00:00",
+            "method": "GET",
+            "path": "/api/consultations/4",
+            "request": null,
+            "expected_status": 200,
+            "actual_status": 200,
+            "response": {
+                "data": {
+                    "id": 4,
+                    "reference": "31685814-07bf-4996-878a-52356b29168f",
+                    "student_id": 1,
+                    "adviser_id": 3,
+                    "agenda": "Controlled API evidence ab4832621cd3: review fictional methodology.",
+                    "status": "confirmed",
+                    "starts_at": "2026-11-05T11:45:51.000000Z",
+                    "ends_at": "2026-11-05T12:15:51.000000Z",
+                    "schedule_version": 1,
+                    "meeting_notes": null,
+                    "created_at": "2026-10-29T11:45:51.000000Z",
+                    "updated_at": "2026-10-29T11:45:53.000000Z",
+                    "student": {
+                        "id": 1,
+                        "name": "Student One (Demo)",
+                        "role": "student"
+                    },
+                    "adviser": {
+                        "id": 3,
+                        "name": "Adviser One (Demo)",
+                        "role": "adviser"
+                    },
+                    "panel_members": [],
+                    "action_items": []
+                }
+            },
+            "duration_ms": 244.28,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T11:45:55+00:00",
+            "method": "PATCH",
+            "path": "/api/consultations/4/schedule",
+            "request": {
+                "starts_at": "2026-11-05T11:45:51Z",
+                "ends_at": "2026-11-05T12:15:51Z"
+            },
+            "expected_status": 403,
+            "actual_status": 403,
+            "response": {
+                "message": "This action is unauthorized."
+            },
+            "duration_ms": 174.46,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T11:45:56+00:00",
+            "method": "POST",
+            "path": "/api/logout",
+            "request": [],
+            "expected_status": 200,
+            "actual_status": 200,
+            "response": {
+                "message": "Signed out."
+            },
+            "duration_ms": 180.65,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T11:45:56+00:00",
+            "method": "GET",
+            "path": "/api/me",
+            "request": null,
+            "expected_status": 401,
+            "actual_status": 401,
+            "response": {
+                "message": "Unauthenticated."
+            },
+            "duration_ms": 191.85,
+            "outcome": "pass"
+        }
+    ],
+    "audit_events": [
+        {
+            "event": "consultation_requested",
+            "actor_id": 1,
+            "correlation_id": "7c1cfd79-8bcd-4fb8-9046-37689398f88b",
+            "from_status": null,
+            "to_status": "requested",
+            "schedule_version": 0
+        },
+        {
+            "event": "schedule_confirmed",
+            "actor_id": 3,
+            "correlation_id": "2d58e3aa-252a-48b4-985a-da0683431d99",
+            "from_status": "requested",
+            "to_status": "confirmed",
+            "schedule_version": 1
+        }
+    ],
+    "limitation": "Creates and retains one fictional evidence consultation per run; does not prove Flutter UI, concurrent overlap races, notifications or automation. Cookies/secrets omitted."
+}

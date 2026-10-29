@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ConsultationController;
 use Illuminate\Support\Facades\Route;
 
 // Public liveness only: database and notification delivery are checked separately.
@@ -9,3 +11,14 @@ Route::get('/health', fn () => response()->json([
     'week' => 13,
     'milestone' => 'foundation',
 ]));
+
+Route::post('/login', [AuthController::class, 'login'])->middleware('throttle:6,1');
+Route::middleware('auth:sanctum')->group(function () {
+    Route::get('/me', [AuthController::class, 'me']);
+    Route::post('/logout', [AuthController::class, 'logout']);
+    Route::get('/advisers', [ConsultationController::class, 'advisers']);
+    Route::get('/consultations', [ConsultationController::class, 'index']);
+    Route::post('/consultations', [ConsultationController::class, 'store']);
+    Route::get('/consultations/{consultation}', [ConsultationController::class, 'show']);
+    Route::patch('/consultations/{consultation}/schedule', [ConsultationController::class, 'confirmSchedule']);
+});

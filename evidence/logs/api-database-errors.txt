@@ -1,0 +1,7 @@
+[2026-10-29 11:41:01] testing.ERROR: database_operation_failed {"sqlstate":"23000"} 
+[2026-10-29 11:41:44] testing.ERROR: database_operation_failed {"sqlstate":0} 
+[2026-10-29 11:43:11] local.ERROR: database_operation_failed {"sqlstate":1045} 
+[2026-10-29 11:44:02] local.ERROR: database_operation_failed {"sqlstate":1045} 
+[2026-10-29 11:46:59] testing.ERROR: database_operation_failed {"sqlstate":"0","driver_code":null} 
+[2026-10-29 11:48:26] testing.ERROR: database_operation_failed {"sqlstate":"0","driver_code":null} 
+[2026-10-29 11:48:26] testing.ERROR: database_operation_failed {"sqlstate":"0","driver_code":null} 

@@ -1,5 +1,14 @@
 # Changelog
 
+## Uncommitted API milestone — 2026-10-29
+
+- Verified student data commit 27960ba locally/on remote before changes.
+- Added Sanctum 4.3.3 cookie-session login/logout, CSRF integration, login throttling, policies/scoped reads, student request creation and assigned-adviser schedule confirmation.
+- Added minimal transactional consultation events/correlation IDs, UTC validation, recorded-adviser overlap checks, repeated-confirmation rejection and safe database-error responses/log metadata.
+- Final MariaDB suite: 29 tests/111 assertions; actual HTTP session exercise: 24 expected responses, retained consultation 4/two audit events. Captured actual saved policy in VS Code.
+- Retained initial test failures and HTTP configuration/router failures, then corrected/retested. Single API server now runs from backend/public; no database/security/SDK repair.
+- Remaining workflow mutations, Flutter login/screens, four automations, full evidence and activities/SA7 pending.
+
 ## Uncommitted data foundation — 2026-10-29
 
 - Verified the student's foundation commit d43b0df locally and on GitHub before changes.

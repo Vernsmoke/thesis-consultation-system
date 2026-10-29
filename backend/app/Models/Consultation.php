@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
@@ -17,6 +18,17 @@ class Consultation extends Model
     protected function casts(): array
     {
         return ['starts_at' => 'datetime', 'ends_at' => 'datetime', 'schedule_version' => 'integer'];
+    }
+
+    public function scopeVisibleTo(Builder $query, User $user): Builder
+    {
+        return match ($user->role) {
+            'student' => $query->where('student_id', $user->id),
+            'adviser' => $query->where('adviser_id', $user->id),
+            'panel' => $query->whereHas('panelMembers', fn (Builder $members) => $members->where('users.id', $user->id)),
+            'coordinator' => $query,
+            default => $query->whereRaw('1 = 0'),
+        };
     }
 
     public function student(): BelongsTo

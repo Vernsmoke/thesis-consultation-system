@@ -1,0 +1,6 @@
+
+   INFO  Running migrations.  
+
+  2026_10_29_000003_create_consultation_events_table .................................................... 52.00ms DONE
+  2026_10_29_113825_create_personal_access_tokens_table ................................................. 21.70ms DONE
+

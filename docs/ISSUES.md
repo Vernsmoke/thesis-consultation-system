@@ -10,8 +10,12 @@
 | W13-06 | Local HTTP only planned for Week 13 | No HTTPS/security-exchange compliance claim; Week 14 addresses transport/encryption |
 | W13-07 | Notification destination is a controlled local test service | No real email/SMS delivery or production readiness claim |
 | W13-08 | Submission time/format unspecified | Confirm when preparing final submission; date October 30, 2026 Asia/Manila |
-| W13-09 | Student commit/push checkpoints | First commit d43b0df verified on remote; checkpoint 02 awaiting student review/commit/push |
+| W13-09 | Student commit/push checkpoints | d43b0df and 27960ba verified on remote; checkpoint 03 awaiting student review/commit/push |
 | W13-10 | Windows Application Control blocked Flutter widget-test compiler dartaotruntime.exe | Blocked; preserve failed run. Analysis/build and browser worked; no policy or SDK changes authorized by this failure |
 | W13-11 | Project 29 fictional fixtures | Generic seeder replaced and tested; seeded completed status is a fixture, not proof of an executed workflow |
-| W13-12 | Data roles and foreign keys are not a permission system | Authentication, role/record policies and business validation pending next milestone |
+| W13-12 | Role/record policies and business validation | Implemented/tested for read/request/schedule APIs; meeting/action/follow-up endpoints and Flutter integration pending |
 | W13-13 | XAMPP startup warned about existing mysql.gtid_slave_pos system replication-state table | No repair attempted; local project migrations/tests succeeded. No broader server-health claim |
+| W13-14 | Schedule concurrency/availability limits | Adviser-row locking implemented; actual competing-process test and student-across-adviser conflicts unverified; no real calendar availability asserted |
+| W13-15 | HTTP cookie/session transport | Local first-party session flow verified; HTTPS/Secure-cookie demonstration deferred to Week 14 |
+| W13-16 | Inaccessible record existence | Existing inaccessible record returns 403, absent returns 404; contents hidden, existence not concealed |
+| W13-17 | Real API evidence fixture | Consultation 4/two audit events retained. Repeat live script adds records and may conflict; use isolated suite for routine regression |

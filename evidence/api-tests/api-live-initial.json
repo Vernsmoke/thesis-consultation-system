@@ -1,0 +1,68 @@
+{
+    "run": "af67a891502c",
+    "base_commit": "27960ba0bee39bc40b003090df61e9782570f895",
+    "build": "uncommitted API milestone",
+    "environment": "PHP curl -> actual local Laravel HTTP server; MariaDB app database; origin 127.0.0.1:8080",
+    "outcome": "fail",
+    "failure": "Unexpected status for POST /api/login; see sanitized results.",
+    "requests": [
+        {
+            "timestamp_utc": "2026-10-29T11:43:11+00:00",
+            "method": "GET",
+            "path": "/api/me",
+            "request": null,
+            "expected_status": 401,
+            "actual_status": 401,
+            "response": {
+                "message": "Unauthenticated."
+            },
+            "duration_ms": 206.79,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T11:43:11+00:00",
+            "method": "POST",
+            "path": "/api/login",
+            "request": {
+                "email": "student.one@example.test",
+                "password": "[redacted]"
+            },
+            "expected_status": 419,
+            "actual_status": 419,
+            "response": {
+                "message": "CSRF token mismatch."
+            },
+            "duration_ms": 162.43,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T11:43:11+00:00",
+            "method": "GET",
+            "path": "/sanctum/csrf-cookie",
+            "request": null,
+            "expected_status": 204,
+            "actual_status": 204,
+            "response": null,
+            "duration_ms": 138.07,
+            "outcome": "pass"
+        },
+        {
+            "timestamp_utc": "2026-10-29T11:43:12+00:00",
+            "method": "POST",
+            "path": "/api/login",
+            "request": {
+                "email": "student.one@example.test",
+                "password": "[redacted]"
+            },
+            "expected_status": 200,
+            "actual_status": 503,
+            "response": {
+                "message": "The data service is unavailable. Please retry later."
+            },
+            "duration_ms": 395.12,
+            "outcome": "fail"
+        }
+    ],
+    "audit_events": [],
+    "limitation": "Creates and retains one fictional evidence consultation per run; does not prove Flutter UI, concurrent overlap races, notifications or automation. Cookies/secrets omitted."
+}

@@ -22,3 +22,12 @@ Record requirement/case ID, build/commit (or explicit uncommitted build/hash), e
 - [Actual saved constraints in VS Code](screenshots/source-code/w13-data-schedule-constraints-vscode.jpg): implementation proof; database tests above provide execution proof.
 
 No new browser-workflow capture is claimed for a schema-only increment. The existing Flutter foundation screen remains unchanged. Data tests do not replace required authenticated API/browser adverse cases or automation failure/recovery evidence.
+
+## Checkpoint 03 API evidence
+
+- [API result map](test-results/API-RESULTS.md), [final 29-test output](test-results/api-tests-final-with-audit.txt), [initial failed suite](test-results/api-tests-initial.txt) and intermediate retests retained.
+- [Actual HTTP success, 24 requests](api-tests/api-live-retest-3.json), plus [initial failure](api-tests/api-live-initial.json), [first retest failure](api-tests/api-live-retest.json), [router-directory failure](api-tests/api-live-retest-2.json). No cookies/private passwords saved.
+- [Current app snapshot](test-results/api-app-snapshot.json), [migration output](test-results/api-migration.txt), [routes](api-tests/api-routes.txt), [safe extracted error lines](logs/api-database-errors.txt), [build fingerprints](test-results/api-build.json).
+- [Actual saved record policy in VS Code](screenshots/source-code/w13-api-record-policy-vscode.jpg). This proves source; tests/live responses prove execution.
+
+Full Flutter login/workflow/browser states and automation evidence remain pending. API HTTP evidence uses curl, not a fabricated browser screenshot.

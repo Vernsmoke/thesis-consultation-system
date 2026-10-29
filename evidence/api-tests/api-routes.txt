@@ -1,0 +1,13 @@
+
+  GET|HEAD   api/advisers ............................................................ ConsultationController@advisers
+  GET|HEAD   api/consultations .......................................................... ConsultationController@index
+  POST       api/consultations .......................................................... ConsultationController@store
+  GET|HEAD   api/consultations/{consultation} ............................................ ConsultationController@show
+  PATCH      api/consultations/{consultation}/schedule ........................ ConsultationController@confirmSchedule
+  GET|HEAD   api/health ............................................................................. routes/api.php:8
+  POST       api/login .......................................................................... AuthController@login
+  POST       api/logout ........................................................................ AuthController@logout
+  GET|HEAD   api/me ................................................................................ AuthController@me
+
+                                                                                                    Showing [9] routes
+
