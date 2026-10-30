@@ -1,0 +1,7 @@
+{
+  "outcome": "blocked",
+  "case": "initial_read_only_database_inspector",
+  "reason": "Restricted process sandbox denied local database socket access. No application failure or data mutation inferred.",
+  "retest": "revision-app-before-authorized.json",
+  "raw_diagnostic": "Retained privately outside the repository; raw SQL/stack details excluded from public evidence."
+}

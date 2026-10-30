@@ -113,3 +113,8 @@ Verified local/live remote1bf5323 and clean starting tree, inspected existing se
 
 
 Word QA follow-up: user explicitly authorized installed local LibreOffice. Canonical render completed; all24 report pages and2 private AI-assisted reflection pages visually inspected. Eleven actual saved-source/browser images embedded with source captions; media hashes match originals. Interpretations each one page (7/10). Personal reflection draft remains outside GitHub and requires student revision/verification. No additional runtime tests needed for document-only edits. No assistant staging/commit/push.
+
+
+## Revised manual and continuing repository update
+
+Revision30 October2026: read AGENTS/progress, full Week13 module and guide common rules/mapping/Project29; inspected actual Week13 cleanmain/cfbacef and Week14 unborn/untracked source. Services all stopped, existing Week13 settings restarted without data reset; no Week14 service/source changes. Regression64/325 in7.20s, analyze3.7s clean, existing compiled hash matches. Twelve new real manual captures/read-only+invalid-form checks, seven retained-effect checks, no domain count changes. Automatic review blocked opening Confirm schedule; no workaround/retry/save; authentic prior capture retained. Public inspector sandbox error preserved safely; authorized read succeeded. Manual/transition/audit/current checklist and guarded student commit/tag plan prepared.214 Week14 source/Git hashes unchanged. Root rules/progress updated; no assistant staging/commit/tag/push.

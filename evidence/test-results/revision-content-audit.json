@@ -1,0 +1,18 @@
+{
+  "recorded_at_utc": "2026-10-30T09:18:35.401443+00:00",
+  "manual_numbered_procedures": 18,
+  "embedded_actual_image_occurrences": 23,
+  "unique_actual_screenshot_files": 22,
+  "new_browser_jpegs_verified": 12,
+  "local_file_links_missing": [],
+  "configured_private_value_count": 8,
+  "candidate_text_files_checked": 151,
+  "matching_private_value_paths": [],
+  "runtime_source_changed": [],
+  "staged_files": [],
+  "student_staging_paths_exist": true,
+  "powershell_command_blocks_parsed_without_execution": 4,
+  "proposed_tag": "week-13",
+  "tag_created_by_assistant": false,
+  "metadata_note": "Literal private-value scan and selected screenshot visual review, not independent vulnerability/privacy certification."
+}

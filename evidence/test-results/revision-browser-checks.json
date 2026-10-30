@@ -1,0 +1,72 @@
+{
+  "base_commit": "cfbacefdef66950d2a2fd71c705258d0099f2e9c",
+  "runtime_source_changed": false,
+  "checks": [
+    {
+      "time_utc": "2026-10-30T08:54:23.758Z",
+      "screenshot": "w13-manual-sign-in.jpg",
+      "observed": "Signed-out real Week13 app: Email, Password and Sign in; assigned role comes from server."
+    },
+    {
+      "time_utc": "2026-10-30T08:55:59.435Z",
+      "screenshot": "w13-manual-student-list.jpg",
+      "observed": "Student One authenticated; fifteen authorized consultations, Request consultation and Open ID controls, no coordinator review menu."
+    },
+    {
+      "time_utc": "2026-10-30T08:56:36.631Z",
+      "screenshot": "w13-manual-request-form.jpg",
+      "observed": "Student request dialog exposes Adviser selection and Agenda; no request submitted."
+    },
+    {
+      "time_utc": "2026-10-30T08:56:51.332Z",
+      "screenshot": "w13-manual-request-validation.jpg",
+      "observed": "Blank request stays in dialog with adviser required and agenda 10–2000 validation; no domain write."
+    },
+    {
+      "time_utc": "2026-10-30T08:57:28.955Z",
+      "screenshot": "w13-manual-forbidden.jpg",
+      "observed": "Student opening another student consultation1 is denied with safe feedback; no private detail or mutation."
+    },
+    {
+      "time_utc": "2026-10-30T08:57:29.398Z",
+      "screenshot": "w13-manual-signed-out.jpg",
+      "observed": "Sign out returns to login and displays Signed out.; account session closed."
+    },
+    {
+      "time_utc": "2026-10-30T08:59:32.774Z",
+      "screenshot": "w13-manual-completed-workflow.jpg",
+      "observed": "Adviser reads retained completed consultation7, completed action4 and existing adviser follow-up; no new action/outcome/note submitted."
+    },
+    {
+      "time_utc": "2026-10-30T09:01:27.474Z",
+      "screenshot": "w13-manual-not-found.jpg",
+      "observed": "Lookup119 (an unintended appended ID during harness input) returned safe not-found; no write occurred."
+    },
+    {
+      "time_utc": "2026-10-30T09:02:22.228Z",
+      "screenshot": "w13-manual-recovered-history.jpg",
+      "observed": "Coordinator reads accepted work19 with original422, cycle2 accepted attempt and actor6 recovery reason; no new recovery submitted."
+    },
+    {
+      "time_utc": "2026-10-30T09:02:41.366Z",
+      "screenshot": "w13-manual-exhausted-review.jpg",
+      "observed": "Work15 remains needs_review after three503 attempts, assigned coordinator6, no recovery authorized; historical source now elapsed, so no recovery replayed."
+    },
+    {
+      "time_utc": "2026-10-30T09:03:05.401Z",
+      "screenshot": "w13-manual-progress-summary.jpg",
+      "observed": "Coordinator reads work22 daily Manila snapshot counts; still pending with no attempts, not claimed delivered."
+    },
+    {
+      "time_utc": "2026-10-30T09:03:53.270Z",
+      "screenshot": "w13-manual-summary-narrow-390.jpg",
+      "observed": "Actual390x844 progress-summary view: roles/navigation wrap, counts and correlation remain readable; history scrolls below."
+    }
+  ],
+  "observed_harness_notes": [
+    "Coordinator lookup appended19 to retained1, yielding119 and a safe404; corrected by opening the actual list row.",
+    "Flutter merges history headings into semantic text; an exact text wait timed out although the real detail loaded.",
+    "Automatic review blocked opening Confirm schedule; no outcome/save/recovery or new consultation was submitted. Historical authentic confirmation evidence is used."
+  ],
+  "scope": "Fresh sign-in/out, read-only authorized/forbidden/not-found records, invalid request form, retained workflow/recovery/permanent review/summary and390px layout. Historical principal workflow captures remain dated historical evidence."
+}

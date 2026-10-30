@@ -34,3 +34,8 @@ Checkpoint 06 status supersedes earlier delivery-pending entries: worker/receive
 ## Checkpoint08 update — 2026-10-30
 
 Current summary supersedes historical pending statements: checkpoints01–07 verified,08 ready; workflow/scans/delivery/selected UI cases implemented. DOCX format reported by student, exact destination/time unknown. Personal reflection stays outside GitHub. Logging-outage observability fixed and API tested; client branch unverified. Word visual verification pending. Automated Flutter execution, human review/reflection, final Git and submission remain pending.
+
+
+## Revised manual and continuing repository update
+
+Revised teacher rules now require one continuing repository/weekly identifiable versions and a screenshot user manual. Transition/manual implemented as documentation. Annotated week-13 tag proposed, not created; no remote/folder/repository rename. Week14 unborn/uncommitted work preserved. Prior generic separate-repository instructions are superseded. Automated Flutter and real warning-browser gaps remain.

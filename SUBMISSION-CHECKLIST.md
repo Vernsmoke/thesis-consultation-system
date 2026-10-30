@@ -1,6 +1,6 @@
 # Week 13 requirements and evidence checklist
 
-Project 29: Thesis Consultation Reminder System. Updated 2026-10-30 (Asia/Manila).
+Project 29: Thesis Consultation Reminder System. Revised30 October2026 (Asia/Manila). Current runtimecfbacef; documentation revision uncommitted. Revised teacher rules are reported by student; tag mechanism/name is proposed.
 
 Sources: original module, complete Module 13 including Flutter foundation, five topic checkpoints, guided procedure, activities, assessment and reflection; project guide, common rules, assessment mapping and Project 29. The source DOCX files remain in the parent workspace. Filenames and milestone boundaries below are organization choices, not teacher requirements.
 
@@ -9,7 +9,7 @@ Status: **prepared** means a reviewable plan exists, **pending** means the imple
 | ID | Requirement and origin | Status | Artifact / planned proof |
 | --- | --- | --- | --- |
 | GOV-01 | One individual approved/registered project; no production data (guide) | Student reports assigned and approved; official registry not inspected | [Scope and authority](docs/DESIGN.md#scope-and-authority); student must retain instructor confirmation |
-| GOV-02 | Fresh history, separate folder, student commits/pushes | Commits through1bf5323 verified local/live remote; checkpoint08 pending student commit | [Checkpoint08](docs/CHECKPOINT-08.md); assistant never stages/commits/pushes |
+| GOV-02 | Fresh history, separate folder, student commits/pushes | Eight commits throughcfbacef verified; revised manual/version documentation ready for student commits/tag | [Current commands](docs/STUDENT-COMMIT-PLAN.md); assistant never stages/commits/tags/pushes |
 | PREP-01 | Feature branch, evidence folders, lab log with date, environment, versions, scope (guided part 1) | Complete for foundation | [Lab log](docs/LAB-LOG.md) |
 | FND-01 | Fresh scaffold/API connection (implementation milestone, not a separate teacher requirement) | Verified; widget tests blocked | [Results](evidence/test-results/FOUNDATION-RESULTS.md); five backend tests, analysis, web build, real browser connection |
 | DATA-01 | Consultation/role/action-item data foundation (implementation milestone supporting workflow) | Committed 27960ba; verified | [Database guide](docs/DATABASE.md), [data evidence](evidence/test-results/DATA-RESULTS.md) |
@@ -53,7 +53,13 @@ Status: **prepared** means a reviewable plan exists, **pending** means the imple
 | REF-01 | Four reflection prompts: influential decision/evidence, hard failure, independent contribution, next verification/out-of-scope work | AI-assisted local answers drafted; student review/revision pending | Separate local personalized reflection DOCX outside GitHub; AI assistance disclosed; no unverified independent-work claim |
 | INT-01 | Acknowledge AI, third-party code/libraries/sources; student can reproduce, explain and defend | Disclosure/references prepared; student review and understanding pending | [Report](docs/WEEK-13-REPORT.md), [walkthrough questions](docs/DEMO-AND-MAINTENANCE.md) |
 | FINAL-01 | Technical requirements verified, documentation aligned, honest limitations, no generated dependencies/secrets in submission | Technical review prepared; recorded gaps remain | [Final review](docs/FINAL-REVIEW.md); automated Flutter execution unfinished |
-| FINAL-02 | Student commits/pushes, verifies remote and actual submission; instructor review | Checkpoint08 commit/push and actual submission pending | [Student commands](docs/CHECKPOINT-08.md); no instructor evaluation claimed |
+| FINAL-02 | Student commits/pushes, verifies remote and actual submission; instructor review | Checkpoint08 committed/pushed; revision commits, proposed tag/push and actual submission pending | [Current commands](docs/STUDENT-COMMIT-PLAN.md); no instructor evaluation claimed |
 
+| GOV-03 | Reported revised teacher rule: ONE continuing repository, identifiable weekly versions | Transition documented; no repository/folder/remote changed | [Transition](docs/REPOSITORY-TRANSITION.md); proposed tag still student action |
+| MAN-01 | User Manual in repository, linked from README | Complete documentation; review pending | [Manual](docs/USER-MANUAL.md) |
+| MAN-02 | Numbered procedures, roles, prerequisites and expected results for every major implemented function | Complete to implemented Week13 scope | Manual procedures1–18 and coverage table; no invented features |
+| MAN-03 | Genuine application screenshots for every major function |12 new captures plus clearly dated actual original workflow/role/notices | [Browser record](evidence/test-results/revision-browser-checks.json), manual embeds |
+| VER-01 | Tested build/evidence/manual match proposed weekly version | Runtime unchanged fromcfbacef, compiled hash matches; new64-test/325-assertion suite and clean analysis | [Revision audit](docs/REVISION-VERIFICATION.md), [fingerprints](evidence/test-results/revision-verification.json) |
+| PRE-01 | Preserve separate Week14 and exclude its security changes | Verified214 inspected source/Git files unchanged; no Week14 HEAD/commits | Revision audit; reconciliation deferred |
 
-Backend and selected browser paths are verified to named cases. Technical activities/SA7/report/demo materials are prepared. Word layout verified; personal reflection revision, student understanding/disclosure review, checkpoint08 commit/push and actual DOCX submission remain pending. Automated Flutter execution is unfinished (zero browser tests executed; prior VM policy blocker unresolved). No future-week work started.
+Backend and selected browser paths are verified to named cases. Technical activities/SA7/report/demo/manual materials and the full requirements audit are prepared. Existing Word interpretations were visually verified as one page each. Personal reflection revision, student understanding/disclosure review, revision commits/tag/push and actual submission remain pending. Automated Flutter execution remains unfinished (zero browser tests executed; prior VM policy blocker unresolved). The actual browser logging-warning branch and broader runtime/operational limits stay explicit. No Week14 security changes or new future-week work were included.

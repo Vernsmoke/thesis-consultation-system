@@ -1,5 +1,14 @@
 # Changelog
 
+## Week13 revised teacher rules and user manual — ready for student commits
+
+- Retain the existing eight-commit history/main/cfbacef runtime. Document one continuing repository, proposed annotated weekly tags and preservation of separate unborn/uncommitted Week14 security work. No remotes, folder names, repositories, commits or tags changed by assistant.
+- Add numbered USER-MANUAL with role/precondition/expected-result procedures and actual screenshots for every major implemented function. New read-only/invalid-input/login/logout/narrow captures complement honestly dated existing successful workflow/failure evidence.
+- Rerun guarded Week13 regression64 tests/325 assertions,7.20s; Flutter analysis clean3.7s. Running compiled JS/runtime hashes match saved checkpoint08; no runtime source change. Seven retained DB/receipt checks pass; application domain data unchanged. Known automated Flutter execution and real logging-warning browser branch gaps remain.
+- Update requirement audit, setup/version guidance, current checklist and student-only coherent commit/tag commands. Existing private Word/ZIP artifacts remain historical until revised packaging after student Git steps.
+
+Earlier entries preserve their original checkpoint-time statements.
+
 ## Checkpoint 08 ready for student commit — 2026-10-30
 
 - Verified checkpoint07 `1bf5323` locally and on the live remote before changes.

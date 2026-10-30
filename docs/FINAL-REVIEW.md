@@ -45,3 +45,8 @@ Review date30 October2026 Asia/Manila. Base1bf5323b5e13d25b73c57e911310e7799a73b
 Historical result maps retain their original counts/build labels. Latest code changes do not retroactively relabel earlier screenshots as execution of the new branch. Final metrics derive from the named historical JSON cohort, not a new load test. Pending work20–22 and exhausted15 are not cleaned up to make a report green. No fixture or scheduler command is rerun for timestamps. Root progress and the local written-submissions folder remain outside weekly staging.
 
 The technical output works to the recorded bounded cases, while completion/submission remains conditional on the missing student work and explicit limitations. The checklist is an evidence map, not a blanket completion certificate.
+
+
+## Revised manual and continuing repository update
+
+Current Week13 revision supersedes earlier checkpoint08 Git-pending notes: cfbacef is committed/pushed. See REVISION-VERIFICATION.md for the full audit and USER-MANUAL.md for actual role procedures/images. New regression64/325 and analysis pass; runtime/compiled hash unchanged. Revision docs/tag/push and human/submission steps remain pending. Week14 preserved.

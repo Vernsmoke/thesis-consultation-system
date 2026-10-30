@@ -1,0 +1,160 @@
+{
+    "case": "DATA-LIVE",
+    "timestamp_utc": "2026-10-30T08:53:42+00:00",
+    "timezone": "UTC; display Asia/Manila",
+    "database": "thesis_consultation_week13",
+    "connection": {
+        "version": "10.4.32-MariaDB",
+        "account": "thesis_week13@127.0.0.1"
+    },
+    "counts": {
+        "users": 6,
+        "consultations": 16,
+        "panel_links": 2,
+        "action_items": 4,
+        "follow_ups": 4,
+        "audit_events": 16,
+        "automation_items": 22,
+        "pending_automation": 3,
+        "delivered_automation": 18
+    },
+    "roles": [
+        {
+            "role": "student",
+            "count": 2
+        },
+        {
+            "role": "adviser",
+            "count": 2
+        },
+        {
+            "role": "panel",
+            "count": 1
+        },
+        {
+            "role": "coordinator",
+            "count": 1
+        }
+    ],
+    "consultations": [
+        {
+            "reference": "31685814-07bf-4996-878a-52356b29168f",
+            "status": "confirmed",
+            "starts_at": "2026-11-05T11:45:51.000000Z",
+            "ends_at": "2026-11-05T12:15:51.000000Z",
+            "schedule_version": 1
+        },
+        {
+            "reference": "a7d6526b-a38e-4323-8e13-42cecc8dec4b",
+            "status": "confirmed",
+            "starts_at": "2026-10-30T01:00:00.000000Z",
+            "ends_at": "2026-10-30T01:30:00.000000Z",
+            "schedule_version": 1
+        },
+        {
+            "reference": "DELIVERY-2c6a2e49a53f-ack_loss_once",
+            "status": "confirmed",
+            "starts_at": "2026-10-29T15:08:20.000000Z",
+            "ends_at": "2026-10-29T16:08:20.000000Z",
+            "schedule_version": 1
+        },
+        {
+            "reference": "DELIVERY-2c6a2e49a53f-interrupted",
+            "status": "confirmed",
+            "starts_at": "2026-10-29T15:08:20.000000Z",
+            "ends_at": "2026-10-29T16:08:20.000000Z",
+            "schedule_version": 1
+        },
+        {
+            "reference": "DELIVERY-2c6a2e49a53f-permanent",
+            "status": "confirmed",
+            "starts_at": "2026-10-29T15:08:20.000000Z",
+            "ends_at": "2026-10-29T16:08:20.000000Z",
+            "schedule_version": 1
+        },
+        {
+            "reference": "DELIVERY-2c6a2e49a53f-success",
+            "status": "confirmed",
+            "starts_at": "2026-10-29T15:08:19.000000Z",
+            "ends_at": "2026-10-29T16:08:19.000000Z",
+            "schedule_version": 1
+        },
+        {
+            "reference": "DELIVERY-2c6a2e49a53f-timeout_once",
+            "status": "confirmed",
+            "starts_at": "2026-10-29T15:08:20.000000Z",
+            "ends_at": "2026-10-29T16:08:20.000000Z",
+            "schedule_version": 1
+        },
+        {
+            "reference": "DELIVERY-2c6a2e49a53f-transient_once",
+            "status": "confirmed",
+            "starts_at": "2026-10-29T15:08:20.000000Z",
+            "ends_at": "2026-10-29T16:08:20.000000Z",
+            "schedule_version": 1
+        },
+        {
+            "reference": "DELIVERY-2c6a2e49a53f-unavailable",
+            "status": "confirmed",
+            "starts_at": "2026-10-29T15:08:20.000000Z",
+            "ends_at": "2026-10-29T16:08:20.000000Z",
+            "schedule_version": 1
+        },
+        {
+            "reference": "DEMO-COMPLETED-001",
+            "status": "completed",
+            "starts_at": "2026-10-28T11:00:00.000000Z",
+            "ends_at": "2026-10-28T11:30:00.000000Z",
+            "schedule_version": 1
+        },
+        {
+            "reference": "DEMO-CONFIRMED-001",
+            "status": "confirmed",
+            "starts_at": "2026-10-30T11:00:00.000000Z",
+            "ends_at": "2026-10-30T11:30:00.000000Z",
+            "schedule_version": 1
+        },
+        {
+            "reference": "DEMO-REQUEST-001",
+            "status": "requested",
+            "starts_at": null,
+            "ends_at": null,
+            "schedule_version": 0
+        },
+        {
+            "reference": "SCAN-ELAPSED-b1239e74abbf",
+            "status": "missed",
+            "starts_at": "2026-10-29T11:28:37.000000Z",
+            "ends_at": "2026-10-29T11:58:37.000000Z",
+            "schedule_version": 1
+        },
+        {
+            "reference": "SCAN-REMINDER-b1239e74abbf",
+            "status": "completed",
+            "starts_at": "2026-10-29T13:28:37.000000Z",
+            "ends_at": "2026-10-29T13:58:37.000000Z",
+            "schedule_version": 1
+        },
+        {
+            "reference": "W13-COMPLETE-5bf695121a72",
+            "status": "completed",
+            "starts_at": "2026-10-29T11:12:50.000000Z",
+            "ends_at": "2026-10-29T11:42:50.000000Z",
+            "schedule_version": 1
+        },
+        {
+            "reference": "W13-MISSED-5bf695121a72",
+            "status": "missed",
+            "starts_at": "2026-10-29T11:12:50.000000Z",
+            "ends_at": "2026-10-29T11:42:50.000000Z",
+            "schedule_version": 1
+        }
+    ],
+    "cross_database_isolation": {
+        "outcome": "pass",
+        "sqlstate": "42000",
+        "driver_code": 1142,
+        "reason": "App account denied access to test database; no data returned."
+    },
+    "limitation": "Read-only counts and controlled record metadata. This snapshot alone does not prove API actions, notification delivery or recovery; consult the dated execution records."
+}

@@ -1,0 +1,158 @@
+{
+  "recorded_at_utc": "2026-10-30T09:10:45.419887+00:00",
+  "base_commit": "cfbacefdef66950d2a2fd71c705258d0099f2e9c",
+  "runtime_files_unchanged_from_base": true,
+  "week14_source_and_git_files_unchanged": true,
+  "week14_files_checked": 214,
+  "week14_head": "unborn; no commits or tracked files",
+  "app_counts_unchanged": true,
+  "app_before_counts": {
+    "users": 6,
+    "consultations": 16,
+    "panel_links": 2,
+    "action_items": 4,
+    "follow_ups": 4,
+    "audit_events": 16,
+    "automation_items": 22,
+    "pending_automation": 3,
+    "delivered_automation": 18
+  },
+  "app_after_counts": {
+    "users": 6,
+    "consultations": 16,
+    "panel_links": 2,
+    "action_items": 4,
+    "follow_ups": 4,
+    "audit_events": 16,
+    "automation_items": 22,
+    "pending_automation": 3,
+    "delivered_automation": 18
+  },
+  "retained_effect_checks_pass": true,
+  "manual_images": {
+    "evidence/screenshots/application/manual/w13-manual-completed-workflow.jpg": [
+      897,
+      884
+    ],
+    "evidence/screenshots/application/manual/w13-manual-exhausted-review.jpg": [
+      897,
+      884
+    ],
+    "evidence/screenshots/application/manual/w13-manual-forbidden.jpg": [
+      897,
+      884
+    ],
+    "evidence/screenshots/application/manual/w13-manual-not-found.jpg": [
+      897,
+      884
+    ],
+    "evidence/screenshots/application/manual/w13-manual-progress-summary.jpg": [
+      897,
+      884
+    ],
+    "evidence/screenshots/application/manual/w13-manual-recovered-history.jpg": [
+      897,
+      884
+    ],
+    "evidence/screenshots/application/manual/w13-manual-request-form.jpg": [
+      897,
+      884
+    ],
+    "evidence/screenshots/application/manual/w13-manual-request-validation.jpg": [
+      897,
+      884
+    ],
+    "evidence/screenshots/application/manual/w13-manual-sign-in.jpg": [
+      897,
+      884
+    ],
+    "evidence/screenshots/application/manual/w13-manual-signed-out.jpg": [
+      897,
+      884
+    ],
+    "evidence/screenshots/application/manual/w13-manual-student-list.jpg": [
+      897,
+      884
+    ],
+    "evidence/screenshots/application/manual/w13-manual-summary-narrow-390.jpg": [
+      390,
+      844
+    ]
+  },
+  "runtime_sha256": {
+    "backend/app/Models/ActionItem.php": "294dd12ba3b8cf6d032bcd49861d0295d5a7f35b29a0431041e9cb6880e02aec",
+    "backend/app/Models/AutomationItem.php": "dc5d3d2cabcd0d32f6b3b7e53c017d974ba7b8130d86eab48c0e2fd84684c2fb",
+    "backend/app/Models/Consultation.php": "1d831e809b6b5a4b60dbadd7a4f6c17bad6f90983a12a5297bbfa885b253efd3",
+    "backend/app/Models/ConsultationEvent.php": "66b1db655e5959872e9ef6097dcdcd9f53431814f52f099eb04ff87c893aa44c",
+    "backend/app/Models/FollowUp.php": "17263e7dab4bfb5d1c1f22672b55ea267e597a985021499b3559dd9bdf6728b3",
+    "backend/app/Models/User.php": "a21974a644efee4764a7ca967c9e45636b22964dc6dfb1d00f409dd04c925524",
+    "backend/app/Policies/ActionItemPolicy.php": "78d11bc64de03567f4d269add7533aff6ef22273589e01dc0f39b85f072d8bc3",
+    "backend/app/Policies/AutomationItemPolicy.php": "c74bf680e596085936e9d9371652a4d24e501f2b9ef23810f0eff7409db5b572",
+    "backend/app/Policies/ConsultationPolicy.php": "80c5aee1e199e44062b374aa746ad4e5640171c525e2c568039ef5634d320ee3",
+    "backend/app/Providers/AppServiceProvider.php": "caf306ef6a25a547bbb7edd5508a39b51c365083eb6dd58378cf2242018e94c7",
+    "backend/app/Services/AutomationDelivery.php": "27f6a3be62fbdd30b463fdf3aae189803d4ba307795d965951bd71a18b8af92d",
+    "backend/app/Services/AutomationEligibility.php": "e262b28bb10ba4a2bd5efcc4c0634aef046aefbcd55de55feb40c12d6e31913b",
+    "backend/app/Services/AutomationScanner.php": "0a3b25fd54e6cd90e1330825b785873431e7e58415e7fb920a29c89ff9e3a16e",
+    "backend/app/Console/Commands/DeliverAutomation.php": "0cc6fcbb0067fc5ff8807c33ef294b02c04b2053b0b6f02ea5e003cb361c2165",
+    "backend/app/Console/Commands/ScanConsultations.php": "34b9d3d7fc7174909b14bb0ab48bbb42fbe6efc0648a64291a3b3f2b817cf30e",
+    "backend/app/Http/Controllers/AuthController.php": "ea5b39398b44949e36a61f30a9ba7dbdbbdfc7d244dd52236d6a43990bdf02a1",
+    "backend/app/Http/Controllers/AutomationController.php": "27aeb9818526181b00903e992ad76addb6f82450ca6a794c2fd8830991c2d776",
+    "backend/app/Http/Controllers/ConsultationController.php": "a67e59309516f7a3af96793e17062549f42abcc29ba958e8531c644eb655f298",
+    "backend/app/Http/Controllers/Controller.php": "25d1c1ef8e6cc8a376553faacfba2b07d9dfaee9bdbb84f14f77517580e9deb1",
+    "backend/app/Http/Controllers/WorkflowController.php": "2ee2c4639a9c2257f2bef153a7ef48d4506b71c75aa4530cb13ccac5ec2d871d",
+    "backend/routes/api.php": "4fdf5cde6fe513b73d4d7035362ab43f6305baacfd2959b454a0ce23d2836392",
+    "backend/routes/console.php": "2a171f8732cfdbe17d16d566505550993547c7edcaee54d87c5369425555bfea",
+    "backend/routes/web.php": "248c7eeeb43bb61ee4fb6603e52b44843c64f72a841d671bcd41871aab23f970",
+    "backend/config/app.php": "c8863128d674a2c067542d6d83b9f0a899a8ad1c5f84a60e5cc9ca5e37654935",
+    "backend/config/auth.php": "09c46d5c0e950f0a35ae95c21ff998cc5e4157a78cb3d8ec7b9925322f00869f",
+    "backend/config/cache.php": "dc3a64749bc19946ba6a054be0b67ae8c450c9401799cb176ac0a0b8d4756664",
+    "backend/config/consultation.php": "64077b42d2dab47cd644cd747d86c8e66c1b4df0164845cfba5d96f91cb9b6b8",
+    "backend/config/cors.php": "cac0505f09b5a3f6b9cb63d83d0c8043075329598731d0c7a84e62e53de0ee26",
+    "backend/config/database.php": "4c831a869f4335805c6ca67c3f583e71329622ee8f70dbdc70c57a523a6b6021",
+    "backend/config/filesystems.php": "46b977d9555ed617aa0d42055a0c76a34c9d16c63ee634ff6683bc95712c9317",
+    "backend/config/logging.php": "20552e2e6c8ae48fc03e7a2869122eae254dd352e74f1a607ee16d14de6ffbb9",
+    "backend/config/mail.php": "433acc0d5342a074b32e44b3d7ffba153c3eaf292a5a2fc94d7cb6ee0addb147",
+    "backend/config/queue.php": "a185a3e86b65db26938204f4f50cf0c0ca99974e9926b9cdcef6b7743feea482",
+    "backend/config/sanctum.php": "91f2e8e2b77d7599401fbd3069cdfcd29af6165cb2ce84c830f9b6c41918c88c",
+    "backend/config/services.php": "2226be3fa0e560fc8cd628f3e8f50fcd78639a24375f5e931d0c656eaf1d4ce8",
+    "backend/config/session.php": "c7f637c49f3e61d5488a11653b06a6b5a8a73b335d1dadbd84666be5ec4f6de6",
+    "backend/database/.gitignore": "e758642d95e83e907e010b6e46b07b3f953c7cef11fe5ebefc2a77b9d7b4d5f7",
+    "backend/database/factories/UserFactory.php": "50bdc543f1b09d1a57260be55ad0e1a68aee4b34f63e1109dc94d9bcd3080526",
+    "backend/database/migrations/0001_01_01_000000_create_users_table.php": "10d79883bc08ce46510f9ad8b1830b4d06d586dc56ae2c8bac3b3e491f69a90f",
+    "backend/database/migrations/0001_01_01_000001_create_cache_table.php": "20f769d3c11748c1cc42c41cd3789b0b9b2cd0db44ee22d378addac3ff8aed4f",
+    "backend/database/migrations/0001_01_01_000002_create_jobs_table.php": "7c9c712adf4091c87bf2612f4d0dccdfa1df4501553e4ac068b83d7bd5462fa5",
+    "backend/database/migrations/2026_10_29_000001_add_role_to_users_table.php": "1ad65c4b69a03fb7a374095b2092afbb749b01d7c5fe63f514da181816ed3d2c",
+    "backend/database/migrations/2026_10_29_000002_create_consultation_tables.php": "77e7b5153d8641c5c14d4a15fba41a59e49cc09598552f0649f618d1b197728a",
+    "backend/database/migrations/2026_10_29_000003_create_consultation_events_table.php": "3a3973f1e366b0ab9732ec7177a263dd90c80757ef9767a6c77c1c708ed71acd",
+    "backend/database/migrations/2026_10_29_000004_add_follow_ups_and_action_audit.php": "3542e99cfdeaf63e4dab9b580861e46e24ef335970db78c443e2cd35d84fa865",
+    "backend/database/migrations/2026_10_29_000005_create_automation_items.php": "2171adbc7b8046201bdf6463d8c8f9f579694606a2ab5e9e1dde69d582ca5ea2",
+    "backend/database/migrations/2026_10_29_000006_create_delivery_history.php": "fdddb804e6021a1ea00a1038bb9a17f1cff4f158170cc9b2073814b4e19e03b3",
+    "backend/database/migrations/2026_10_29_113825_create_personal_access_tokens_table.php": "c81ecde85ea5072188c468dcaf79776728b6eb8f684d63fc0d88a4908484ca75",
+    "backend/database/seeders/DatabaseSeeder.php": "8d0ad1967a8976fdf5b5afb81d21b13ac6eca3ff8cea65bd9048943b38e20a28",
+    "frontend/lib/api.dart": "db68a7ec2bfe1d0935073b3a2ab5586f64ad9e3e041cdee18053b542fb7ea3f6",
+    "frontend/lib/browser_transport.dart": "21d61225b9f83d28485656e89d4e05f6f2e04e48b3b59d17aae8e3e4c5cab653",
+    "frontend/lib/browser_transport_stub.dart": "6de240837753943483d8f5c943e12eb55ba1d18f8030817eb1d4dd4a4fa9118d",
+    "frontend/lib/browser_transport_web.dart": "513ef7f1f1dcfbf5a2d574e6c5f0f20fa5f55c78cd59a5623f83d9355412a297",
+    "frontend/lib/details.dart": "21a5a82458eda259ce6d122c79c35a5c17cae18478ad81b85e20683095f6dc8f",
+    "frontend/lib/main.dart": "06b1f592a28a811d5b6e7a30c1aa52d1ee6fd8f2f6d6dc6460714aed073dd2c4",
+    "frontend/lib/ui.dart": "199680a4917d0d79785ea250c9a71756863a69d8ef66d37312e130e1ba6f9636",
+    "frontend/lib/workspace.dart": "8f3bb3d4c36f322215b85ebb631195007da80475f00164df9faafa56c728b4c5",
+    "notification-service/public/index.php": "a18a7b763cb50a4c3556b7b9f78342588e0edf225122880adeeda42027a848fa"
+  },
+  "compiled_web_sha256": "27a2b64aec6b1fee43f3b3f7376ebf44f2e2cc49348150debefb404b5fc42d8b",
+  "matches_recorded_checkpoint08_web_hash": true,
+  "newly_executed": [
+    "64 backend tests /325 assertions /7.20s",
+    "Flutter analyze clean /3.7s",
+    "read-only and invalid-form browser checks; sessions signed out;390px viewport reset",
+    "7 read-only retained outcome/audit/receipt checks"
+  ],
+  "not_newly_executed": [
+    "build: existing successful checkpoint08 binary verified by hash, no redundant rebuild",
+    "historical consultation/schedule/outcome/action/follow-up writes, scan/worker/fault/recovery drills",
+    "automated Flutter suite, real browser logging outage, process-kill/concurrency/continuous scheduler/ledger restore"
+  ],
+  "tags": "No local/remote tags at initial inspection; week-13 proposed only, no tag created",
+  "remotes": "unchanged; Week13 origin remains proposed continuing URL, Week14 separate origin preserved",
+  "limitations": "Domain snapshots do not prove every session row unchanged; UI sign-in/out changes authentication state. Week14 private/generated files not inventoried; no operations targeted them."
+}

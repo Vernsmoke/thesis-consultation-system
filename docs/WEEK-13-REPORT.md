@@ -1,5 +1,8 @@
 # Week 13 Advanced Automation and Scripting Report
 
+Revision30 October2026: Week13 runtime is committed as `cfbacef`; this working revision adds the [User Manual](USER-MANUAL.md), [one-repository transition](REPOSITORY-TRANSITION.md), fresh read-only UI captures and [revision verification](REVISION-VERIFICATION.md). The proposed weekly tag is `week-13`, not yet created. Earlier checkpoint-time counts/failed runs below remain historical; current regression64/325 and analysis pass are recorded separately. Week14 security work remains outside this version. Human reflection/defense/submission remain pending.
+
+
 Project 29 Thesis Consultation Reminder System
 
 PFEBSIT 002 Integrative Programming and Technologies 2 · SA7 and laboratory portfolio · 30 October 2026
@@ -10,7 +13,7 @@ The prototype supports consultation request, adviser confirmation, agenda, meeti
 
 The student reports that the teacher assigned and approved Project 29. The official registry was not independently inspected or changed. The instructor is the acceptance authority for the assessed output. All operational identities and consultation records are fictional. No actual stakeholder acceptance, university attendance policy, adviser availability or production readiness is claimed. The deadline supplied by the student is 30 October 2026; the submission time is unconfirmed.
 
-The work started fresh in week-13. Archived generic code, settings, credentials, evidence and Git history were excluded. The student made and pushed checkpoints 01–07; the verified current base is 1bf5323b5e13d25b73c57e911310e7799a73bbc7. This report and its small logging-feedback improvement are the uncommitted checkpoint 08 increment. Final source fingerprints identify that increment; the student's eventual commit must be reviewed before submission.
+The work started fresh in week-13. Archived generic code, settings, credentials, evidence and Git history were excluded. The student committed and pushed checkpoints01–08; the verified runtime base is cfbacefdef66950d2a2fd71c705258d0099f2e9c. This manual/policy revision preserves that code and adds current documentation/evidence. Final documentation commits and the proposed weekly tag still require student review and execution.
 
 ## Workflow and ownership
 

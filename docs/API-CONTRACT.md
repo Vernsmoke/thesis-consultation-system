@@ -2,7 +2,7 @@
 
 Checkpoint 07 update: [Flutter integration](FLUTTER.md) now implements the cookie/CSRF client, role workflows and coordinator recovery with [actual browser evidence](../evidence/test-results/FLUTTER-RESULTS.md). Four-kind scans and delivery are implemented, and ten migrations applied. Earlier references below to future Flutter, unimplemented automatic missed detection, eight migrations and old counts describe their checkpoint-time implementation; use the current Flutter/delivery result maps for present status. Domain/automation endpoints themselves are unchanged by this frontend increment.
 
-Session/request/schedule APIs were implemented at checkpoint 03. Checkpoint 04 adds manual meeting outcomes, action assignment/completion and follow-up. Checkpoint 06 adds the automation routes below. Full Flutter workflow remains pending. This document describes implemented routes.
+Session/request/schedule APIs were implemented at checkpoint 03. Checkpoint 04 adds manual meeting outcomes, action assignment/completion and follow-up. Checkpoint 06 adds the automation routes below. The bounded Flutter workflow is implemented. This document describes implemented routes.
 
 ## Automation routes added at checkpoint 06
 
@@ -119,3 +119,8 @@ Local HTTP/controlled data only; no real email or production readiness claim. Fu
 ## Checkpoint08 update — 2026-10-30
 
 Coordinator recovery success now includes `log_status: recorded|unavailable`. A logging outage after committed recovery still returns200/pending and retains its audit; it does not justify repeating recovery. See ACTIVITY-2-RESULTS.md for the controlled fault and regression.
+
+
+## Revised Week13 version note
+
+Runtime endpoints remain those of cfbacef; no Week14 HTTPS/envelope/replay endpoints are included. The [User Manual](USER-MANUAL.md) matches current role controls and numbered procedures; [revision verification](REVISION-VERIFICATION.md) names its checked build. Structured automation logging is implemented as documented in DELIVERY.md; older domain-API milestone notes above do not mean automation logs remain unimplemented.
